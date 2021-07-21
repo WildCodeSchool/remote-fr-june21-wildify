@@ -1,5 +1,5 @@
 import React from "react";
-import { BrowserRouter, NavLink, Router, Route, Switch } from "react-router-dom";
+import { BrowserRouter, NavLink, Route, Switch } from "react-router-dom";
 import Home from './Home';
 import Explore from './Explore';
 import MyLibrary from './MyLibrary';
@@ -10,26 +10,15 @@ import './Navbar.css'
 const Navbar = () => {
 
     return (
-    <Router>
-        <div className="navbar">
-            <BrowserRouter>
-            <nav className="navbar-buttons">
-                <ul>
-                    <li>
-                        <NavLink to="/Home" >Home</NavLink>
-                    </li>
-                    <li>
-                        <NavLink to="/Explore">Explore</NavLink>
-                    </li>
-                    <li>
-                        <NavLink to="/MyLibrary">My Library</NavLink>
-                    </li>
-                    <li>
-                        <NavLink to="/UserProfile">User Profile</NavLink>
-                    </li>
-                </ul>
+    <BrowserRouter>
+    
+        <div className="navbar-items">
+            <nav>
+                <NavLink className="nav-buttons" to="/Home" >Home</NavLink>
+                <NavLink className="nav-buttons" to="/Explore">Explore</NavLink>
+                <NavLink className="nav-buttons" to="/MyLibrary">My Library</NavLink>
+                <NavLink className="nav-buttons" to="/UserProfile">User Profile</NavLink>
             </nav>
-            </BrowserRouter>
         </div>
   
        <Switch>
@@ -46,7 +35,8 @@ const Navbar = () => {
           <UserProfile />
          </Route>
        </Switch>
-    </Router>
+    
+    </BrowserRouter>
     )
 
 }

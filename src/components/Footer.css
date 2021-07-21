@@ -1,0 +1,30 @@
+.footer { 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #424242;
+    position: absolute;
+    width: 100%;
+    height: 40px;
+    margin-top: 752px;
+    
+    
+}
+
+.footer-buttons {
+    color: #C4C4C4;
+    padding: 6px;
+    background-color: #414141;
+    margin: 6px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 18px;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.footer-buttons:hover {
+    color: #FFC228;
+    border: 1px solid #FFC228;
+    border-radius: 12%;
+    padding: 5px;
+}
