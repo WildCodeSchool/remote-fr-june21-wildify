@@ -1,0 +1,10 @@
+.navbar-buttons {
+        color: C4C4C4;
+        display: flex;
+        justify-content: space-around;
+}
+
+.navbar {
+    background-color: 414141;
+    width: 100%;
+}
