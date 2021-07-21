@@ -1,0 +1,23 @@
+.artist-sheet{
+    display: flex;
+    flex-direction: row;
+  
+    margin: 10px 10px;
+    background-color:blueviolet;
+}
+
+.artist-sheet img{
+    width: 200px;
+    margin: 10px
+}
+
+
+.artist-sheet h2{
+    font-size: larger;
+    margin: 0px;
+}
+
+.artist-sheet p{
+    font-size: large;
+    margin: 0px;
+}

@@ -1,12 +1,16 @@
-import ArtistAlbums from "./ArtistAlbums";
-import ArtistDetail from "./ArtistDetail";
+import ArtistAlbumList from "./ArtistAlbumList";
+import ArtistSheet from './ArtistSheet';
+import ArtistBiography from './ArtistBiography';
+
+import '../style/ArtistCard.css';
 
 const ArtistCard = () => {
-    return ( 
+
+    return (
         <div className="artist-card">
-            <h3>Artist</h3>
-            <ArtistDetail />
-            <ArtistAlbums Artist={Artist}/>
+            <ArtistSheet />
+            <ArtistAlbumList />
+            {/* <ArtistBiography artistBio = {Artist}/> */}
         </div>
 );
 }

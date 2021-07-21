@@ -1,27 +1,29 @@
 import { useEffect, useState } from "react";
+import '../style/ArtistSheet.css'
 
-const ArtistDetail = () => {
+const ArtistSheet = () => {
 
     const [ Artist, setArtist ] = useState(null);
     
     useEffect(() => {
-        fetch("https://theaudiodb.com/api/v1/json/1/search.php?s=coldplay")
+        fetch("https://theaudiodb.com/api/v1/json/1/search.php?s=Michael Jackson")
         .then(response => response.json())
         .then(data => {
             console.log(data.artists[0]);
             setArtist(data.artists[0]);
-
         })
         }, [])
 
     return (
         <>
             { Artist &&
-                <div>
-                    <h3>{Artist.strArtist}</h3>
-                    <h5>{Artist.strCountry}</h5>
-                    <h4>{Artist.strBiographyFR}</h4>
+                <div className="artist-sheet">
+        
                     <img src={Artist.strArtistThumb} alt={`image of ${Artist.strArtist}`} />
+                    <div>
+                        <h2>{Artist.strArtist}</h2>
+                        <p>{Artist.strCountry} ({Artist.strCountryCode})</p>
+                    </div>
                 </div>
             }
             
@@ -29,4 +31,4 @@ const ArtistDetail = () => {
     );
 }
 
-export default ArtistDetail;
+export default ArtistSheet;
