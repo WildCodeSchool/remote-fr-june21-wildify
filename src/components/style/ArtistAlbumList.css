@@ -1,8 +1,9 @@
 .artist-album-list {
     display: flex;
     flex-wrap: wrap;
-    background-color: blue;
+    background-color: rgb(38, 0, 53);
     margin: 10px 10px;
+    border-radius: 16px;
     /* align-items: center; */
     justify-content: center;
 }

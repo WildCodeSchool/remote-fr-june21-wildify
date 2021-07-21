@@ -1,16 +1,16 @@
 .artist-sheet{
     display: flex;
     flex-direction: row;
-  
     margin: 10px 10px;
-    background-color:blueviolet;
+    background-color: rgb(38, 0, 53);
+    border-radius: 16px;
 }
 
 .artist-sheet img{
     width: 200px;
-    margin: 10px
+    margin: 16px;
+    border-radius: 50%;
 }
-
 
 .artist-sheet h2{
     font-size: larger;
@@ -20,4 +20,19 @@
 .artist-sheet p{
     font-size: large;
     margin: 0px;
+}
+
+.artist-bio{
+    font-size: medium;
+    margin: 30px;
+    padding: 0 5px;
+    text-align: justify;
+}
+
+.artist-title{
+    margin: 10px;
+    background-color: #fcc228;
+    color: var(--bg-color);
+    text-align: center;
+    border-radius: 16px;
 }

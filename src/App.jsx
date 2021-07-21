@@ -5,7 +5,6 @@ import './components/style/App.css';
 const App = () => {
   return (
     <div className="app">
-      <div className="artist-title">Artist Page</div>
       <ArtistCard />
     </div>
   );

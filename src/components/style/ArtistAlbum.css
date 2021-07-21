@@ -2,19 +2,22 @@
     display: flex;
     flex-direction: column;
     width: 18%;
-    background-color: darkcyan;
-    margin: 5px;
+    /* background-color: #fcc228; */
+    margin: 10px 5px;
     padding: 5px;
 }
 
+.album img{
+    opacity: 0.8;
+}
+
+.album img:hover{
+    opacity: 1;
+}
+
 .album p{
-    font-size: small;
+    font-size: medium;
     margin: 0px;
 }
 
-.album-cover{
-    width: 100px;
-    height: 100px;
-    background-color: darkolivegreen;
-}
 

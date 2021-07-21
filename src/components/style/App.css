@@ -2,22 +2,16 @@
     --bg-color: #424242;
     --primary-color: #F76C6C;
     --secondary-color: #f76c6c7c;
+    font-family: 'Quicksand', sans-serif;
 }
 
 .app {
     display: flex;
     flex-direction: column;
-    height: 100vh;
+    /* height: 100vh; */
     background-color: var(--bg-color);
     /* align-items: center;
     justify-content: center; */
-}
-
-.artist-title{
-    width: 100%;
-    background-color: #fcc228;
-    font-size: 2em;
-    text-align: center;
 }
 
 
