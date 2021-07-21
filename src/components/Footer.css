@@ -1,14 +1,16 @@
+.footer-container {
+    background-color: #424242;
+    position: fixed;
+    width: 100%;
+    height: 40px;
+    bottom: 0;
+    padding-bottom: 15%;
+}
+
 .footer { 
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #424242;
-    position: absolute;
-    width: 100%;
-    height: 40px;
-    margin-top: 752px;
-    
-    
 }
 
 .footer-buttons {
@@ -28,3 +30,8 @@
     border-radius: 12%;
     padding: 5px;
 }
+
+/*.logo {
+    width: 15px;
+    height: 15px;
+}*/

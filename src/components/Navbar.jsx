@@ -14,10 +14,10 @@ const Navbar = () => {
     
         <div className="navbar-items">
             <nav>
-                <NavLink className="nav-buttons" to="/Home" >Home</NavLink>
-                <NavLink className="nav-buttons" to="/Explore">Explore</NavLink>
-                <NavLink className="nav-buttons" to="/MyLibrary">My Library</NavLink>
-                <NavLink className="nav-buttons" to="/UserProfile">User Profile</NavLink>
+                <NavLink className="nav-buttons" to="/Home" >Accueil</NavLink>
+                <NavLink className="nav-buttons" to="/Explore">Explorer</NavLink>
+                <NavLink className="nav-buttons" to="/MyLibrary">Mes favoris</NavLink>
+                <NavLink className="nav-buttons" to="/UserProfile">Profil</NavLink>
             </nav>
         </div>
   
