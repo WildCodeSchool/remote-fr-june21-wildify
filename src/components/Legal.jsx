@@ -31,7 +31,7 @@ const Legal = () => {
                 </article>
                 <article className="bloc-text">
                     <h3>Utilisation et conservation des données collectées</h3>
-                    <p>Depuis le 25 mai 2018, le nouveau Règlement Général relatif à la Protection des Données fait évoluer la Loi dite « Informatique et Liberté ». Ce règlement encadre l’utilisation et la sécurisation de données à caractère personnel et vise à en assurer une meilleure protection, en octroyant le droit au client d’obtenir des informations sur les données récoltés par INFO MANIA 24, demander à les modifier, les corriger, les restreindre ou à les supprimer (à noter que des dispositions légales nous imposent de conserver vos données).
+                    <p>Depuis le 25 mai 2018, le nouveau Règlement Général relatif à la Protection des Données fait évoluer la Loi dite « Informatique et Liberté ». Ce règlement encadre l’utilisation et la sécurisation de données à caractère personnel et vise à en assurer une meilleure protection, en octroyant le droit au client d’obtenir des informations sur les données récoltés par Wildify, demander à les modifier, les corriger, les restreindre ou à les supprimer (à noter que des dispositions légales nous imposent de conserver vos données).
                         Ces dernières peuvent collectées lors de nos échanges ou de votre navigation sur nos pages. Ces données seront conservées durant 5 ans.
                         Le client peut toutefois exercer ses droits en envoyant un courrier auprès de nos services.
                         </p>
