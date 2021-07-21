@@ -1,5 +1,5 @@
 .footer-container {
-    background-color: #424242;
+    background-color: #414141;
     position: fixed;
     width: 100%;
     height: 40px;
@@ -9,7 +9,7 @@
 
 .footer { 
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
     align-items: center;
 }
 
@@ -31,7 +31,6 @@
     padding: 5px;
 }
 
-/*.logo {
-    width: 15px;
-    height: 15px;
-}*/
+.active {
+    color: #FFC228;
+}

@@ -2,6 +2,7 @@
 import React from "react";
 import { BrowserRouter, NavLink, Route, Switch } from "react-router-dom";
 
+
 import './Footer.css'
 
 
@@ -13,10 +14,10 @@ const Footer = () => {
                 <nav className="footer">
                     <NavLink className="footer-buttons" to="/Legal">Mentions Légales</NavLink>
                     <NavLink className="footer-buttons" to="/Legal">Mentions Légales</NavLink>
+                    <a className="footer-buttons" href="https://facebook.com/wildify">Facebook</a>
+                    <a className="footer-buttons" href="https://instagram.com/wildify">Instagram</a>
                 </nav>
             </footer>
-
-
 
             <Switch>
                 <Route path="/Legal">
