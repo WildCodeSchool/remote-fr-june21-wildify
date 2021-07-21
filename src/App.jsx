@@ -4,7 +4,6 @@ import './App.css';
 const App = () => {
   return (
     <div class="app">
-      <Legal/>
     </div>
   );
 }
