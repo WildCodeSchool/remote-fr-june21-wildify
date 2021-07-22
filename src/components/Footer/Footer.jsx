@@ -5,8 +5,6 @@ import Contact from "../Contact/Contact"
 import Facebook from './facebook.png';
 import Insta from './instagram.png';
 
-
-
 import './Footer.css'
 
 const Footer = () => {
@@ -14,16 +12,18 @@ const Footer = () => {
         <BrowserRouter>
             <footer className="footer-container">
                 <nav className="footer">
-                    <NavLink className="footer-buttons" to="/Legal">Mentions Légales</NavLink>
-                    <NavLink className="footer-buttons" to="/Contact">Contactez-nous</NavLink>
-                <div className="footer-logos">
-                    <a href="https://facebook.com/wildify">
+                    <div className="footer-logos">
+                        <a href="https://facebook.com/wildify">
                         <img className="logo" src={Facebook} alt="facebook logo" ></img>
-                    </a>
-                    <a href="https://instagram.com/wildify">
+                        </a>
+                        <a href="https://instagram.com/wildify">
                         <img className="logo" src={Insta} alt="insta logo"></img>
                     </a>
-                </div>
+                    </div>
+                    <div className="footer-links">
+                        <NavLink className="footer-buttons" to="/Legal">Mentions Légales</NavLink>
+                        <NavLink className="footer-buttons" to="/Contact">Contactez-nous</NavLink>
+                    </div>
                 </nav>
             </footer>
 
