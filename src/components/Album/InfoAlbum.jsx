@@ -1,3 +1,4 @@
+import React from 'react';
 import './Album.css';
 
 const InfoAlbum = ({infoalbum}) => {

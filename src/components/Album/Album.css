@@ -26,6 +26,23 @@ body {
 .info-album-bloc-article p {
     font-size:18px;
 }
+.track-list-bloc {
+    display: block;
+    background: linear-gradient(178deg, #f7f5f5, #ffe600);
+    margin: 1vh;
+    border-radius: 20px;
+}
+.track-list-bloc h3 {
+    font-size:20px;
+    text-align:center;
+    padding-bottom: 1vh;
+}
+.track-list-bloc-table {
+    display:grid;
+}
+.track-list-bloc-table td {
+    text-align:center;
+}
 @media (min-width: 522px) {
     .info-album-bloc {
         display:flex;
@@ -51,8 +68,9 @@ body {
         font-size:24px;
     }
 }
-@media (min-width : 1280px){
-    .info-album-bloc{
+@media (min-width : 1100px){
+    .info-album-bloc,
+    .track-list-bloc {
         margin: 3vh 15vh;
     }
 }
