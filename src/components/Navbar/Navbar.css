@@ -10,19 +10,7 @@
     height: 50px;
 }
 
-.nav-buttons {
-    color: #C4C4C4;
-    padding: 6px;
-    background-color: #414141;
-    margin: 12px;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    font-size: 22px;
-    font-weight: bold;
-    text-decoration: none;
-
-}
-
-.nav-buttons:hover {
+.nav-logo:hover {
     color: #FFC228;
     border: 1px solid #FFC228;
     border-radius: 12%;
@@ -32,4 +20,13 @@
 
 .active {
     color: #FFC228;
+}
+
+.nav-logo {
+    width: 60px;
+    height: 60px;
+    color: #C4C4C4;
+    padding: 6px;
+    background-color: #414141;
+    margin: 12px;
 }
