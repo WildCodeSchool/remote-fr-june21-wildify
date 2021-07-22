@@ -1,0 +1,30 @@
+.ArtistCard {
+  width: 30%;
+  background-color: antiquewhite;
+  text-align: center;
+  border-radius: 10px;
+}
+
+.ArtistCard h3 {
+  margin: 10px;
+}
+
+.ArtistCardContent {
+  display: flex;
+  flex-flow: wrap column;
+}
+
+.ArtistCardContent p {
+  margin: 5px;
+}
+
+.ArtistCard img {
+  width: 35%;
+  margin: 5px;
+  border-radius: 50%;
+  text-align: left;
+}
+
+.ArtistCard p {
+  font-size: 12px;
+}
