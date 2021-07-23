@@ -1,13 +1,29 @@
-import logo from './assets/logo.png';
-
+import Explore from './Components/Explore/Explore.jsx'
 import './App.css';
+import { useEffect, useState } from 'react';
 
 const App = () => {
+
+  const [selectedArtist, setSelectedArtist] = useState(null)
+
+/* useEffect qui permets de console.log le state selectedArtist
+   lorsque l'user clique sur l'artiste de son choix. */
+
+  useEffect(() => {
+    console.log(selectedArtist);
+  }, [selectedArtist])
+
+
+/* selectArtist Function qui permets de set le state SelectedArtist
+   avec l'artiste cliquer dans le composant Explore/ArtistCard */
+
+  const selectArtist = (Artist) => {
+    setSelectedArtist(Artist)
+  }
+
   return (
-    <div class="app">
-      <img src={logo} alt="WildCodeSchool Logo"/>
-      <h1>Hello Wilders 👋</h1>
-      <p>Welcome in your project 2 structure</p>
+    <div className="app">
+      <Explore selectArtist={selectArtist} />
     </div>
   );
 }
