@@ -1,15 +1,27 @@
-import logo from './assets/logo.png';
+import React from "react";
+import Navbar from "./components/Navbar/Navbar";
+import Footer from "./components/Footer/Footer";
 
-import './App.css';
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+
+import "./App.css";
 
 const App = () => {
   return (
-    <div class="app">
-      <img src={logo} alt="WildCodeSchool Logo"/>
-      <h1>Hello Wilders 👋</h1>
-      <p>Welcome in your project 2 structure</p>
-    </div>
+    <Router>
+      <Footer />
+      <Navbar />
+
+      <Switch>
+        <Route exact path="/"></Route>
+        <Route path="/Explore"></Route>
+        <Route path="/MyLibrary"></Route>
+        <Route path="/UserProfile"></Route>
+        <Route path="/Legal"></Route>
+        <Route path="/Contact"></Route>
+      </Switch>
+    </Router>
   );
-}
+};
 
 export default App;
