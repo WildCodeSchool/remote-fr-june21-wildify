@@ -3,7 +3,7 @@ import ArtistProfile from './ArtistProfile';
 import ArtistAlbumList from "./ArtistAlbumList";
 import ArtistBiography from './ArtistBiography';
 
-import '../style/ArtistCard.css'
+import './ArtistCard.css'
 
 const ArtistCard = ({artistId}) => {
 
@@ -16,18 +16,17 @@ const ArtistCard = ({artistId}) => {
             console.log(data.artists[0]);
             setArtist(data.artists[0]);
         })
-        }, [artistId])
+    }, [artistId])
 
     return (
         <>
-            { Artist &&
-                <div>
-                    <ArtistProfile Artist={Artist}/>
-                    <ArtistAlbumList Artist={Artist}/>
-                    <ArtistBiography Artist={Artist}/>
-                </div>
-            }
-            
+        { Artist &&
+            <div>
+                <ArtistProfile Artist={Artist}/>
+                <ArtistAlbumList Artist={Artist}/>
+                <ArtistBiography Artist={Artist}/>
+            </div>
+        }
         </>
     );
 }

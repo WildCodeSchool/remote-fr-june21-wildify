@@ -1,4 +1,4 @@
-import '../style/ArtistProfile.css'
+import './ArtistProfile.css'
 
 const ArtistProfile = ({Artist}) => {
     return (

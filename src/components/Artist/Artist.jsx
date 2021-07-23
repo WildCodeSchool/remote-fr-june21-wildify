@@ -1,5 +1,6 @@
 import ArtistCard from './ArtistCard';
-import '../style/ArtistCard.css';
+
+import './ArtistCard.css';
 
 const Artist = () => {
     const searchArtist = "Michael Jackson"
@@ -8,7 +9,7 @@ const Artist = () => {
         <div className="artist-card">
             <ArtistCard artistId={searchArtist}/>
         </div>
-);
+    );
 }
 
 export default Artist;
