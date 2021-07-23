@@ -67,14 +67,19 @@
 
 @media screen and (min-width: 680px) {
 
-    .footer {
-        display: flex;
-        justify-content: space-around;
-        align-items: center;
-        flex-direction: row;
+    .footer-container {
+        height: 5%;
+        width: 100%;
     }
 
-    .footer-container {
-        height: 20%;
+    .footer {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-direction: row;
+        margin: 15px;
+        padding: 10px;
     }
+
+
 }
