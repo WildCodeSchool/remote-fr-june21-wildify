@@ -3,16 +3,10 @@
     flex-wrap: wrap;
     margin-bottom: 0px;
     padding-top: 20px;
-    /* padding-left: 0.8vw; */
     background-color: rgb(38, 0, 53);
     border-radius: 16px 16px 0px 0px;
     justify-content: center;
 }
-
-/* .artist-album-list::after {
-    content: '';
-    flex: auto;
-    } */
 
 .albums-pages{
     display: flex;

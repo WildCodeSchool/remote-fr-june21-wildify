@@ -21,8 +21,7 @@ const ArtistAlbumList = ({ Artist }) => {
     useEffect(() => {
         fetch(`https://theaudiodb.com/api/v1/json/1/album.php?i=${Artist.idArtist}`)
         .then(response => response.json())
-        .then(data => {setAlbumList(data.album);
-            })
+        .then(data => setAlbumList(data.album))
     }, [Artist])
 
     return (

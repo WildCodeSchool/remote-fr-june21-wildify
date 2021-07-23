@@ -12,10 +12,7 @@ const ArtistCard = ({artistId}) => {
     useEffect(() => {
         fetch(`https://theaudiodb.com/api/v1/json/1/search.php?s=${artistId}`)
         .then(response => response.json())
-        .then(data => {
-            console.log(data.artists[0]);
-            setArtist(data.artists[0]);
-        })
+        .then(data => setArtist(data.artists[0]))
     }, [artistId])
 
     return (
