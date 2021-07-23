@@ -5,6 +5,7 @@ import { useEffect, useState } from 'react';
 import Explore from './Components/Explore/Explore.jsx'
 import Navbar from "./components/Navbar/Navbar";
 import Footer from "./components/Footer/Footer";
+import Legal from './components/Legal';
 
 import "./App.css";
 
@@ -32,7 +33,9 @@ const App = () => {
         </Route>
         <Route path="/MyLibrary"></Route>
         <Route path="/UserProfile"></Route>
-        <Route path="/Legal"></Route>
+        <Route path="/Legal">
+          <Legal/>
+        </Route>
         <Route path="/Contact"></Route>
       </Switch>
     </Router>
