@@ -1,5 +1,5 @@
 import React from "react";
-import { BrowserRouter, NavLink } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import home from './home.png';
 import explore from './explore.png';
 import myLibrary from './mylibrary.png';
@@ -10,8 +10,6 @@ import './Navbar.css'
 const Navbar = () => {
 
     return (
-    <BrowserRouter>
-    
         <div className="navbar-items">
             <nav>
                 <NavLink className="nav-buttons" to="/Home" >
@@ -28,8 +26,6 @@ const Navbar = () => {
                 </NavLink>
             </nav>
         </div>
-    
-    </BrowserRouter>
     )
 
 }

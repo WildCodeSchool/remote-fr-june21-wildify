@@ -1,6 +1,6 @@
 
 import React from "react";
-import { BrowserRouter, NavLink } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import Facebook from './facebook.png';
 import Insta from './instagram.png';
 
@@ -8,7 +8,7 @@ import './Footer.css'
 
 const Footer = () => {
     return (
-        <BrowserRouter>
+        
             <footer className="footer-container">
                 <nav className="footer">
                     <div className="footer-logos">
@@ -25,7 +25,7 @@ const Footer = () => {
                     </div>
                 </nav>
             </footer>
-        </BrowserRouter>
+        
     )
 }
 
