@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import ArtistCard from './ArtistCard'
+import ExploreArtistCard from './ExploreArtistCard'
 
 import './Explore.css';
 
@@ -23,11 +23,11 @@ const Explore = ({ selectArtist }) => {
       <h2>Search</h2>
       <input type="text" value={search} onChange={event => setSearch(event.target.value)} />
 
-      <div className="CardContainer">
+      <div className="ExploreCardContainer">
         { artistList === null
           ? <div>Wait...</div>
           : artistList.map((artist) => (
-            <ArtistCard key={artist.idArtist} artist={artist}  selectArtist={selectArtist} />
+            <ExploreArtistCard key={artist.idArtist} artist={artist}  selectArtist={selectArtist} />
           ))
         }
       </div>
