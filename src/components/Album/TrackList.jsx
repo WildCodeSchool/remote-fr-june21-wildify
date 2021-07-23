@@ -1,9 +1,7 @@
 import React from 'react';
 import './Album.css';
 
-const TrackList = ({tracklist}) => {
-
-    return (
+const TrackList = ({ tracklist }) => (
     <>
         <div className="track-list-bloc">
             <h3>Liste des pistes</h3>
@@ -27,7 +25,6 @@ const TrackList = ({tracklist}) => {
             </div>
         </div>
     </>
-    );
-}
+)
 
 export default TrackList;
