@@ -1,7 +1,7 @@
 import React from "react";
 import Navbar from './components/Navbar/Navbar';
 import Footer from './components/Footer/Footer';
-import Contact from './components/Contact/Contact';
+
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 
 
@@ -29,7 +29,7 @@ const App = () => {
         <Route path="/Legal">
           </Route>
         <Route path="/Contact">
-          <Contact />
+        
         </Route>
        </Switch>
     </Router>
