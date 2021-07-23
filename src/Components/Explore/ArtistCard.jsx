@@ -1,8 +1,6 @@
 import './ArtistCard.css'
 
-const Artiste = ({ artist, selectArtist }) => {
-
-  return (
+const ArtisteCard = ({ artist, selectArtist }) => (
     <div className="ArtistCard" onClick={() => selectArtist(artist)}>
       <h3>{artist.strArtist}</h3>
       <div className="ArtistCardContent">
@@ -15,6 +13,5 @@ const Artiste = ({ artist, selectArtist }) => {
       </div>
     </div>
   );
-}
 
-export default Artiste;
+export default ArtisteCard;

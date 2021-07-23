@@ -6,20 +6,14 @@ const App = () => {
 
   const [selectedArtist, setSelectedArtist] = useState(null)
 
-/* useEffect qui permets de console.log le state selectedArtist
-   lorsque l'user clique sur l'artiste de son choix. */
-
+  // useEffect qui permets de console.log le state selectedArtist lorsque l'user clique sur l'artiste de son choix.
   useEffect(() => {
     console.log(selectedArtist);
   }, [selectedArtist])
 
 
-/* selectArtist Function qui permets de set le state SelectedArtist
-   avec l'artiste cliquer dans le composant Explore/ArtistCard */
-
-  const selectArtist = (Artist) => {
-    setSelectedArtist(Artist)
-  }
+  // selectArtist Function qui permets de set le state SelectedArtist avec l'artiste cliquer dans le composant Explore/ArtistCard.
+  const selectArtist = Artist => setSelectedArtist(Artist)
 
   return (
     <div className="app">

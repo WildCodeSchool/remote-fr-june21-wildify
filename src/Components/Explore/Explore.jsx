@@ -5,16 +5,17 @@ import './Explore.css';
 
 const Explore = ({ selectArtist }) => {
 
-  const [search, setSearch] = useState('');         // Valeur de la recherche dans la barre de recherche
-  const [artistList, setArtistList] = useState([]);   // Reponse du call API avec search
+  // Valeur de la recherche dans la barre de recherche
+  const [search, setSearch] = useState('');
+
+  // Reponse du call API avec search
+  const [artistList, setArtistList] = useState([]);
 
   // Call API avec Valeur du search
   useEffect(() => {
     fetch(`https://theaudiodb.com/api/v1/json/1/search.php?s=${search}`)
       .then(response => response.json())
-      .then(data => {
-        setArtistList(data.artists)
-      })
+      .then(data => setArtistList(data.artists))
   },[search])
 
   return (
