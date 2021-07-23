@@ -2,11 +2,14 @@ import React from 'react';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import { useEffect, useState } from 'react';
 
-import Explore from './Components/Explore/Explore'
-import Navbar from "./components/Navbar/Navbar";
-import Footer from "./components/Footer/Footer";
+import Explore from './components/Explore/Explore'
+import Artist from './components/Artist/Artist';
+import Navbar from './components/Navbar/Navbar';
+import Footer from './components/Footer/Footer';
+import Legal from './components/Legal';
+import Album from './components/Album/Album';
 
-import "./App.css";
+import './App.css';
 
 const App = () => {
 
@@ -24,15 +27,22 @@ const App = () => {
     <Router>
       <Footer />
       <Navbar />
-
       <Switch>
         <Route exact path="/"></Route>
         <Route path="/Explore">
           <Explore selectArtist={selectArtist} />
         </Route>
+        <Route path="/Artist">
+          <Artist />
+        </Route>
+        <Route path="/Album">
+          <Album/>
+        </Route>
         <Route path="/MyLibrary"></Route>
         <Route path="/UserProfile"></Route>
-        <Route path="/Legal"></Route>
+        <Route path="/Legal">
+          <Legal/>
+        </Route>
         <Route path="/Contact"></Route>
       </Switch>
     </Router>

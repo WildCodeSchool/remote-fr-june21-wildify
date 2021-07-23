@@ -1,0 +1,23 @@
+.artist-album{
+    display: flex;
+    flex-direction: column;
+    width: 17%;
+    margin: 10px 5px;
+    padding: 5px;
+}
+
+.artist-album img{
+    opacity: 0.8;
+    width: 100%;
+}
+
+.artist-album img:hover{
+    opacity: 1.0;
+}
+
+.artist-album p{
+    font-size: medium;
+    margin: 0px;
+}
+
+
