@@ -1,6 +1,6 @@
 
 import React from "react";
-import { BrowserRouter, NavLink, Route, Switch } from "react-router-dom";
+import { BrowserRouter, NavLink } from "react-router-dom";
 import Facebook from './facebook.png';
 import Insta from './instagram.png';
 
