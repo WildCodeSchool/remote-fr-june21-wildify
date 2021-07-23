@@ -1,8 +1,7 @@
 import React from 'react';
 import './Legal.css';
 
-const Legal = () => {
-    return(
+const Legal = () => (
         <>
             <section className="bloc-infos">
             <h2>Mentions Légales</h2>
@@ -38,9 +37,6 @@ const Legal = () => {
                 </article>
             </section>
         </>
-    );
-}
-
-//Manque navbar
+    )
 
 export default Legal;
