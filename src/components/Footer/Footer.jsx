@@ -6,8 +6,7 @@ import Insta from './instagram.png';
 
 import './Footer.css'
 
-const Footer = () => {
-    return (
+const Footer = () => (
         
             <footer className="footer-container">
                 <nav className="footer">
@@ -26,7 +25,7 @@ const Footer = () => {
                 </nav>
             </footer>
         
-    )
-}
+ )
+
 
 export default Footer;

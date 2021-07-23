@@ -7,9 +7,7 @@ import UserProfile from './userprofile.png';
 
 import './Navbar.css'
 
-const Navbar = () => {
-
-    return (
+const Navbar = () => (
         <div className="navbar-items">
             <nav>
                 <NavLink className="nav-buttons" to="/Home" >
@@ -26,8 +24,8 @@ const Navbar = () => {
                 </NavLink>
             </nav>
         </div>
-    )
+)
 
-}
+
 
 export default Navbar;

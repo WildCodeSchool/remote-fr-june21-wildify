@@ -10,13 +10,9 @@ import './App.css';
 const App = () => {
   return (
     <Router>
-       <>
         <Footer />
-      </>
-      <>
         <Navbar />
-      </>
-
+      
       <Switch>
         <Route exact path="/">
          </Route>
