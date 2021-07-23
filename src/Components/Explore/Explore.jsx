@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react';
+
 import ExploreArtistCard from './ExploreArtistCard'
 
 import './Explore.css';
