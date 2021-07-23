@@ -6,6 +6,7 @@ import Explore from './Components/Explore/Explore.jsx'
 import Navbar from "./components/Navbar/Navbar";
 import Footer from "./components/Footer/Footer";
 import Legal from './components/Legal';
+import Album from './components/Album/Album';
 
 import "./App.css";
 
@@ -30,6 +31,9 @@ const App = () => {
         <Route exact path="/"></Route>
         <Route path="/Explore">
           <Explore selectArtist={selectArtist} />
+        </Route>
+        <Route path="/Album">
+          <Album/>
         </Route>
         <Route path="/MyLibrary"></Route>
         <Route path="/UserProfile"></Route>
