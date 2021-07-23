@@ -1,21 +1,21 @@
-.album{
+.artist-album{
     display: flex;
     flex-direction: column;
-    width: 18%;
-    /* background-color: #fcc228; */
+    width: 17%;
     margin: 10px 5px;
     padding: 5px;
 }
 
-.album img{
+.artist-album img{
     opacity: 0.8;
+    width: 100%;
 }
 
-.album img:hover{
-    opacity: 1;
+.artist-album img:hover{
+    opacity: 1.0;
 }
 
-.album p{
+.artist-album p{
     font-size: medium;
     margin: 0px;
 }

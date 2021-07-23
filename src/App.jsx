@@ -1,11 +1,11 @@
 // import { BrowserRouter as Router, Link, Route, Switch } from 'react-router-dom';
-import ArtistCard from './components/Artist/ArtistCard';
-import './components/style/App.css';
+import Artist from './components/Artist/Artist';
+import './App.css';
 
 const App = () => {
   return (
     <div className="app">
-      <ArtistCard />
+      <Artist />
     </div>
   );
 }

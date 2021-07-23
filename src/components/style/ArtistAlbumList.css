@@ -1,9 +1,37 @@
 .artist-album-list {
     display: flex;
     flex-wrap: wrap;
+    margin-bottom: 0px;
+    padding-top: 20px;
+    /* padding-left: 0.8vw; */
     background-color: rgb(38, 0, 53);
-    margin: 10px 10px;
-    border-radius: 16px;
-    /* align-items: center; */
+    border-radius: 16px 16px 0px 0px;
     justify-content: center;
+}
+
+/* .artist-album-list::after {
+    content: '';
+    flex: auto;
+    } */
+
+.albums-pages{
+    display: flex;
+    flex-direction: row;
+    margin: 0px 10px;
+    background-color: rgb(38, 0, 53);
+    border-radius: 0px 0px 16px 16px;
+    justify-content: center;
+    text-align: center;
+}
+
+.albums-pages p{
+    width: 100px;
+    font-size: large;
+    color: #fcc228;
+    opacity: 0.8;
+}
+
+.albums-pages p:hover{
+    cursor: pointer;
+    opacity: 1.0;
 }
