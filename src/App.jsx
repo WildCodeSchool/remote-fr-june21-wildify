@@ -1,35 +1,27 @@
 import React from "react";
-import Navbar from './components/Navbar/Navbar';
-import Footer from './components/Footer/Footer';
+import Navbar from "./components/Navbar/Navbar";
+import Footer from "./components/Footer/Footer";
 
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 
-
-import './App.css';
+import "./App.css";
 
 const App = () => {
   return (
     <Router>
-        <Footer />
-        <Navbar />
-      
+      <Footer />
+      <Navbar />
+
       <Switch>
-        <Route exact path="/">
-         </Route>
-        <Route path="/Explore">
-         </Route>
-        <Route path="/MyLibrary">
-         </Route>
-        <Route path="/UserProfile">
-         </Route>
-        <Route path="/Legal">
-          </Route>
-        <Route path="/Contact">
-        
-        </Route>
-       </Switch>
+        <Route exact path="/"></Route>
+        <Route path="/Explore"></Route>
+        <Route path="/MyLibrary"></Route>
+        <Route path="/UserProfile"></Route>
+        <Route path="/Legal"></Route>
+        <Route path="/Contact"></Route>
+      </Switch>
     </Router>
   );
-}
+};
 
 export default App;
