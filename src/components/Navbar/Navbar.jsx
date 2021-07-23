@@ -1,5 +1,5 @@
 import React from "react";
-import { BrowserRouter, NavLink, Route, Switch } from "react-router-dom";
+import { BrowserRouter, NavLink } from "react-router-dom";
 import home from './home.png';
 import explore from './explore.png';
 import myLibrary from './mylibrary.png';
@@ -28,17 +28,6 @@ const Navbar = () => {
                 </NavLink>
             </nav>
         </div>
-  
-       <Switch>
-         <Route exact path="/">
-         </Route>
-         <Route path="/Explore">
-         </Route>
-         <Route path="/MyLibrary">
-         </Route>
-         <Route path="/UserProfile">
-         </Route>
-       </Switch>
     
     </BrowserRouter>
     )

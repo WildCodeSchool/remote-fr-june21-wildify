@@ -1,7 +1,6 @@
 
 import React from "react";
 import { BrowserRouter, NavLink, Route, Switch } from "react-router-dom";
-import Contact from "../Contact/Contact"
 import Facebook from './facebook.png';
 import Insta from './instagram.png';
 
@@ -26,14 +25,6 @@ const Footer = () => {
                     </div>
                 </nav>
             </footer>
-
-            <Switch>
-                <Route path="/Legal">
-                </Route>
-                <Route path="/Contact">
-                    <Contact />
-                </Route>
-            </Switch>
         </BrowserRouter>
     )
 }
