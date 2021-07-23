@@ -14,10 +14,10 @@ const Footer = () => {
                 <nav className="footer">
                     <div className="footer-logos">
                         <a href="https://facebook.com/wildify">
-                        <img className="logo" src={Facebook} alt="facebook logo" ></img>
+                        <img className="logo" src={Facebook} alt="facebook logo" />
                         </a>
                         <a href="https://instagram.com/wildify">
-                        <img className="logo" src={Insta} alt="insta logo"></img>
+                        <img className="logo" src={Insta} alt="insta logo" />
                     </a>
                     </div>
                     <div className="footer-links">
