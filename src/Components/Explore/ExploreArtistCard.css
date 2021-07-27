@@ -1,5 +1,6 @@
 .ExploreArtistCard {
   width: 95%;
+  height: 100%;
   background-color: #c4c4c4;
   border-radius: 5px;
   box-shadow: 0 0 2px #252525;
@@ -44,17 +45,46 @@
 }
 
 @media screen and (min-width: 400px) {
+  .ExploreArtistCardInfo {
+    margin-left: 15%;
+  }
   .ExploreArtistCardInfo p {
-    font-size: 1rem;
+    font-size: 4vw;
+  }
+  .ExploreArtistCardContent img {
+    margin-left: 5%;
   }
 }
 
 @media screen and (min-width: 620px) {
-  .ExploreArtistCard {
-    width: 45%;
-  }
-
   .ExploreArtistCardInfo {
     width: 60%;
+    margin-left: 0;
+  }
+
+  .ExploreArtistCardInfo p {
+    font-size: 2vw;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .ExploreArtistCard {
+    width: 100%;
+  }
+
+  .ExploreArtistCardContent {
+    flex-direction: column;
+  }
+  .ExploreArtistCardInfo {
+    width: 100%;
+    text-align: center;
+    margin-top: 5px;
+  }
+  .ExploreArtistCardInfo p {
+    font-size: 1.2vw;
+  }
+  .ExploreArtistCardContent img {
+    margin: 5px 0;
+    width: 35%;
   }
 }

@@ -15,11 +15,21 @@
 .Explore input {
   margin-bottom: 35px;
   width: 60%;
+  height: 28px;
+  padding: 2px 30px 2px 10px;
   border: 2px solid #FFC045;
   border-radius: 5px;
-  background-color: #c4c4c4;
   box-shadow: 0 0 2px #252525;
+  position: relative;
+  background: url('../../assets/explore.png') no-repeat;
+  background-size: 30px;
+  background-position-x: 99.5%;
+  background-position-y: 1px;
+  background-color: #c4c4c4;
 }
+
+
+
 
 .ExploreCardContainer {
   width: 95%;
@@ -33,5 +43,14 @@
 @media screen and (min-width: 620px) {
   .ExploreCardContainer {
     flex-direction: row;
+  }
+  .ExploreCardContainer a {
+    width: 45%;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .ExploreCardContainer a {
+    width: 20%;
   }
 }

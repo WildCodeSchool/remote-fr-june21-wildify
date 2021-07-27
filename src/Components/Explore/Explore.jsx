@@ -15,15 +15,18 @@ const Explore = ({ selectArtist }) => {
 
   // Call API avec Valeur du search
   useEffect(() => {
-    fetch(`https://theaudiodb.com/api/v1/json/1/search.php?s=${search}`)
+    const timer = setTimeout(() => {
+      fetch(`https://theaudiodb.com/api/v1/json/1/search.php?s=${search}`)
       .then(response => response.json())
       .then(data => setArtistList(data.artists))
+    }, 800)
+    return () => clearTimeout(timer)
   },[search])
 
   return (
     <div className="Explore">
       <h2>Search</h2>
-      <input type="text" value={search} onChange={event => setSearch(event.target.value)} />
+      <input type="text" minLength='1' maxlength="50" value={search} onChange={(event) => {setSearch(event.target.value)}}/>
 
       <div className="ExploreCardContainer">
         { artistList === null
