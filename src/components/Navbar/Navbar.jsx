@@ -8,7 +8,7 @@ import UserProfile from "./userprofile.png";
 import "./Navbar.css";
 
 const Navbar = () => (
-  <div className="navbar-items">
+  <div className="navbar-container">
     <nav>
       <NavLink className="nav-buttons" to="/Home">
         <img className="nav-logo" src={home} alt="Home" />

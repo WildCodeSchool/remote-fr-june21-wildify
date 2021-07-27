@@ -1,13 +1,13 @@
-.navbar-items {
+.navbar-container {
   padding: 5px;
   background-color: #414141;
   display: flex;
   justify-content: space-around;
   align-items: center;
-  position: fixed;
-  bottom: 0;
+  position: absolute;
+  top: 0;
   width: 100%;
-  height: 60px;
+  height: 10vh;
 }
 
 .nav-logo:hover {
@@ -27,5 +27,21 @@
   color: #c4c4c4;
   padding: 6px;
   background-color: #414141;
-  margin: 12px;
+  margin: 10px;
+}
+
+/* Responsive Design */
+
+@media screen and (max-width:700px) {
+  .navbar-container {
+    position: absolute;
+    top: 78vh;
+    height: 10vh;
+    display: flex;
+    justify-content: space-around;
+  }
+
+  .nav-logo {
+    margin: 8px;
+  }
 }
