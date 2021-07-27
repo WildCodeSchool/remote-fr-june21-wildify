@@ -2,12 +2,12 @@ import React from 'react';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import { useEffect, useState } from 'react';
 
-import Explore from './components/Explore/Explore'
-import Artist from './components/Artist/Artist';
-import Navbar from './components/Navbar/Navbar';
-import Footer from './components/Footer/Footer';
-import Legal from './components/Legal';
-import Album from './components/Album/Album';
+import Explore from './Components/Explore/Explore'
+import Artist from './Components/Artist/Artist';
+import Navbar from './Components/Navbar/Navbar';
+import Footer from './Components/Footer/Footer';
+import Legal from './Components/Legal';
+import Album from './Components/Album/Album';
 
 import './App.css';
 
@@ -36,7 +36,7 @@ const App = () => {
           <Artist />
         </Route>
         <Route path="/Album">
-          <Album/>
+          <Album />
         </Route>
         <Route path="/MyLibrary"></Route>
         <Route path="/UserProfile"></Route>
