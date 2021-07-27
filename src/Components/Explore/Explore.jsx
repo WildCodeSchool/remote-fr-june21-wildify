@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react';
+import { NavLink } from 'react-router-dom';
 
 import ExploreArtistCard from './ExploreArtistCard'
 
@@ -28,7 +29,7 @@ const Explore = ({ selectArtist }) => {
         { artistList === null
           ? <div>Wait...</div>
           : artistList.map((artist) => (
-            <ExploreArtistCard key={artist.idArtist} artist={artist}  selectArtist={selectArtist} />
+            <NavLink to="/artist"><ExploreArtistCard key={artist.idArtist} artist={artist}  selectArtist={selectArtist} /></NavLink>
           ))
         }
       </div>
