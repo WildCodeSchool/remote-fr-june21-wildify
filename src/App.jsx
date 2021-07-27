@@ -8,6 +8,7 @@ import Navbar from './Components/Navbar/Navbar';
 import Footer from './Components/Footer/Footer';
 import Legal from './Components/Legal';
 import Album from './Components/Album/Album';
+import Contact from './Components/Contact/Contact'
 
 import './App.css';
 
@@ -25,7 +26,6 @@ const App = () => {
 
   return (
     <Router>
-      <Footer />
       <Navbar />
       <Switch>
         <Route exact path="/"></Route>
@@ -43,8 +43,11 @@ const App = () => {
         <Route path="/Legal">
           <Legal/>
         </Route>
-        <Route path="/Contact"></Route>
+        <Route path="/Contact">
+          <Contact />
+        </Route>
       </Switch>
+      <Footer />
     </Router>
   );
 };

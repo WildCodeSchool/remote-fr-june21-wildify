@@ -2,6 +2,7 @@ import React from "react";
 import { NavLink } from "react-router-dom";
 import Facebook from "./facebook.png";
 import Insta from "./instagram.png";
+import Twitter from "./twitter.png"
 
 import "./Footer.css";
 
@@ -14,6 +15,9 @@ const Footer = () => (
         </a>
         <a href="https://instagram.com/wildify">
           <img className="logo" src={Insta} alt="insta logo" />
+        </a>
+        <a href="https://twitter.com/wildify">
+          <img className="logo" src={Twitter} alt="twitter logo" />
         </a>
       </div>
       <div className="footer-links">
