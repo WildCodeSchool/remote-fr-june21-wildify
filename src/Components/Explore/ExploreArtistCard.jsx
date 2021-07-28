@@ -1,17 +1,12 @@
-import './ExploreArtistCard.css'
+import { NavLink } from 'react-router-dom';
+import './ExploreCard.css'
 
-const ExploreArtistCard = ({ artist, selectArtist }) => (
-    <div className="ExploreArtistCard" onClick={() => selectArtist(artist)}>
-      <h3>{artist.strArtist}</h3>
-      <div className="ExploreArtistCardContent">
-      <img src={artist.strArtistThumb} alt={`Img of ${artist.strArtist}`} />
-      <div className="ExploreArtistCardInfo">
-        <p>Genre : {artist.strGenre}</p>
-        <p>Former en : {artist.intFormedYear}</p>
-        <p>{artist.strCountry}</p>
-      </div>
-      </div>
+const ExploreArtistCard = ({ artist }) => (
+  <NavLink to={`/artist/${artist.name}`} >
+    <div className="ExploreCard">
+      <img src={artist.image[2]['#text']} alt={`Img of ${artist.name}`} />
+      <h>{artist.name}</h>
     </div>
+  </NavLink>
   );
-
 export default ExploreArtistCard;
