@@ -34,8 +34,8 @@ const Contact = () => {
       };
       return (
         <div>
-          <h1 className="form-h1">Formulaire de contact @Wildify</h1>
           <form className="form-container" onSubmit={submit} onReset={onReset}>
+            <h1 className="form-h1">Formulaire de contact @Wildify</h1>
             <div className="form-label">
               <label className="form-title">Name</label>
               <input className="form-input"
