@@ -38,7 +38,7 @@ const Explore = () => {
       <h1>Search</h1>
       <input type="text" minLength='1' maxlength="50" value={search} onChange={(event) => {setSearch(event.target.value)}}/>
 
-      <h2>Artist</h2>
+      {search && <h2>Artist</h2>}
       <div className="ExploreCardContainer">
         { !(artistList === null) && artistList.map((artist) => (
             <ExploreArtistCard key={artist.mbid} artist={artist} />
@@ -46,7 +46,7 @@ const Explore = () => {
         }
       </div>
 
-      <h2>Album</h2>
+      {search && <h2>Album</h2>}
       <div className="ExploreCardContainer">
         { !(albumList === undefined || albumList === null || albumList.length === 0) && albumList.albummatches.album.map((album) => (
             <ExploreAlbumCard key={album.mbid} album={album} />
@@ -54,7 +54,7 @@ const Explore = () => {
         }
       </div>
 
-      <h2>Track</h2>
+      {search && <h2>Track</h2>}
       <div className="ExploreCardContainer">
         {!(trackList === undefined || trackList === null || trackList.length === 0) && trackList.trackmatches.track.map((track) => (
             <ExploreTrackCard key={track.mbid} track={track} />
