@@ -1,3 +1,4 @@
+import React from 'react';
 import './ExploreArtistCard.css'
 
 const ExploreArtistCard = ({ artist, selectArtist }) => (

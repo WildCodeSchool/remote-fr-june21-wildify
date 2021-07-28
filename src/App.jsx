@@ -2,7 +2,7 @@ import React from "react";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import { useEffect, useState } from 'react';
 
-import Explore from './Components/Explore/Explore.jsx'
+import Explore from './components/Explore/Explore'
 import Navbar from "./components/Navbar/Navbar";
 import Footer from "./components/Footer/Footer";
 import Legal from './components/Legal';
