@@ -8,7 +8,18 @@ body {
     align-items: center;
     flex-direction: column;
     height: 85%;
-    margin-top: 120px;
+    margin-top: 75px;
+    margin-bottom: 60px;
+}
+
+.form-h1 {
+    display: block;
+    text-align: center;
+    margin-top: 50px;
+    font-size: 40px;
+    font-weight: bold;
+    color: #ffc228;
+    font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
 }
 
 .form-label {
@@ -16,7 +27,6 @@ body {
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    border: 2px solid #ffc228;
     font-weight: bold;
     padding: 5px;
     margin: 15px;
@@ -62,8 +72,21 @@ body {
     border-radius: 12%;
     padding: 5px;
     border-radius: 8px;
-    border-radius: 8px;
     background: #ffc228;
-    box-shadow:  10px 10px 18px #916f17,
-             -10px -10px 18px #ffff39;
+    box-shadow:  6px 6px 7px #cc9b20,
+             -6px -6px 7px #ffe930;
+}
+
+
+
+@media screen and (max-width: 700px) {
+    .form-label {
+        width: 80%;
+        margin-top: 30px;
+    }
+
+    .form-container {
+        margin-bottom: 30px;
+        margin-top: 70px;
+    }
 }

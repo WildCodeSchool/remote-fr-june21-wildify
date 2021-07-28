@@ -8,7 +8,8 @@ import "./Footer.css";
 
 const Footer = () => (
   <footer className="footer-container">
-    <nav className="footer">
+    <nav>
+      <div className="footer">
       <div className="footer-logos">
         <a href="https://facebook.com/wildify">
           <img className="logo" src={Facebook} alt="facebook logo" />
@@ -27,6 +28,7 @@ const Footer = () => (
         <NavLink className="footer-buttons" to="/Contact">
           Contactez-nous
         </NavLink>
+      </div>
       </div>
     </nav>
   </footer>

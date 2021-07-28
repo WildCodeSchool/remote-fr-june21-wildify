@@ -34,6 +34,7 @@ const Contact = () => {
       };
       return (
         <div>
+          <h1 className="form-h1">Formulaire de contact @Wildify</h1>
           <form className="form-container" onSubmit={submit} onReset={onReset}>
             <div className="form-label">
               <label className="form-title">Name</label>
@@ -54,8 +55,10 @@ const Contact = () => {
                 onChange={(e) => setMessage(e.target.value)}
               ></textarea>
             </div>
-            <button className="button-contact" type="submit">submit</button>
-            <button className="button-contact" type="reset">reset</button>
+            <div classname="button-container">
+                <button className="button-contact" type="submit">submit</button>
+                <button className="button-contact" type="reset">reset</button>
+            </div>
           </form>
         </div>
       );
