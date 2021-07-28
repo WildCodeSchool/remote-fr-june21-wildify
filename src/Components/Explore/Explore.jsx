@@ -1,5 +1,4 @@
 import { useEffect, useState } from 'react';
-import { NavLink } from 'react-router-dom';
 
 import ExploreArtistCard from './ExploreArtistCard'
 import ExploreAlbumCard from './ExploreAlbumCard'
@@ -7,7 +6,7 @@ import ExploreTrackCard from './ExploreTrackCard'
 
 import './Explore.css';
 
-const Explore = ({ selectArtist, selectAlbum, selectTrack}) => {
+const Explore = () => {
   // Valeur de la recherche dans la barre de recherche
   const [search, setSearch] = useState('');
 
@@ -41,24 +40,24 @@ const Explore = ({ selectArtist, selectAlbum, selectTrack}) => {
 
       <h2>Artist</h2>
       <div className="ExploreCardContainer">
-        { !(artistList === null) && artistList.map((artist, index) => (
-            <NavLink to="/artist"><ExploreArtistCard key={index} artist={artist}  selectArtist={selectArtist} /></NavLink>
+        { !(artistList === null) && artistList.map((artist) => (
+            <ExploreArtistCard key={artist.mbid} artist={artist} />
           ))
         }
       </div>
 
       <h2>Album</h2>
       <div className="ExploreCardContainer">
-        { !(albumList === undefined || albumList === null || albumList.length === 0) && albumList.albummatches.album.map((album, index) => (
-            <NavLink to="/album"><ExploreAlbumCard key={index} album={album}  selectAlbum={selectAlbum} /></NavLink>
+        { !(albumList === undefined || albumList === null || albumList.length === 0) && albumList.albummatches.album.map((album) => (
+            <ExploreAlbumCard key={album.mbid} album={album} />
           ))
         }
       </div>
 
       <h2>Track</h2>
       <div className="ExploreCardContainer">
-        {!(trackList === undefined || trackList === null || trackList.length === 0) && trackList.trackmatches.track.map((track, index) => (
-            <NavLink to="/track"><ExploreTrackCard key={index} track={track}  selectTrack={selectTrack} /></NavLink>
+        {!(trackList === undefined || trackList === null || trackList.length === 0) && trackList.trackmatches.track.map((track) => (
+            <ExploreTrackCard key={track.mbid} track={track} />
           ))
         }
       </div>

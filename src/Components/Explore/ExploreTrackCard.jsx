@@ -1,10 +1,13 @@
+import { NavLink } from 'react-router-dom';
 import './ExploreCard.css'
 
-const ExploreTrackCard = ({ track, selectTrack }) => (
-    <div className="ExploreCard" onClick={() => selectTrack(track)}>
+const ExploreTrackCard = ({ track }) => (
+  <NavLink to={`/track/${track.name}`}>
+    <div className="ExploreCard">
       <img src={track.image[2]['#text']} alt={`Img of ${track.name}`} />
       <h3>{track.name}</h3>
     </div>
+  </NavLink>
   );
 
 export default ExploreTrackCard;
