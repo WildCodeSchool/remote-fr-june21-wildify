@@ -37,13 +37,14 @@
 
 @media screen and (max-width:700px) {
   .navbar-container {
-    position: absolute;
+    position: fixed;
     bottom: 0;
     height: 10vh;
     display: flex;
     justify-content: center;
-    align-items: center;
-    margin-left: 50px;
+    align-self: center;
+    width: 100%;
+    z-index: 10;
   }
 
   .nav-logo {
