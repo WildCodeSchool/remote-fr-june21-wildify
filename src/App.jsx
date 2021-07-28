@@ -2,13 +2,14 @@ import React from 'react';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import { useEffect, useState } from 'react';
 
-import Explore from './components/Explore/Explore'
+import Album from './components/Album/Album';
 import Artist from './components/Artist/Artist';
-import Navbar from './components/Navbar/Navbar';
+import Explore from './components/Explore/Explore';
 import Footer from './components/Footer/Footer';
 import Legal from './components/Legal';
-import Album from './components/Album/Album';
 import Contact from './components/Contact/Contact'
+import Navbar from './components/Navbar/Navbar'
+import Track from './components/Track/Track'
 
 import './App.css';
 
@@ -37,6 +38,9 @@ const App = () => {
         </Route>
         <Route path="/Album">
           <Album />
+        </Route>
+        <Route path="/Track">
+          <Track />
         </Route>
         <Route path="/MyLibrary"></Route>
         <Route path="/UserProfile"></Route>
