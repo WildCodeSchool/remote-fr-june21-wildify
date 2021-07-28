@@ -1,5 +1,7 @@
-import React from 'react'
-import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
+
+import React from 'react';
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+import { useEffect, useState } from 'react';
 
 import Album from './components/Album/Album'
 import Artist from './components/Artist/Artist'
@@ -24,9 +26,9 @@ const App = () => {
         <Route path="/artist">
           <Artist />
         </Route>
-        <Route path="/album">
-          <Album/>
-        </Route>
+        <Route path="/Album">
+          <Album />
+        </route>
         <Route path="/track">
           <Track />
         </Route>
@@ -35,7 +37,9 @@ const App = () => {
         <Route path="/legal">
           <Legal/>
         </Route>
-        <Route path="/contact"></Route>
+        <Route path="/Contact">
+          <Contact />
+        </Route>
       </Switch>
       <Footer />
     </Router>
