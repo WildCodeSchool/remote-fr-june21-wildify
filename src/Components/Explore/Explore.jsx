@@ -19,17 +19,26 @@ const Explore = () => {
   // Call API avec Valeur du search
   useEffect(() => {
     // const timer = setTimeout(() => {
-      search && fetch(`http://ws.audioscrobbler.com/2.0/?method=artist.search&artist=${search}&api_key=${process.env.REACT_APP_API_KEY}&limit=16&format=json`)
-      .then(response => response.json())
-      .then(data => setArtistList(data.results.artistmatches.artist))
+      const getArtist = () => {
+        fetch(`http://ws.audioscrobbler.com/2.0/?method=artist.search&artist=${search}&api_key=${process.env.REACT_APP_API_KEY}&limit=16&format=json`)
+          .then(response => response.json())
+          .then(data => setArtistList(data.results.artistmatches.artist))
+      }
+      search && getArtist()
 
-      search && fetch(`http://ws.audioscrobbler.com/2.0/?method=album.search&album=${search}&api_key=${process.env.REACT_APP_API_KEY}&limit=16&format=json`)
-      .then(response => response.json())
-      .then(data => setAlbumList(data.results))
+      const getAlbum = () => {
+        fetch(`http://ws.audioscrobbler.com/2.0/?method=album.search&album=${search}&api_key=${process.env.REACT_APP_API_KEY}&limit=16&format=json`)
+          .then(response => response.json())
+          .then(data => setAlbumList(data.results))
+      }
+      search && getAlbum()
 
-      search && fetch(`http://ws.audioscrobbler.com/2.0/?method=track.search&track=${search}&api_key=${process.env.REACT_APP_API_KEY}&limit=16&format=json`)
-      .then(response => response.json())
-      .then(data => setTrackList(data.results))
+      const getTrack = () => {
+        fetch(`http://ws.audioscrobbler.com/2.0/?method=track.search&track=${search}&api_key=${process.env.REACT_APP_API_KEY}&limit=16&format=json`)
+          .then(response => response.json())
+          .then(data => setTrackList(data.results))
+      }
+      search && getTrack()
     // }, 800)
     // return () => clearTimeout(timer)
   },[search])
@@ -41,7 +50,7 @@ const Explore = () => {
 
       {search && <h2>Artist</h2>}
       <div className="ExploreCardContainer">
-        { !(artistList === null) && artistList.map((artist) => (
+        {search && !(artistList === null) && artistList.map((artist) => (
             <ExploreArtistCard key={artist.mbid} artist={artist} />
           ))
         }
@@ -49,7 +58,7 @@ const Explore = () => {
 
       {search && <h2>Album</h2>}
       <div className="ExploreCardContainer">
-        { !(albumList === undefined || albumList === null || albumList.length === 0) && albumList.albummatches.album.map((album) => (
+        {search && !(albumList === undefined || albumList === null || albumList.length === 0) && albumList.albummatches.album.map((album) => (
             <ExploreAlbumCard key={album.mbid} album={album} />
           ))
         }
@@ -57,7 +66,7 @@ const Explore = () => {
 
       {search && <h2>Track</h2>}
       <div className="ExploreCardContainer">
-        {!(trackList === undefined || trackList === null || trackList.length === 0) && trackList.trackmatches.track.map((track) => (
+        {search && !(trackList === undefined || trackList === null || trackList.length === 0) && trackList.trackmatches.track.map((track) => (
             <ExploreTrackCard key={track.mbid} track={track} />
           ))
         }
