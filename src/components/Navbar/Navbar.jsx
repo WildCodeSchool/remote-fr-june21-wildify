@@ -12,7 +12,10 @@ import "./Navbar.css";
 
 const Navbar = () => (
   <div className="navbar-container">
+    <div className="w-logo-container">
     <img className="Wlogo" src={WildifyLogo} alt="wildify-logo"></img>
+    <p className="logo-title">Wildify</p>
+    </div>
     <div className="navbar">
       <nav>
         <NavLink className="nav-buttons" to="/Home">
