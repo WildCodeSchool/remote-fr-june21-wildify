@@ -1,0 +1,99 @@
+body {
+    background-color: #414141;
+}
+
+.form-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 85%;
+    margin-top: 25px;
+    margin-bottom: 60px;
+}
+
+.form-h1 {
+    text-align: center;
+    margin-top: 50px;
+    font-size: 40px;
+    font-weight: bold;
+    color: #ffc228;
+    font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+    border: 1px solid #ffc228;
+    width: 45%;
+}
+
+.form-label {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    font-weight: bold;
+    padding: 5px;
+    margin: 15px;
+    width: 40%;
+    border-radius: 6px;
+}
+
+.form-title {
+    font-size: 25px;
+    font-weight: bold;
+    color: #ffc228;
+    font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+    margin: 8px;
+}
+
+.form-input {
+    padding: 15px 50px;
+    border: 2px solid #0000;
+    border-radius: 6px;
+    margin-bottom: 8px;
+}
+
+.text-input {
+    padding: 30px 70px;
+    border: 2px solid #0000;
+    border-radius: 6px;
+    margin-bottom: 8px;
+}
+
+.button-contact {
+    border: 2px solid #050505;
+    padding: 5px;
+    margin: 10px;
+    border-radius: 6px;
+    width: 75px;
+    height: 45px;
+    font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+    font-size: 19px;
+}
+
+.button-contact:hover {
+    border: 1px solid #ffc228;
+    border-radius: 12%;
+    padding: 5px;
+    border-radius: 8px;
+    background: #ffc228;
+    box-shadow:  6px 6px 7px #cc9b20,
+             -6px -6px 7px #ffe930;
+}
+
+
+
+@media screen and (max-width: 700px) {
+    .form-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 30px;
+        margin-top: 70px;
+        width: 100%;
+    }
+
+    .form-h1 {
+        font-size: 28px;
+        text-align: center;
+        width: 80%;
+        margin-bottom: 30px;
+    }
+}

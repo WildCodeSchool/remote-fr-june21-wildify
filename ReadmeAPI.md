@@ -1,33 +1,96 @@
-Les routes API :
+## Last FM
+Lien documentation : https://www.last.fm/api/intro
 
-Return Artist details from artist name
-search.php?s={Artist name}
-Example - theaudiodb.com/api/v1/json/1/search.php?s=coldplay
+Lien root : http://ws.audioscrobbler.com/2.0/
 
-Return Discography for an Artist with Album names and year only
-discography.php?s={Artist_Name}
-Example - theaudiodb.com/api/v1/json/{APIKEY}/discography.php?s=coldplay
+Exemple utilisation api key .env.local:
+api_key=${process.env.REACT_APP_API_KEY}
 
-Return individul Artist details using known TADB_Artist_ID
-artist.php?i={artistid}
-Example - theaudiodb.com/api/v1/json/{APIKEY}/artist.php?i=112024
 
-Return All Albums for an Artist using known TADB_Artist_ID
-album.php?i={artistid}
-Example - theaudiodb.com/api/v1/json/{APIKEY}/album.php?i=112024
+### artist.search
 
-Return individual Album info using known TADB_Album_ID
-album.php?m={albumid}
-Example - theaudiodb.com/api/v1/json/{APIKEY}/album.php?m=2115888
+/2.0/?method=artist.search&artist=cher&api_key=YOUR_API_KEY&format=json
 
-Return All Tracks for Album from known TADB_Album_ID
-track.php?m={albumid}
-Example - theaudiodb.com/api/v1/json/{APIKEY}/track.php?m=2115888
+Params
+- limit (Optional) : The number of results to fetch per page. Defaults to 30.
+- page (Optional) : The page number to fetch. Defaults to first page.
+- artist (Required) : The artist name
+- api_key (Required) : A Last.fm API key.
 
-Return individual track info using a known TADB_Track_ID
-track.php?h={trackid}
-Example - theaudiodb.com/api/v1/json/{APIKEY}/track.php?h=32793500
+### artist.getinfo
 
-Return all the Music videos for a known TADB_Artist_ID
-mvid.php?i=(artistid}
-Example - theaudiodb.com/api/v1/json/{APIKEY}/mvid.php?i=112024
+/2.0/?method=artist.getinfo&artist=Cher&api_key=YOUR_API_KEY&format=json
+
+- Params
+- artist (Required (unless mbid) : The artist name
+- mbid (Optional) : The musicbrainz id for the artist
+- lang (Optional) : The language to return the biography in, expressed as an ISO 639 alpha-2 code.
+- autocorrect[0|1] (Optional) : Transform misspelled artist names into correct artist names, returning the correct version instead. The corrected artist name will be returned in the response.
+- username (Optional) : The username for the context of the request. If supplied, the user's playcount for this artist is included in the response.
+- api_key (Required) : A Last.fm API key.
+
+### album.search
+
+/2.0/?method=album.search&album=believe&api_key=YOUR_API_KEY&format=json
+
+Params
+- limit (Optional) : The number of results to fetch per page. Defaults to 30.
+- page (Optional) : The page number to fetch. Defaults to first page.
+- album (Required) : The album name
+- api_key (Required) : A Last.fm API key.
+
+### track.search
+
+/2.0/?method=track.search&track=Believe&api_key=YOUR_API_KEY&format=json
+
+Params
+- limit (Optional) : The number of results to fetch per page. Defaults to 30.
+- page (Optional) : The page number to fetch. Defaults to first page.
+- track (Required) : The track name
+- artist (Optional) : Narrow your search by specifying an artist.
+- api_key (Required) : A Last.fm API key.
+
+
+## Chart
+
+### chart.getTopArtists
+
+/2.0/?method=chart.gettopartists&api_key=YOUR_API_KEY&format=json
+
+Params
+- page (Optional) : The page number to fetch. Defaults to first page.
+- limit (Optional) : The number of results to fetch per page. Defaults to 50.
+- api_key (Required) : A Last.fm API key.
+
+### chart.getTopTracks
+
+/2.0/?method=chart.gettoptracks&api_key=YOUR_API_KEY&format=json
+
+Params
+- page (Optional) : The page number to fetch. Defaults to first page.
+- limit (Optional) : The number of results to fetch per page. Defaults to 50.
+- api_key (Required) : A Last.fm API key.
+
+
+## Par pays
+
+### geo.getTopArtists
+
+/2.0/?method=geo.gettopartists&country=spain&api_key=YOUR_API_KEY&format=json
+
+Params
+- country (Required) : A country name, as defined by the ISO 3166-1 country names standard
+- limit (Optional) : The number of results to fetch per page. Defaults to 50.
+- page (Optional) : The page number to fetch. Defaults to first page.
+- api_key (Required) : A Last.fm API key.
+
+### geo.getTopTracks
+
+/2.0/?method=geo.gettoptracks&country=spain&api_key=YOUR_API_KEY&format=json
+
+Params
+- country (Required) : A country name, as defined by the ISO 3166-1 country - names standard
+- location (Optional) : A metro name, to fetch the charts for (must be within - the country specified)
+- limit (Optional) : The number of results to fetch per page. Defaults to 50.
+- page (Optional) : The page number to fetch. Defaults to first page.
+- api_key (Required) : A Last.fm API key.
