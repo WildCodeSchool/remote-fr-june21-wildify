@@ -28,7 +28,35 @@
   height: 60px;
   padding: 6px;
   background-color: #414141;
-  margin: 50px;
+  margin: 10px;
+}
+
+nav {
+  display: flex;
+  align-items: center;
+}
+
+.nav-buttons {
+  display: flex;
+  flex-direction: row;
+}
+
+.nav-title {
+  color: #000;
+  margin-left: 0px;
+  margin-right: 50px;
+  font-size: 20px;
+  font-family: sans-serif;
+  display: flex;
+  align-items: center;
+}
+
+.nav-title:hover {
+  color: #ffc228;
+}
+
+.active {
+  color: #ffc228;
 }
 
 /* Responsive Design */
@@ -47,5 +75,9 @@
 
   .nav-logo {
     margin: 8px;
+  }
+
+  .nav-title {
+    display: none;
   }
 }
