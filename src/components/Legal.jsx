@@ -2,7 +2,7 @@ import React from 'react';
 import './Legal.css';
 
 const Legal = () => (
-    <>
+    <div>
         <section className="bloc-infos">
             <h2>Mentions Légales</h2>
             <article className="bloc-text">
@@ -36,7 +36,7 @@ const Legal = () => (
                 </p>
             </article>
         </section>
-    </>
+    </div>
 )
 
 export default Legal;
