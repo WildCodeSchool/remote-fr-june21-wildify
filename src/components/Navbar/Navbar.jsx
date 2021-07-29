@@ -6,10 +6,13 @@ import explore from "./explore.png";
 import myLibrary from "./mylibrary.png";
 import UserProfile from "./userprofile.png";
 
+import WildifyLogo from './wildify-logo-nav.png';
+
 import "./Navbar.css";
 
 const Navbar = () => (
   <div className="navbar-container">
+    <img className="Wlogo" src={WildifyLogo} alt="wildify-logo"></img>
     <div className="navbar">
       <nav>
         <NavLink className="nav-buttons" to="/Home">
