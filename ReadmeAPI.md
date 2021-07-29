@@ -50,6 +50,18 @@ Params
 - artist (Optional) : Narrow your search by specifying an artist.
 - api_key (Required) : A Last.fm API key.
 
+#### track.getInfo
+
+/2.0/?method=track.getInfo&api_key=YOUR_API_KEY&artist=cher&track=believe&format=json
+
+Params
+- mbid (Optional) : The musicbrainz id for the track
+- track (Required (unless mbid) : The track name
+- artist (Required (unless mbid) : The artist name
+- username (Optional) : The username for the context of the request. If supplied, the user's playcount for this track and whether they have loved the track is included in the response.
+- autocorrect[0|1] (Optional) : Transform misspelled artist and track names into correct artist and track names, returning the correct version instead. The corrected artist and track name will be returned in the response.
+- api_key (Required) : A Last.fm API key.
+
 
 ## Chart
 

@@ -7,17 +7,29 @@ import './Track.css';
 
 const Track = () => {
 
-  const { name } = useParams()
+  const { artistName, trackName } = useParams()
+  console.log('trackName:', trackName)
+  console.log('artistName:', artistName)
 
-  console.log(name);
+  const [track, setTrack] = useState([])
+  console.log('track:', track)
+
 
   useEffect(() => {
-
-  }, [])
+    const getTrack = () => {
+      fetch(`https://ws.audioscrobbler.com/2.0/?method=track.getInfo&api_key=${process.env.REACT_APP_API_KEY}&artist=${artistName}&track=${trackName}&format=json`)
+        .then((res) => res.json())
+        .then((res) => {
+          console.log('res : ', res)
+          setTrack(res)
+        })
+    }
+    getTrack()
+  },[])
 
   return (
     <div className="Track">
-      {/* <TrackProfile track={track} artist={artist} /> */}
+      <TrackProfile track={track} />
     </div>
   );
 }

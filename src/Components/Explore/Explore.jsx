@@ -18,7 +18,6 @@ const Explore = () => {
 
   // Call API avec Valeur du search
   useEffect(() => {
-    // const timer = setTimeout(() => {
       const getArtist = () => {
         fetch(`http://ws.audioscrobbler.com/2.0/?method=artist.search&artist=${search}&api_key=${process.env.REACT_APP_API_KEY}&limit=16&format=json`)
           .then(response => response.json())
@@ -39,8 +38,6 @@ const Explore = () => {
           .then(data => setTrackList(data.results))
       }
       search && getTrack()
-    // }, 800)
-    // return () => clearTimeout(timer)
   },[search])
 
   return (
