@@ -1,4 +1,4 @@
-.artist-card{
+.artistCard{
     display: flex;
     flex-direction: column;
     width:100%;
@@ -9,7 +9,7 @@
     background-color: var(--bg-color);
 }
 
-.artist-title{
+.artistTitle{
     margin: 10px;
     background-color: #fcc228;
     color: var(--bg-color);

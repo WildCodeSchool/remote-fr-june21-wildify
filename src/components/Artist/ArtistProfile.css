@@ -1,4 +1,4 @@
-.artist-profile{
+.artistProfile{
     display: flex;
     flex-direction: row;
     margin: 10px 10px;
@@ -17,18 +17,18 @@
     border-radius: 50%;
 }
 
-.artist-info{
+.artistInfo{
     width: 70%;
     align-items: center;
     text-align: left;
 }
 
-.artist-info h2{
+.artistInfo h2{
     font-size: larger;
     margin: 10px;
 }
 
-.artist-info p{
+.artistInfo p{
     font-size: large;
     margin: 0px;
 }

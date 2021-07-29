@@ -1,9 +1,9 @@
 import { useEffect, useState } from "react";
 import ArtistAlbum from './ArtistAlbum'
 
-import './ArtistAlbumList.css'
+import './ArtistAlbums.css'
 
-const ArtistAlbumList = ({ Artist }) => {
+const ArtistAlbums = ({ artist }) => {
     
     const [firstAlbum, setFirstAlbum] = useState(0);
     const [lastAlbum, setLastAlbum] = useState(10);
@@ -17,28 +17,28 @@ const ArtistAlbumList = ({ Artist }) => {
         setLastAlbum(lastAlbum + 10);
     };
     
-    const [AlbumList, setAlbumList] = useState(null);
+    const [albums, setAlbums] = useState(null);
     useEffect(() => {
-        fetch(`https://theaudiodb.com/api/v1/json/1/album.php?i=${Artist.idArtist}`)
+        fetch(`https://theaudiodb.com/api/v1/json/1/album.php?i=${artist.idArtist}`)
         .then(response => response.json())
-        .then(data => setAlbumList(data.album))
-    }, [Artist])
+        .then(data => setAlbums(data.album))
+    }, [artist])
 
     return (
         <>
-        { AlbumList
+        { albums
             ?<div>
-                <div className="artist-title">Discographie</div>
+                <div className="artistTitle">Discographie</div>
                 <div className="center">
-                    <div className="artist-album-list">
-                        {AlbumList.slice(firstAlbum, lastAlbum)
+                    <div className="artistAlbums">
+                        {albums.slice(firstAlbum, lastAlbum)
                         .map( (album) => <ArtistAlbum key={album.idAlbum} album={ album } /> )
                         }
                     </div>
                 </div>
-                <div className="albums-pages">
+                <div className="albumsPages">
                     {firstAlbum >= 10 && <p className="albums-prev" onClick={prevClick}>Prec</p>}
-                    {lastAlbum < AlbumList.length && <p className="albums-next" onClick={nextClick}>Suiv</p>}
+                    {lastAlbum < albums.length && <p className="albums-next" onClick={nextClick}>Suiv</p>}
                 </div>
             </div>
             :<div>Discographie non disponible</div>
@@ -47,4 +47,4 @@ const ArtistAlbumList = ({ Artist }) => {
     );
 }
 
-export default ArtistAlbumList;
+export default ArtistAlbums;

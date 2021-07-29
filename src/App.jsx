@@ -23,7 +23,7 @@ const App = () => {
           <Explore/>
         </Route>
         <Route path="/artist/:name">
-          <Artist />
+          <Artist/>
         </Route>
         <Route path="/Album/:name">
           <Album />

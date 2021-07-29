@@ -1,13 +1,16 @@
+import { useParams } from 'react-router-dom';
+
 import ArtistCard from './ArtistCard';
 
 import './ArtistCard.css';
 
 const Artist = () => {
-    const searchArtist = "Michael Jackson"
+    const { name } = useParams()
+    console.log(name);
 
     return (
-        <div className="artist-card">
-            <ArtistCard artistId={searchArtist}/>
+        <div className="artistCard">
+            <ArtistCard artistId={name}/>
         </div>
     );
 }

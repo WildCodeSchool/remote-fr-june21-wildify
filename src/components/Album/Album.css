@@ -5,7 +5,6 @@ body {
     display: block;
     background: linear-gradient(178deg, #f7f5f5, #ffe600);
     margin: 1vh;
-    border-radius: 20px;
 }
 .info-album-bloc-img{
     text-align:center;
