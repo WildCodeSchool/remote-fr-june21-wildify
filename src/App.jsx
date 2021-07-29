@@ -22,13 +22,13 @@ const App = () => {
         <Route path="/explore">
           <Explore/>
         </Route>
-        <Route path="/artist">
+        <Route path="/artist/:name">
           <Artist />
         </Route>
-        <Route path="/Album">
+        <Route path="/Album/:name">
           <Album />
         </Route>
-        <Route path="/track">
+        <Route path="/track/:name">
           <Track />
         </Route>
         <Route path="/myLibrary"></Route>
