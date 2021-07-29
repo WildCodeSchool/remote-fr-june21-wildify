@@ -9,6 +9,7 @@ import Footer from './components/Footer/Footer'
 import Legal from './components/Legal'
 import Navbar from './components/Navbar/Navbar'
 import Track from './components/Track/Track'
+import Contact from './components/Contact/Contact'
 
 import './App.css'
 
@@ -22,13 +23,13 @@ const App = () => {
         <Route path="/explore">
           <Explore/>
         </Route>
-        <Route path="/artist">
+        <Route path="/artist/:name">
           <Artist />
         </Route>
-        <Route path="/Album">
+        <Route path="/Album/:name">
           <Album />
         </Route>
-        <Route path="/track">
+        <Route path="/track/:name">
           <Track />
         </Route>
         <Route path="/myLibrary"></Route>
