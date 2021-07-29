@@ -1,1 +1,9 @@
+:root {
+    --bg-color: #424242;
+    font-family: 'Quicksand', sans-serif;
+}
 
+a {
+    text-decoration: none;
+    color: black;
+}

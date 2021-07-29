@@ -1,14 +1,22 @@
-.navbar-items {
+.navbar-container {
   padding: 5px;
   background-color: #414141;
+  margin-top: 8px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navbar {
   display: flex;
   justify-content: space-around;
   align-items: center;
-  position: fixed;
-  bottom: 0;
+  position: relative;
+  top: 0;
   width: 100%;
-  height: 60px;
+  height: 10vh;
 }
+
 
 .nav-logo:hover {
   color: #ffc228;
@@ -17,15 +25,85 @@
   padding: 5px;
 }
 
-.active {
-  color: #ffc228;
-}
 
 .nav-logo {
   width: 60px;
   height: 60px;
-  color: #c4c4c4;
   padding: 6px;
   background-color: #414141;
-  margin: 12px;
+  margin: 10px;
+}
+
+nav {
+  display: flex;
+  align-items: center;
+}
+
+.nav-buttons {
+  display: flex;
+  flex-direction: row;
+}
+
+.nav-title {
+  color: #ffc228;
+  margin-left: 0px;
+  margin-right: 50px;
+  font-size: 20px;
+  font-family: sans-serif;
+  display: flex;
+  align-items: center;
+  font-weight: bold;
+}
+
+.nav-title:hover {
+  color: #ffc228;
+}
+
+.Wlogo {
+  width: 60px;
+  height: 60px;
+  padding: 6px;
+  background-color: #414141;
+  margin-left: 10px;
+}
+
+.w-logo-container {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.logo-title {
+  margin-left: 7px;
+  font-size: 30px;
+  font-family: sans-serif;
+  color : #ffc228;
+  font-weight: bold;
+}
+
+/* Responsive Design */
+
+@media screen and (max-width:700px) {
+  .navbar-container {
+    position: fixed;
+    bottom: 0;
+    height: 10vh;
+    display: flex;
+    justify-content: center;
+    align-self: center;
+    width: 100%;
+    z-index: 10;
+  }
+
+  .nav-logo {
+    margin: 8px;
+  }
+
+  .nav-title {
+    display: none;
+  }
+
+  .logo-title {
+    display: none;
+  }
 }
