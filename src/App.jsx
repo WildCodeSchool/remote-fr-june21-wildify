@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import { useEffect, useState } from 'react';
@@ -28,7 +27,7 @@ const App = () => {
         </Route>
         <Route path="/Album">
           <Album />
-        </route>
+        </Route>
         <Route path="/track">
           <Track />
         </Route>
