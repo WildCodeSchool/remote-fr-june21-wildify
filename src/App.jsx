@@ -1,9 +1,9 @@
 import React from 'react';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
-import { useEffect, useState } from 'react';
 
 import Album from './components/Album/Album'
 import Artist from './components/Artist/Artist'
+import Contact from './components/Contact/Contact'
 import Explore from './components/Explore/Explore'
 import Footer from './components/Footer/Footer'
 import Legal from './components/Legal'

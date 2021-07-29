@@ -21,6 +21,7 @@ body {
     font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
     border: 1px solid #ffc228;
     width: 45%;
+    border-radius: 8px;
 }
 
 .form-label {
