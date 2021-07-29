@@ -9,7 +9,6 @@ import Footer from './components/Footer/Footer'
 import Legal from './components/Legal'
 import Navbar from './components/Navbar/Navbar'
 import Track from './components/Track/Track'
-import Contact from './components/Contact/Contact'
 
 import './App.css'
 
