@@ -17,7 +17,7 @@ const ArtistAlbum = ({ album }) => {
         // /</div>
         
         // With lastFM
-        album.name != "(null)" && // remove albums with title = (null)
+        album.name !== "(null)" && // remove albums with title = (null)
         <div className="artistAlbum">
             <NavLink to={`/album/${album.name}`}> 
             {album.image[3]['#text']
