@@ -9,7 +9,7 @@ import './ArtistCard.css'
 
 const ArtistCard = ({ artistId }) => {
 
-    // Get artist lastFM
+    // Get artist from lastFM
     const [ artist, setArtist ] = useState(null);
         useEffect(() => {
         axios
@@ -20,7 +20,7 @@ const ArtistCard = ({ artistId }) => {
         })
     }, [artistId])
 
-        // Get artist Audio DB
+        // Get artist from Audio DB
     const [ artistDB, setArtistDB] = useState(null);
     useEffect(() => {
         axios
@@ -31,7 +31,7 @@ const ArtistCard = ({ artistId }) => {
         })
     }, [artistId])
 
-    // Get artist info last FM
+    // Get artist info from last FM
     const [ artistInfo, setArtistInfo ] = useState(null);
     useEffect(() => {
         axios
@@ -42,7 +42,7 @@ const ArtistCard = ({ artistId }) => {
             })
     }, [artistId])
 
-    // Get artist top albums
+    // Get artist top albums from last FM
     // artist = artistId
 
     return (
@@ -50,7 +50,6 @@ const ArtistCard = ({ artistId }) => {
         { artist && 
             <div>
                 <ArtistProfile artist={artistDB}/>
-                {/* <ArtistAlbums artist={artistDB}/> */}
                 <ArtistAlbums artist={artistId}/>
             </div>
         }

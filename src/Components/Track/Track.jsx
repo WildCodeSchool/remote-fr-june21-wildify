@@ -14,7 +14,6 @@ const Track = () => {
   const [track, setTrack] = useState([])
   console.log('track:', track)
 
-
   useEffect(() => {
     const getTrack = () => {
       fetch(`https://ws.audioscrobbler.com/2.0/?method=track.getInfo&api_key=${process.env.REACT_APP_API_KEY}&artist=${artistName}&track=${trackName}&format=json`)

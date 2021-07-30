@@ -19,15 +19,7 @@ const ArtistAlbums = ({ artist }) => {
         setLastAlbum(lastAlbum + 10);
     };
     
-    // // With audioDB
-    // const [albums, setAlbums] = useState(null);
-    // useEffect(() => {
-    //     fetch(`https://theaudiodb.com/api/v1/json/1/album.php?i=${artist.idArtist}`)
-    //     .then(response => response.json())
-    //     .then(data => setAlbums(data.album))
-    // }, [artist])
-
-    // With lastFM
+    // Data from lastFM
     const [ albums, setAlbums ] = useState(null);
         useEffect(() => {
             axios

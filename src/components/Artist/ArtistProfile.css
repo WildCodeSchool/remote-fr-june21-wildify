@@ -2,8 +2,6 @@
     display: flex;
     flex-direction: row;
     margin: 10px 10px;
-    /* background-color: rgb(38, 0, 53); */
-    /* border: #fcc228 1px solid; */
     border-radius: 2px;
 }
 

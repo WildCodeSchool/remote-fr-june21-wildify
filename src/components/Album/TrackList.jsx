@@ -1,8 +1,9 @@
 import React from 'react';
-import './Album.css';
+
 import play from '../../assets/iconplay.png';
 import time from '../../assets/icontime.png';
 
+import './Album.css';
 
 const TrackList = ({ tracklist }) => (
         <div className="track-list-bloc">

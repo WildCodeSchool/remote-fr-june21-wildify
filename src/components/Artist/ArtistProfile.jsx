@@ -13,7 +13,7 @@ const ArtistProfile = ({artist}) => {
                     <p>Genre : {artist.strGenre}</p>
                     <p>Facebook : {artist.strFacebook}</p>
                     <p>Website : {artist.strWebsite}</p>
-                    {/* <p>MusicbrainzId : {artist.strMusicBrainzID}</p> */}
+                    <p>MusicbrainzId : {artist.strMusicBrainzID}</p>
                 </div>
             </div>
         </div>
