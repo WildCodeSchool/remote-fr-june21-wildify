@@ -1,5 +1,6 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
+
 import './ExploreCard.css'
 
 const ExploreArtistCard = ({ artist }) => (
@@ -10,4 +11,5 @@ const ExploreArtistCard = ({ artist }) => (
     </div>
   </NavLink>
   );
+
 export default ExploreArtistCard;

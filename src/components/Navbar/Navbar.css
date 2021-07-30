@@ -17,14 +17,12 @@
   height: 10vh;
 }
 
-
 .nav-logo:hover {
   color: #ffc228;
   border: 1px solid #ffc228;
   border-radius: 12%;
   padding: 5px;
 }
-
 
 .nav-logo {
   width: 60px;
@@ -107,3 +105,4 @@ nav {
     display: none;
   }
 }
+
