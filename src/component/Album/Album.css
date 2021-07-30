@@ -1,0 +1,84 @@
+body {
+    background-color: #414141;
+}
+.info-album-bloc {
+    display: block;
+    background: linear-gradient(178deg, #f7f5f5, #414141, #060606);
+    margin: 1vh;
+}
+.info-album-bloc-img{
+    text-align:center;
+    padding: 2vh;
+}
+.info-album-bloc-img img {
+    width:30vh;
+    height:30vh;
+    border-radius:1vh;
+}
+.info-album-bloc-article{
+    text-align:center;
+    padding-bottom: 1vh;
+}
+.info-album-bloc-article h2 {
+    font-size:20px;
+    color: #FFC228;
+}
+.info-album-bloc-article p {
+    font-size:18px;
+    color: #FFC228;
+}
+.track-list-bloc {
+    display: block;
+    background: #06060645;
+    margin: 1vh;
+}
+.track-list-bloc h3 {
+    font-size:20px;
+    text-align:center;
+    padding: 4vh 0;
+    color: #FFC228;
+}
+.track-list-bloc-table {
+    display:grid;
+    color: white;
+}
+.track-left {
+    text-align:left;
+    padding: 1vh 0 0 1vh;
+}
+.track-center {
+    text-align:center;
+}
+@media (min-width: 522px) {
+    .info-album-bloc {
+        display:flex;
+        justify-content:space-evenly;
+    }
+    .info-album-bloc-img {
+        align-self: center;
+    }
+    .info-album-bloc-article{
+        align-self: center;
+    }
+}
+@media (min-width : 768px){
+    .info-album-bloc-img img {
+        width:50vh;
+        height:50vh;
+    }
+    .track-list-bloc h3 {
+        font-size:25px;
+    }
+    .info-album-bloc-article h2 {
+        font-size:28px;
+    }
+    .info-album-bloc-article p {
+        font-size:24px;
+    }
+}
+@media (min-width : 1100px){
+    .info-album-bloc,
+    .track-list-bloc {
+        margin: 3vh 15vh;
+    }
+}
