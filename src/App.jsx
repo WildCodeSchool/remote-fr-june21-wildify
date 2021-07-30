@@ -1,14 +1,14 @@
 import React from 'react';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 
-import Album from './components/Album/Album'
-import Artist from './components/Artist/Artist'
-import Contact from './components/Contact/Contact'
-import Explore from './components/Explore/Explore'
-import Footer from './components/Footer/Footer'
-import Legal from './components/Legal/Legal'
-import Navbar from './components/Navbar/Navbar'
-import Track from './components/Track/Track'
+import Album from './component/Album/Album'
+import Artist from './component/Artist/Artist'
+import Contact from './component/Contact/Contact'
+import Explore from './component/Explore/Explore'
+import Footer from './component/Footer/Footer'
+import Legal from './component/Legal/Legal'
+import Navbar from './component/Navbar/Navbar'
+import Track from './component/Track/Track'
 
 import './App.css'
 
