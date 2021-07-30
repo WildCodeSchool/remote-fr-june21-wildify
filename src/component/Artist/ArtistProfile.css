@@ -1,13 +1,13 @@
-.artist-profile{
+.artistProfile{
     display: flex;
     flex-direction: row;
     margin: 10px 10px;
-    background-color: rgb(38, 0, 53);
-    border-radius: 16px;
+    border-radius: 2px;
 }
 
 .avatar{
-    width: 25%;
+    min-width: 15%;
+    max-width: 80%;
     text-align: left;
 }
 
@@ -17,18 +17,19 @@
     border-radius: 50%;
 }
 
-.artist-info{
-    width: 70%;
+.artistInfo{
+    margin-left: 30px;
+    padding: 10px;
     align-items: center;
     text-align: left;
 }
 
-.artist-info h2{
-    font-size: larger;
+.artistInfo h2{
+    font-size: 1em;
     margin: 10px;
 }
 
-.artist-info p{
-    font-size: large;
+.artistInfo p{
+    font-size: 0.5em;
     margin: 0px;
 }

@@ -27,7 +27,6 @@
   background-color: #c4c4c4;
 }
 
-
 .ExploreCardContainer {
   width: 70%;
   display: flex;
@@ -36,7 +35,6 @@
   justify-content: center;
   overflow: hidden;
 }
-
 
 @media screen and (min-width: 620px) {
   .ExploreCardContainer {

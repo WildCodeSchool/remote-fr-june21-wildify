@@ -1,27 +1,61 @@
 import { useEffect, useState } from "react";
-import ArtistProfile from './ArtistProfile';
-import ArtistAlbumList from "./ArtistAlbumList";
+import axios from 'axios';
+
+import ArtistAlbums from "./ArtistAlbums";
 import ArtistBiography from './ArtistBiography';
+import ArtistProfile from './ArtistProfile';
 
 import './ArtistCard.css'
 
-const ArtistCard = ({artistId}) => {
+const ArtistCard = ({ artistId }) => {
 
-    const [ Artist, setArtist ] = useState(null);
-    
-    useEffect(() => {
-        fetch(`https://theaudiodb.com/api/v1/json/1/search.php?s=${artistId}`)
-        .then(response => response.json())
-        .then(data => setArtist(data.artists[0]))
+    // Get artist from lastFM
+    const [ artist, setArtist ] = useState(null);
+        useEffect(() => {
+        axios
+        .get(`https://ws.audioscrobbler.com/2.0/?method=artist.search&artist=${artistId}&api_key=${process.env.REACT_APP_API_KEY}&format=json`)
+        .then(response => response.data)
+        .then(data => {
+            setArtist(data.results.artistmatches.artist[0]);
+        })
     }, [artistId])
+
+        // Get artist from Audio DB
+    const [ artistDB, setArtistDB] = useState(null);
+    useEffect(() => {
+        axios
+        .get(`https://theaudiodb.com/api/v1/json/1/search.php?s=${artistId}`)
+        .then(response => response.data)
+        .then(data => {
+            setArtistDB(data.artists[0]);
+        })
+    }, [artistId])
+
+    // Get artist info from last FM
+    const [ artistInfo, setArtistInfo ] = useState(null);
+    useEffect(() => {
+        axios
+        .get(`https://ws.audioscrobbler.com/2.0/?method=artist.getinfo&artist=${artistId}&api_key=${process.env.REACT_APP_API_KEY}&format=json`)
+        .then(response => response.data)
+        .then(data => {
+            setArtistInfo(data.artist);
+            })
+    }, [artistId])
+
+    // Get artist top albums from last FM
+    // artist = artistId
 
     return (
         <>
-        { Artist &&
+        { artist && 
             <div>
-                <ArtistProfile Artist={Artist}/>
-                <ArtistAlbumList Artist={Artist}/>
-                <ArtistBiography Artist={Artist}/>
+                <ArtistProfile artist={artistDB}/>
+                <ArtistAlbums artist={artistId}/>
+            </div>
+        }
+        {artistInfo &&
+            <div>
+                <ArtistBiography artist={artistInfo}/>
             </div>
         }
         </>

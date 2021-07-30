@@ -1,4 +1,4 @@
-.artist-album{
+.artistAlbum{
     display: flex;
     flex-direction: column;
     width: 17%;
@@ -6,18 +6,18 @@
     padding: 5px;
 }
 
-.artist-album img{
+.artistAlbum img{
     opacity: 0.8;
+    border-radius: 12px;
     width: 100%;
 }
 
-.artist-album img:hover{
+.artistAlbum img:hover{
     opacity: 1.0;
 }
 
-.artist-album p{
+.artistAlbum p{
     font-size: medium;
     margin: 0px;
+    color: white;
 }
-
-

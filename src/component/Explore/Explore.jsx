@@ -43,7 +43,7 @@ const Explore = () => {
   return (
     <div className="Explore">
       <h1>Search</h1>
-      <input type="text" minLength='1' maxlength="50" value={search} onChange={(event) => {setSearch(event.target.value)}}/>
+      <input type="text" minLength='1' maxLength="50" value={search} onChange={(event) => {setSearch(event.target.value)}}/>
 
       {search && <h2>Artist</h2>}
       <div className="ExploreCardContainer">

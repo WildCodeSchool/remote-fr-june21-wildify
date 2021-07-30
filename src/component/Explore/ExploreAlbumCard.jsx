@@ -1,6 +1,6 @@
 import { NavLink } from 'react-router-dom'
-import './ExploreCard.css'
 
+import './ExploreCard.css'
 
 const ExploreAlbumCard = ({ album }) => (
   <NavLink to={`/album/${album.name}`} >
