@@ -1,5 +1,8 @@
 import React from 'react';
 import './Album.css';
+import play from '../../assets/iconplay.png';
+import time from '../../assets/icontime.png';
+
 
 const TrackList = ({ tracklist }) => (
         <div className="track-list-bloc">
@@ -8,17 +11,17 @@ const TrackList = ({ tracklist }) => (
                 <table>
                     <thead>
                         <tr>
-                            <th>Piste</th>
-                            <th>Titre</th>
-                            <th>Durée</th>
+                            <th><img src={play} alt="Logo" /></th>
+                            <th className="track-left">Titre</th>
+                            <th><img src={time} alt="Logo" /></th>
                         </tr>
                     </thead>
                     <tbody>
                         {tracklist.tracks.track.map((alb) => (
                         <tr>
-                            <td>{alb['@attr'].rank}</td>
-                            <td>{alb.name}</td>
-                            <td>{alb.duration}</td>
+                            <td className="track-center">{alb['@attr'].rank}</td>
+                            <td className="track-left">{alb.name}</td>
+                            <td className="track-center">{Math.floor(alb.duration / 60)}:{alb.duration % 60 ? alb.duration % 60 : '00'}</td>
                         </tr>
                         ))}
                     </tbody>
