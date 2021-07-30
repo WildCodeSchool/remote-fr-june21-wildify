@@ -6,7 +6,6 @@ import './ArtistCard.css';
 
 const Artist = () => {
     const { name } = useParams()
-    console.log(name);
 
     return (
         <div className="artistCard">

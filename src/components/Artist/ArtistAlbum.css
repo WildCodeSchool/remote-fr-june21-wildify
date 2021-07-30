@@ -8,6 +8,7 @@
 
 .artistAlbum img{
     opacity: 0.8;
+    border-radius: 12px;
     width: 100%;
 }
 
@@ -18,6 +19,7 @@
 .artistAlbum p{
     font-size: medium;
     margin: 0px;
+    color: white;
 }
 
 

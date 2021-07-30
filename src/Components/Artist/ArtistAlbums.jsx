@@ -1,7 +1,9 @@
 import { useEffect, useState } from "react";
-import ArtistAlbum from './ArtistAlbum'
+import axios from 'axios';
 
-import './ArtistAlbums.css'
+import ArtistAlbum from './ArtistAlbum';
+
+import './ArtistAlbums.css';
 
 const ArtistAlbums = ({ artist }) => {
     
@@ -17,12 +19,24 @@ const ArtistAlbums = ({ artist }) => {
         setLastAlbum(lastAlbum + 10);
     };
     
-    const [albums, setAlbums] = useState(null);
-    useEffect(() => {
-        fetch(`https://theaudiodb.com/api/v1/json/1/album.php?i=${artist.idArtist}`)
-        .then(response => response.json())
-        .then(data => setAlbums(data.album))
-    }, [artist])
+    // // With audioDB
+    // const [albums, setAlbums] = useState(null);
+    // useEffect(() => {
+    //     fetch(`https://theaudiodb.com/api/v1/json/1/album.php?i=${artist.idArtist}`)
+    //     .then(response => response.json())
+    //     .then(data => setAlbums(data.album))
+    // }, [artist])
+
+    // With lastFM
+    const [ albums, setAlbums ] = useState(null);
+        useEffect(() => {
+            axios
+            .get(`https://ws.audioscrobbler.com/2.0/?method=artist.gettopalbums&artist=${artist}&api_key=${process.env.REACT_APP_API_KEY}&format=json`)
+            .then(response => response.data)
+            .then(data => {
+                setAlbums(data.topalbums.album);
+            })
+        }, [artist])
 
     return (
         <>
@@ -32,7 +46,7 @@ const ArtistAlbums = ({ artist }) => {
                 <div className="center">
                     <div className="artistAlbums">
                         {albums.slice(firstAlbum, lastAlbum)
-                        .map( (album) => <ArtistAlbum key={album.idAlbum} album={ album } /> )
+                        .map( (album, index) => <ArtistAlbum key={index} album={ album } /> )
                         }
                     </div>
                 </div>
