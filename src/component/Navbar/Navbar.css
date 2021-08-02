@@ -28,7 +28,15 @@
   width: 60px;
   height: 60px;
   padding: 6px;
-  background-color: #414141;
+  color: #ffc228;
+  margin: 10px;
+}
+
+.FontAwesomeIcon {
+  width: 60px;
+  height: 60px;
+  padding: 6px;
+  color: #ffc228;
   margin: 10px;
 }
 
