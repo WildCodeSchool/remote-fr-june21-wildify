@@ -23,7 +23,7 @@ const ExploreArtistCard = ({ artist }) => {
 return (
   <NavLink to={`/artist/${artist.name}`} >
     <div className="ExploreCard">
-      <img src={img ? img : artist.image[2]['#text']} alt={`Img of ${artist.name}`} />
+      <img src={img ? img : `https://i.ibb.co/fD8vLPB/no-cover-ter.png`} alt={`Img of ${artist.name}`} />
       <h3>{artist.name}</h3>
     </div>
   </NavLink>
