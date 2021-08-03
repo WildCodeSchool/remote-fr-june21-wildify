@@ -6,7 +6,7 @@ import './ExploreCard.css'
 
 const ExploreAlbumCard = ({ album }) => (
   <Link to={`/album/${album.name}`} >
-    <div className="ExploreCard">
+    <div className="exploreCard">
       <img src={album.image[2]['#text'] ? album.image[2]['#text'] : imgNotFound} alt={`Img of ${album.name}`} />
       <h3>{album.name}</h3>
     </div>

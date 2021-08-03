@@ -2,40 +2,46 @@ import { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import axios from 'axios';
 
-import TrackProfile from './TrackProfile'
+import TrackProfile from './TrackProfile';
 import TrackLyrics from './TrackLyrics';
-import imgNotFound from '../../assets/cover-wildify.png'
+import imgNotFound from '../../assets/cover-wildify.png';
 
 import './Track.css';
 
 const Track = () => {
 
-  const { artistName, trackName } = useParams()
+  // Params Nom de l'artiste et du track
+  const { artistName, trackName } = useParams();
 
-  const [track, setTrack] = useState(null)
-  const [loaderTrack, setLoaderTrack] = useState(true)
+  // Reponse du call API Track
+  const [track, setTrack] = useState(null);
+  const [loaderTrack, setLoaderTrack] = useState(true);
 
-  const [imgAudioDb, setImgAudioDb] = useState(null)
+  // Reponse du Call API Img Artist
+  const [imgAudioDb, setImgAudioDb] = useState(null);
 
-  const [lyrics, setLyrics] = useState(null)
-  const [loaderLyric, setLoaderLyric] = useState(true)
+  // Reponse du Call API Lyrics
+  const [lyrics, setLyrics] = useState(null);
+  const [loaderLyric, setLoaderLyric] = useState(true);
 
 
   useEffect(() => {
+
+    // Call API Track
     const getTrack = () => {
-        axios.get(
+      axios.get(
         `https://ws.audioscrobbler.com/2.0/?method=track.getInfo&api_key=${process.env.REACT_APP_API_KEY}&artist=${artistName}&track=${trackName}&format=json`
       ).then((results) => {
         setTrack(results.data.track)
         setLoaderTrack(false)
       })
     }
-    getTrack()
-  },[artistName, trackName])
+    getTrack();
+  },[artistName, trackName]);
 
   useEffect(() => {
 
-    // Get Image Artist
+    // Call API Image Artist
     const getImgAudioDb = () => {
       axios.get(
         `https://www.theaudiodb.com/api/v1/json/1/search.php?s=${track.artist.name}`
@@ -43,9 +49,9 @@ const Track = () => {
         setImgAudioDb(results.data.artists[0].strArtistThumb)
       })
     }
-    track && getImgAudioDb()
+    track && getImgAudioDb();
 
-    // Get Lyrics
+    // Call API Lyrics
     const getLyrics = () => {
       //https://cors-anywhere.herokuapp.com/ a valider avant d'utiliser.
       axios.get(
@@ -58,9 +64,9 @@ const Track = () => {
           : setLyrics('Lyrics not found...') || setLoaderLyric(false)
       })
     }
-    track && getLyrics()
+    track && getLyrics();
 
-  }, [track])
+  }, [track]);
 
   return (
     <div className="track">

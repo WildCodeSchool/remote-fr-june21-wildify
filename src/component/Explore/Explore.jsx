@@ -1,10 +1,9 @@
-import React from 'react';
 import { useEffect, useState } from 'react';
 import axios from 'axios';
 
-import ExploreArtistCard from './ExploreArtistCard'
-import ExploreAlbumCard from './ExploreAlbumCard'
-import ExploreTrackCard from './ExploreTrackCard'
+import ExploreArtistCard from './ExploreArtistCard';
+import ExploreAlbumCard from './ExploreAlbumCard';
+import ExploreTrackCard from './ExploreTrackCard';
 
 import './Explore.css';
 
@@ -27,47 +26,47 @@ const Explore = () => {
   useEffect(() => {
 
       // Call API Artist
-      const getArtist = async () => {
-        const results = await axios.get(
+      const getArtist = () => {
+        axios.get(
           `http://ws.audioscrobbler.com/2.0/?method=artist.search&artist=${search}&api_key=${process.env.REACT_APP_API_KEY}&limit=16&format=json`
         ).then((results) => {
           setArtistList(results.data.results.artistmatches.artist)
           setLoaderArtist(false)
         })
       }
-      search && getArtist()
+      search && getArtist();
 
       // Call API Album
-      const getAlbum = async () => {
-        const results = await axios.get(
+      const getAlbum = () => {
+        axios.get(
           `http://ws.audioscrobbler.com/2.0/?method=album.search&album=${search}&api_key=${process.env.REACT_APP_API_KEY}&limit=16&format=json`
         ).then((results) => {
           setAlbumList(results.data.results.albummatches.album)
           setLoaderAlbum(false)
         })
       }
-      search && getAlbum()
+      search && getAlbum();
 
       // Call API Track
-      const getTrack = async () => {
-        const results = await axios.get(
+      const getTrack = () => {
+        axios.get(
           `http://ws.audioscrobbler.com/2.0/?method=track.search&track=${search}&api_key=${process.env.REACT_APP_API_KEY}&limit=16&format=json`
         ).then((results) => {
           setTrackList(results.data.results.trackmatches.track)
           setLoaderTrack(false)
         })
       }
-      search && getTrack()
-  },[search])
+      search && getTrack();
+  },[search]);
 
   return (
-    <div className="Explore">
+    <div className="explore">
       <h1>Search</h1>
       <input type="text" minLength='1' maxLength="50" value={search} onChange={(event) => {setSearch(event.target.value)}}/>
 
       {/* Affichage des Card Artist */}
       {search && <h2>Artist</h2>}
-      {search && <div className="ExploreCardContainer">
+      {search && <div className="exploreCardContainer">
         {loaderArtist ? (
           <div>Loading...</div>
         ) : (
@@ -80,7 +79,7 @@ const Explore = () => {
 
       {/* Affichage des Card Album */}
       {search && <h2>Album</h2>}
-      {search && <div className="ExploreCardContainer">
+      {search && <div className="exploreCardContainer">
         {loaderAlbum ? (
           <div>Loading...</div>
         ) : (
@@ -93,10 +92,11 @@ const Explore = () => {
 
       {/* Affichage des Card Track */}
       {search && <h2>Track</h2>}
-      {search && <div className="ExploreCardContainer">
+      {search && <div className="exploreCardContainer">
         {loaderTrack ? (
           <div>Loading...</div>
-        ) : ( trackList.map((track) => (
+        ) : (
+            trackList.map((track) => (
             <ExploreTrackCard key={track.mbid} track={track} />
           ))
         )

@@ -27,7 +27,7 @@ const ExploreTrackCard = ({ track }) => {
 
   return (
   <Link to={`/track/${track.name}/${track.artist}`}>
-    <div className="ExploreCard">
+    <div className="exploreCard">
       <img src={img} alt={`Img of ${track.name}`} />
       <h3>{track.name}</h3>
     </div>

@@ -26,7 +26,7 @@ const ExploreArtistCard = ({ artist }) => {
 
 return (
   <Link to={`/artist/${artist.name}`} >
-    <div className="ExploreCard">
+    <div className="exploreCard">
       <img src={img} alt={`Img of ${artist.name}`} />
       <h3>{artist.name}</h3>
     </div>
