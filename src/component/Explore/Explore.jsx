@@ -12,13 +12,14 @@ const Explore = () => {
   // Valeur de la recherche dans la barre de recherche.
   const [search, setSearch] = useState('');
 
-  // Reponse du call API avec search pour les Artists, Albums et tracks.
+  // Reponse du call API avec search pour :
+  // Les Artists
   const [artistList, setArtistList] = useState(null);
   const [loaderArtist, setLoaderArtist] = useState(true);
-
+  // Les Albums.
   const [albumList, setAlbumList] = useState(null);
   const [loaderAlbum, setLoaderAlbum] = useState(true);
-
+  // Les tracks
   const [trackList, setTrackList] = useState(null);
   const [loaderTrack, setLoaderTrack] = useState(true);
 
@@ -65,7 +66,10 @@ const Explore = () => {
       <input type="text" minLength='1' maxLength="50" value={search} onChange={(event) => {setSearch(event.target.value)}}/>
 
       {/* Affichage des Card Artist */}
-      {search && <h2>Artist</h2>}
+      <div className="ExploreBanner">
+        <h2>Artists</h2>
+        <i className="svg-inline--fa fa-podcast fa-w-14"></i>
+      </div>
       {search && <div className="exploreCardContainer">
         {loaderArtist ? (
           <div>Loading...</div>
