@@ -4,15 +4,21 @@ import { useParams } from 'react-router-dom';
 import TrackProfile from './TrackProfile'
 
 import './Track.css';
+import TrackLyrics from './TrackLyrics';
 
 const Track = () => {
 
-  // https://coverartarchive.org/release/08f54f68-7c89-4e22-8a0f-ac2b06e48568
+// REACT_APP_API_KEY_MUSIXMATCH  https://api.musixmatch.com/ws/1.1/  track.lyrics.get?track_mbid musicbrainz recording or track id  q_lyricssearch for a text string among lyrics  f_lyrics_languageFilter the tracks by lyrics language
+// https://api.musixmatch.com/ws/1.1/track.lyrics.get?track_mbid=${trackMbib}&apikey=${process.env.REACT_APP_API_KEY_MUSIXMATCH}
+
 
   const { artistName, trackName } = useParams()
 
   const [track, setTrack] = useState(null)
   const [imgAudioDb, setImgAudioDb] = useState(null)
+  const [lyrics, setLyrics] = useState(null)
+  console.log('lyrics:', lyrics)
+  const [loading, setLoading] = useState(true)
 
   useEffect(() => {
     const getTrack = () => {
@@ -34,11 +40,23 @@ const Track = () => {
       })
     }
     track && getImgAudioDb()
+
+    const getLyrics = () => {
+      //https://cors-anywhere.herokuapp.com/ a valider avant d'utiliser.
+      fetch(`https://cors-anywhere.herokuapp.com/https://api.musixmatch.com/ws/1.1/track.lyrics.get?track_mbid=${track.mbid}&apikey=${process.env.REACT_APP_API_KEY_MUSIXMATCH}`)
+      .then((res) => res.json())
+      .then((res) => {
+        res && setLyrics(res.message.body.lyrics.lyrics_body)
+      })
+    }
+    track && getLyrics()
+
   }, [track])
 
   return (
     <div className="Track">
       {track && <TrackProfile track={track} img={imgAudioDb}/>}
+      {lyrics && <TrackLyrics lyrics={lyrics}/>}
     </div>
   );
 }

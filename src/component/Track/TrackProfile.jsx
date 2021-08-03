@@ -1,3 +1,5 @@
+import { Link } from 'react-router-dom';
+
 import './TrackProfile.css'
 
 const TrackProfile = ({ track, img }) => {
@@ -7,9 +9,11 @@ const TrackProfile = ({ track, img }) => {
     return (
         <div className="Track-profile">
           <div className="Track-content">
-            {track && <div className="Track-avatar">
-              <img src={img} alt={`Album img of ${track.artist.name}}`} />
-            </div>}
+            <div className="Track-avatar">
+              <Link to={`/artist/${track.artist.name}`} >
+                <img src={img} alt={`Album img of ${track.artist.name}}`} />
+              </Link>
+            </div>
             { track && <div className="Track-info">
               <h2>{track.artist.name}</h2>
               <p>Track : {track.name} </p>

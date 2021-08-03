@@ -1,5 +1,5 @@
 import {useEffect, useState} from 'react'
-import { NavLink } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 import './ExploreCard.css'
 
@@ -21,12 +21,12 @@ const ExploreArtistCard = ({ artist }) => {
   }, [artist])
 
 return (
-  <NavLink to={`/artist/${artist.name}`} >
+  <Link to={`/artist/${artist.name}`} >
     <div className="ExploreCard">
       <img src={img ? img : `https://i.ibb.co/fD8vLPB/no-cover-ter.png`} alt={`Img of ${artist.name}`} />
       <h3>{artist.name}</h3>
     </div>
-  </NavLink>
+  </Link>
 )};
 
 export default ExploreArtistCard;
