@@ -15,8 +15,13 @@ const Explore = () => {
 
   // Reponse du call API avec search pour les Artists, Albums et tracks.
   const [artistList, setArtistList] = useState(null);
+  const [loaderArtist, setLoaderArtist] = useState(true);
+
   const [albumList, setAlbumList] = useState(null);
+  const [loaderAlbum, setLoaderAlbum] = useState(true);
+
   const [trackList, setTrackList] = useState(null);
+  const [loaderTrack, setLoaderTrack] = useState(true);
 
   // Call API avec Valeur du search.
   useEffect(() => {
@@ -27,6 +32,7 @@ const Explore = () => {
           `http://ws.audioscrobbler.com/2.0/?method=artist.search&artist=${search}&api_key=${process.env.REACT_APP_API_KEY}&limit=16&format=json`
         )
           setArtistList(results.data.results.artistmatches.artist)
+          setLoaderArtist(false)
       }
       search && getArtist()
 
@@ -36,6 +42,7 @@ const Explore = () => {
           `http://ws.audioscrobbler.com/2.0/?method=album.search&album=${search}&api_key=${process.env.REACT_APP_API_KEY}&limit=16&format=json`
         )
           setAlbumList(results.data.results.albummatches.album)
+          setLoaderAlbum(false)
       }
       search && getAlbum()
 
@@ -45,6 +52,7 @@ const Explore = () => {
           `http://ws.audioscrobbler.com/2.0/?method=track.search&track=${search}&api_key=${process.env.REACT_APP_API_KEY}&limit=16&format=json`
         )
         setTrackList(results.data.results.trackmatches.track)
+        setLoaderTrack(false)
       }
       search && getTrack()
   },[search])

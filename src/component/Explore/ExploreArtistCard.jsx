@@ -16,9 +16,10 @@ const ExploreArtistCard = ({ artist }) => {
     const getImgAudioDb = async () => {
       const results = await axios.get(
         `https://www.theaudiodb.com/api/v1/json/1/search.php?s=${artist.name}`
-      )
-      results.artists ? setImg(results.artists[0].strArtistThumb)
-        : setImg(imgNotFound)
+      ).then((results) => {
+        results.artists ? setImg(results.artists[0].strArtistThumb)
+          : setImg(imgNotFound)
+      })
     }
     artist && getImgAudioDb()
   }, [artist])

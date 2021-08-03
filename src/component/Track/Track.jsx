@@ -37,8 +37,7 @@ const Track = () => {
       const results = await axios.get(
         `https://www.theaudiodb.com/api/v1/json/1/search.php?s=${track.artist.name}`
       )
-      results ? setImgAudioDb(results.artists[0].strArtistThumb)
-      : setImgAudioDb(imgNotFound)
+      setImgAudioDb(results.artists[0].strArtistThumb)
     }
     track && getImgAudioDb()
 
@@ -48,9 +47,10 @@ const Track = () => {
       const results = await axios.get(
         `https://cors-anywhere.herokuapp.com/https://api.musixmatch.com/ws/1.1/track.lyrics.get?track_mbid=${track.mbid}&apikey=${process.env.REACT_APP_API_KEY_MUSIXMATCH}`
       )
-        results ? setLyrics(results.message.body.lyrics.lyrics_body)
-          : setLyrics('Lyrics not found...')
+      .then(() => {
+        setLyrics(results.message.body.lyrics.lyrics_body)
         setLoaderLyric(false)
+      })
     }
     track && getLyrics()
 
@@ -61,12 +61,12 @@ const Track = () => {
       {loaderTrack ? (
         <div>Loading...</div>
       ) : (
-        <TrackProfile {...track} img={imgAudioDb}/>
+        <TrackProfile {...track} img={imgAudioDb ? imgAudioDb : imgNotFound}/>
         )}
         {loaderLyric ? (
           <div>Loading...</div>
         ) : (
-          <TrackLyrics lyrics={lyrics}/>
+          <TrackLyrics lyrics={lyrics ? lyrics : 'Lyrics not found...'}/>
           )}
     </div>
   );

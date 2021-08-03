@@ -16,9 +16,9 @@ const ExploreTrackCard = ({ track }) => {
     const getImgAudioDb = async () => {
       const results = await axios.get(
         `https://www.theaudiodb.com/api/v1/json/1/search.php?s=${track.artist}`
-      )
-      results ? setImg(results.artists[0].strArtistThumb)
-        : setImg(imgNotFound)
+      ).then((results) => {
+        results.artists && setImg(results.artists[0].strArtistThumb)
+      })
     }
     track && getImgAudioDb()
   }, [track])
@@ -27,7 +27,7 @@ const ExploreTrackCard = ({ track }) => {
   return (
   <Link to={`/track/${track.name}/${track.artist}`}>
     <div className="ExploreCard">
-      <img src={img} alt={`Img of ${track.name}`} />
+      <img src={img ? img : imgNotFound} alt={`Img of ${track.name}`} />
       <h3>{track.name}</h3>
     </div>
   </Link>
