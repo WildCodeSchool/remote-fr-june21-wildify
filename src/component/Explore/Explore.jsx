@@ -1,5 +1,6 @@
 import React from 'react';
 import { useEffect, useState } from 'react';
+import axios from 'axios';
 
 import ExploreArtistCard from './ExploreArtistCard'
 import ExploreAlbumCard from './ExploreAlbumCard'
@@ -21,26 +22,29 @@ const Explore = () => {
   useEffect(() => {
 
       // Call API Artist
-      const getArtist = () => {
-        fetch(`http://ws.audioscrobbler.com/2.0/?method=artist.search&artist=${search}&api_key=${process.env.REACT_APP_API_KEY}&limit=16&format=json`)
-          .then(response => response.json())
-          .then(data => setArtistList(data.results.artistmatches.artist))
+      const getArtist = async () => {
+        const results = await axios.get(
+          `http://ws.audioscrobbler.com/2.0/?method=artist.search&artist=${search}&api_key=${process.env.REACT_APP_API_KEY}&limit=16&format=json`
+        )
+          setArtistList(results.data.results.artistmatches.artist)
       }
       search && getArtist()
 
       // Call API Album
-      const getAlbum = () => {
-        fetch(`http://ws.audioscrobbler.com/2.0/?method=album.search&album=${search}&api_key=${process.env.REACT_APP_API_KEY}&limit=16&format=json`)
-          .then(response => response.json())
-          .then(data => setAlbumList(data.results.albummatches.album))
+      const getAlbum = async () => {
+        const results = await axios.get(
+          `http://ws.audioscrobbler.com/2.0/?method=album.search&album=${search}&api_key=${process.env.REACT_APP_API_KEY}&limit=16&format=json`
+        )
+          setAlbumList(results.data.results.albummatches.album)
       }
       search && getAlbum()
 
       // Call API Track
-      const getTrack = () => {
-        fetch(`http://ws.audioscrobbler.com/2.0/?method=track.search&track=${search}&api_key=${process.env.REACT_APP_API_KEY}&limit=16&format=json`)
-          .then(response => response.json())
-          .then(data => setTrackList(data.results.trackmatches.track))
+      const getTrack = async () => {
+        const results = await axios.get(
+          `http://ws.audioscrobbler.com/2.0/?method=track.search&track=${search}&api_key=${process.env.REACT_APP_API_KEY}&limit=16&format=json`
+        )
+        setTrackList(results.data.results.trackmatches.track)
       }
       search && getTrack()
   },[search])

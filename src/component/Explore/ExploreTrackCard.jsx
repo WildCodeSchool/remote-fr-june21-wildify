@@ -1,5 +1,8 @@
 import {useEffect, useState} from 'react'
-import { Link } from 'react-router-dom';
+import { Link } from 'react-router-dom'
+import axios from 'axios'
+
+import imgNotFound from '../../assets/cover-wildify.png'
 
 import './ExploreCard.css'
 
@@ -10,12 +13,12 @@ const ExploreTrackCard = ({ track }) => {
 
   // Call API TheAudioDb pour img Artist
   useEffect(() => {
-    const getImgAudioDb = () => {
-      track && fetch(`https://www.theaudiodb.com/api/v1/json/1/search.php?s=${track.artist}`)
-      .then((res) => res.json())
-      .then((res) => {
-        res.artists && setImg(res.artists[0].strArtistThumb);
-      })
+    const getImgAudioDb = async () => {
+      const results = await axios.get(
+        `https://www.theaudiodb.com/api/v1/json/1/search.php?s=${track.artist}`
+      )
+      results ? setImg(results.artists[0].strArtistThumb)
+        : setImg(imgNotFound)
     }
     track && getImgAudioDb()
   }, [track])
@@ -24,7 +27,7 @@ const ExploreTrackCard = ({ track }) => {
   return (
   <Link to={`/track/${track.name}/${track.artist}`}>
     <div className="ExploreCard">
-      <img src={img ? img : `https://i.ibb.co/fD8vLPB/no-cover-ter.png`} alt={`Img of ${track.name}`} />
+      <img src={img} alt={`Img of ${track.name}`} />
       <h3>{track.name}</h3>
     </div>
   </Link>
