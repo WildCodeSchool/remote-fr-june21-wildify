@@ -30,17 +30,6 @@ const ArtistAlbums = ({ artist }) => {
             })
         }, [artist])
 
-
-        const [ albums, setAlbums ] = useState(null);
-        useEffect(() => {
-            axios
-            .get(`https://ws.audioscrobbler.com/2.0/?method=chart.gettoptracks&api_key=YOUR_API_KEY&format=json`)
-            .then(response => response.data)
-            .then(data => {
-                setAlbums(data.topalbums.album);
-            })
-        }, [artist])
-
     return (
         <>
         { albums
