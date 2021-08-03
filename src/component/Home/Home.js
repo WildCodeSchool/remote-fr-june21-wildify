@@ -1,10 +1,8 @@
 import { useEffect, useState } from "react";
 import axios from 'axios';
 
-
 const Home = () => {
-    // const [topAlbums, setTopAlbums] = useState([]);
-    const [topAlbums, settopAlbums] = useState([]);
+    const [topArtists, settopArtists] = useState([]);
     const [loader, setLoader] = useState(true)
     
     useEffect(() => {
@@ -13,7 +11,7 @@ const Home = () => {
             .get(`https://ws.audioscrobbler.com/2.0/?method=chart.gettopartists&api_key=${process.env.REACT_APP_API_KEY}&format=json`)
             .then(response => { 
                 setLoader(false)
-                settopAlbums(response.data.artists.artist)
+                setTopArtists(response.data.artists.artist)
             })
         }
         getData()   
@@ -21,13 +19,13 @@ const Home = () => {
 
     return (
         <div>
-{console.log('topAlbums02', topAlbums)}
+{console.log('Top Artists', topArtists)}
             <h2>Home</h2>
              {
                 loader ? <div>Loading...</div> :
-                    <div>{topAlbums.map(elem => <div>
-                        <p>{elem.name}</p>
-                        <img src={elem.image[1].['#text']} />
+                    <div>{topArtists.map(topArtist => <div>
+                        <p>{topArtist.name}</p>
+                        <img src={topArtist.image[3].['#text']} />
                     </div>)}</div>
             } 
         </div>
