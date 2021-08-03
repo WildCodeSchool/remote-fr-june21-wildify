@@ -1,10 +1,13 @@
 .navbar-container {
   padding: 5px;
-  background-color: #414141;
+  background: transparent;
   margin-top: 8px;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  background-color : rgb(238,238,238);
+  /*z-index: 100000;
+  position: fixed;*/
 }
 
 .navbar {
@@ -32,13 +35,6 @@
   margin: 10px;
 }
 
-.FontAwesomeIcon {
-  width: 60px;
-  height: 60px;
-  padding: 6px;
-  color: #ffc228;
-  margin: 10px;
-}
 
 nav {
   display: flex;
@@ -51,10 +47,10 @@ nav {
 }
 
 .nav-title {
-  color: #ffc228;
+  Color : rgb(104,98,97);
   margin-left: 0px;
   margin-right: 50px;
-  font-size: 20px;
+  font-size: 25px;
   font-family: sans-serif;
   display: flex;
   align-items: center;
@@ -69,7 +65,6 @@ nav {
   width: 60px;
   height: 60px;
   padding: 6px;
-  background-color: #414141;
   margin-left: 10px;
 }
 
@@ -77,6 +72,7 @@ nav {
   display: flex;
   justify-content: space-around;
   align-items: center;
+  margin-right: 40px;
 }
 
 .logo-title {
@@ -86,6 +82,7 @@ nav {
   color : #ffc228;
   font-weight: bold;
 }
+
 
 /* Responsive Design */
 

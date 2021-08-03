@@ -1,5 +1,5 @@
 body {
-    background-color: #414141;
+    background-color : rgb(238,238,238);
 }
 
 .form-container {
@@ -10,6 +10,7 @@ body {
     height: 85%;
     margin-top: 25px;
     margin-bottom: 60px;
+    background-color : rgb(238,238,238);
 }
 
 .form-h1 {
@@ -17,9 +18,8 @@ body {
     margin-top: 50px;
     font-size: 40px;
     font-weight: bold;
-    color: #ffc228;
+    color : rgb(104,98,97);
     font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
-    border: 1px solid #ffc228;
     width: 45%;
     border-radius: 8px;
 }
@@ -39,7 +39,7 @@ body {
 .form-title {
     font-size: 25px;
     font-weight: bold;
-    color: #ffc228;
+    color: rgb(104,98,97);
     font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
     margin: 8px;
 }
@@ -75,8 +75,6 @@ body {
     padding: 5px;
     border-radius: 8px;
     background: #ffc228;
-    box-shadow:  6px 6px 7px #cc9b20,
-             -6px -6px 7px #ffe930;
 }
 
 
