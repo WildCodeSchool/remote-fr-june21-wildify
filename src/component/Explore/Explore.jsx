@@ -30,9 +30,10 @@ const Explore = () => {
       const getArtist = async () => {
         const results = await axios.get(
           `http://ws.audioscrobbler.com/2.0/?method=artist.search&artist=${search}&api_key=${process.env.REACT_APP_API_KEY}&limit=16&format=json`
-        )
+        ).then((results) => {
           setArtistList(results.data.results.artistmatches.artist)
           setLoaderArtist(false)
+        })
       }
       search && getArtist()
 
@@ -40,9 +41,10 @@ const Explore = () => {
       const getAlbum = async () => {
         const results = await axios.get(
           `http://ws.audioscrobbler.com/2.0/?method=album.search&album=${search}&api_key=${process.env.REACT_APP_API_KEY}&limit=16&format=json`
-        )
+        ).then((results) => {
           setAlbumList(results.data.results.albummatches.album)
           setLoaderAlbum(false)
+        })
       }
       search && getAlbum()
 
@@ -50,9 +52,10 @@ const Explore = () => {
       const getTrack = async () => {
         const results = await axios.get(
           `http://ws.audioscrobbler.com/2.0/?method=track.search&track=${search}&api_key=${process.env.REACT_APP_API_KEY}&limit=16&format=json`
-        )
-        setTrackList(results.data.results.trackmatches.track)
-        setLoaderTrack(false)
+        ).then((results) => {
+          setTrackList(results.data.results.trackmatches.track)
+          setLoaderTrack(false)
+        })
       }
       search && getTrack()
   },[search])
@@ -64,30 +67,41 @@ const Explore = () => {
 
       {/* Affichage des Card Artist */}
       {search && <h2>Artist</h2>}
-      <div className="ExploreCardContainer">
-        {search && !(artistList === null) && artistList.map((artist) => (
+      {search && <div className="ExploreCardContainer">
+        {loaderArtist ? (
+          <div>Loading...</div>
+        ) : (
+            artistList.map((artist) => (
             <ExploreArtistCard key={artist.mbid} artist={artist} />
-          ))
+            ))
+        )
         }
-      </div>
+      </div>}
 
       {/* Affichage des Card Album */}
       {search && <h2>Album</h2>}
-      <div className="ExploreCardContainer">
-        {search && !(albumList === null) && albumList.map((album) => (
+      {search && <div className="ExploreCardContainer">
+        {loaderAlbum ? (
+          <div>Loading...</div>
+        ) : (
+            albumList.map((album) => (
             <ExploreAlbumCard key={album.mbid} album={album} />
           ))
+        )
         }
-      </div>
+      </div>}
 
       {/* Affichage des Card Track */}
       {search && <h2>Track</h2>}
-      <div className="ExploreCardContainer">
-        {search && !(trackList === null) && trackList.map((track) => (
+      {search && <div className="ExploreCardContainer">
+        {loaderTrack ? (
+          <div>Loading...</div>
+        ) : ( trackList.map((track) => (
             <ExploreTrackCard key={track.mbid} track={track} />
           ))
+        )
         }
-      </div>
+      </div>}
 
     </div>
   );

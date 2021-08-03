@@ -14,18 +14,21 @@ const Track = () => {
 
   const [track, setTrack] = useState(null)
   const [loaderTrack, setLoaderTrack] = useState(true)
+
   const [imgAudioDb, setImgAudioDb] = useState(null)
+
   const [lyrics, setLyrics] = useState(null)
   const [loaderLyric, setLoaderLyric] = useState(true)
 
 
   useEffect(() => {
-    const getTrack = async () => {
-      const results = await axios.get(
+    const getTrack = () => {
+        axios.get(
         `https://ws.audioscrobbler.com/2.0/?method=track.getInfo&api_key=${process.env.REACT_APP_API_KEY}&artist=${artistName}&track=${trackName}&format=json`
-      )
-        setTrack(results.track)
+      ).then((results) => {
+        setTrack(results.data.track)
         setLoaderTrack(false)
+      })
     }
     getTrack()
   },[artistName, trackName])
@@ -33,23 +36,26 @@ const Track = () => {
   useEffect(() => {
 
     // Get Image Artist
-    const getImgAudioDb = async () => {
-      const results = await axios.get(
+    const getImgAudioDb = () => {
+      axios.get(
         `https://www.theaudiodb.com/api/v1/json/1/search.php?s=${track.artist.name}`
-      )
-      setImgAudioDb(results.artists[0].strArtistThumb)
+      ).then((results) => {
+        setImgAudioDb(results.data.artists[0].strArtistThumb)
+      })
     }
     track && getImgAudioDb()
 
     // Get Lyrics
-    const getLyrics = async () => {
+    const getLyrics = () => {
       //https://cors-anywhere.herokuapp.com/ a valider avant d'utiliser.
-      const results = await axios.get(
+      axios.get(
         `https://cors-anywhere.herokuapp.com/https://api.musixmatch.com/ws/1.1/track.lyrics.get?track_mbid=${track.mbid}&apikey=${process.env.REACT_APP_API_KEY_MUSIXMATCH}`
       )
-      .then(() => {
-        setLyrics(results.message.body.lyrics.lyrics_body)
-        setLoaderLyric(false)
+      .then((results) => {
+        console.log('Lyric : ', results.data);
+        results.data.message.body.lyrics ?
+          setLyrics(results.data.message.body.lyrics.lyrics_body) || setLoaderLyric(false)
+          : setLyrics('Lyrics not found...') || setLoaderLyric(false)
       })
     }
     track && getLyrics()
@@ -57,7 +63,7 @@ const Track = () => {
   }, [track])
 
   return (
-    <div className="Track">
+    <div className="track">
       {loaderTrack ? (
         <div>Loading...</div>
       ) : (
@@ -66,7 +72,7 @@ const Track = () => {
         {loaderLyric ? (
           <div>Loading...</div>
         ) : (
-          <TrackLyrics lyrics={lyrics ? lyrics : 'Lyrics not found...'}/>
+          <TrackLyrics lyrics={lyrics}/>
           )}
     </div>
   );

@@ -7,14 +7,14 @@ const TrackProfile = ({ artist, name, duration, listeners, img }) => {
   const timeToMin = time => ((time / 1000) /60).toFixed(2);
 
     return (
-        <div className="Track-profile">
-          <div className="Track-content">
-            <div className="Track-avatar">
+        <div className="trackProfile">
+          <div className="trackContent">
+            <div className="trackAvatar">
               <Link to={`/artist/${artist.name}`} >
                 <img src={img} alt={`Album img of ${artist.name}}`} />
               </Link>
             </div>
-            <div className="Track-info">
+            <div className="trackInfo">
               <h2>{artist.name}</h2>
               <p>Track : {name} </p>
               <p>Durée : {timeToMin(duration)}</p>

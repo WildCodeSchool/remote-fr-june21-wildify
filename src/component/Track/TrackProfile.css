@@ -1,32 +1,36 @@
-.Track-profile {
+.trackProfile {
   width: 90%;
 }
 
 
-.Track-title {
+.trackTitle {
   font-size: 40px;
   margin: 20px 0;
 }
 
-.Track-content {
+.trackContent {
   display: flex;
   padding: 20px;
   height: 30vh;
 }
 
-.Track-avatar {
+.trackAvatar {
   width: 50%;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-.Track-avatar img {
+.trackAvatar a {
+  max-width: fit-content;
+  height: 100%;
+}
+.trackAvatar img {
   max-width: fit-content;
   height: 100%;
 }
 
-.Track-info {
+.trackInfo {
   width: 60%;
   margin-left: 20%;
 }

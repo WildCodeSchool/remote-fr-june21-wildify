@@ -1,6 +1,8 @@
+import "./TrackLyrics.css";
+
 const TrackLyrics = ({ lyrics }) => {
   return (
-    <div className="TrackLyrics">
+    <div className="trackLyrics">
       <p>{lyrics}</p>
     </div>
   );

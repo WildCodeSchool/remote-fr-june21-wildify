@@ -13,11 +13,12 @@ const ExploreTrackCard = ({ track }) => {
 
   // Call API TheAudioDb pour img Artist
   useEffect(() => {
-    const getImgAudioDb = async () => {
-      const results = await axios.get(
+    const getImgAudioDb = () => {
+      axios.get(
         `https://www.theaudiodb.com/api/v1/json/1/search.php?s=${track.artist}`
       ).then((results) => {
-        results.artists && setImg(results.artists[0].strArtistThumb)
+        results.data.artists ? setImg(results.data.artists[0].strArtistThumb)
+          : setImg(imgNotFound)
       })
     }
     track && getImgAudioDb()
@@ -27,7 +28,7 @@ const ExploreTrackCard = ({ track }) => {
   return (
   <Link to={`/track/${track.name}/${track.artist}`}>
     <div className="ExploreCard">
-      <img src={img ? img : imgNotFound} alt={`Img of ${track.name}`} />
+      <img src={img} alt={`Img of ${track.name}`} />
       <h3>{track.name}</h3>
     </div>
   </Link>
