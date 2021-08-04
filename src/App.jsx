@@ -2,8 +2,8 @@ import React from 'react';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 
 import Album from './component/Album/Album'
-import Artist from './component/Artist/Artist'
 import Contact from './component/Contact/Contact'
+import DisplayArtist from './component/Artist/DisplayArtist';
 import Explore from './component/Explore/Explore'
 import Footer from './component/Footer/Footer'
 import Legal from './component/Legal/Legal'
@@ -23,12 +23,12 @@ const App = () => {
           <Explore/>
         </Route>
         <Route path="/artist/:name">
-          <Artist/>
+          <DisplayArtist />
         </Route>
-        <Route path="/Album/:name">
+        <Route path="/album/:name">
           <Album />
         </Route>
-        <Route path="/track/:trackName/:artistName">
+        <Route path="/Track/:trackName/:artistName">
           <Track />
         </Route>
         <Route path="/myLibrary"></Route>
