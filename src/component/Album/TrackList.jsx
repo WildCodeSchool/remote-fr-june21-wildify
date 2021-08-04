@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 import play from '../../assets/iconplay.png';
 import time from '../../assets/icontime.png';
@@ -20,11 +21,14 @@ const TrackList = ({ tracklist }) => (
                     <tbody>
                         {tracklist.tracks.track.map((alb) => (
                         <tr>
-                            <td className="track-center">{alb['@attr'].rank}</td>
-                            <td className="track-left">{alb.name}</td>
-                            <td className="track-center">{Math.floor(alb.duration / 60)}:{alb.duration % 60 ? alb.duration % 60 : '00'}</td>
+                            <Link to={`/track/${alb.name}/${alb.artist}`}>
+                                <td className="track-center">{alb['@attr'].rank}</td>
+                                <td className="track-left">{alb.name}</td>
+                                <td className="track-center">{Math.floor(alb.duration / 60)}:{alb.duration % 60 ? alb.duration % 60 : '00'}</td>
+                            </Link>
                         </tr>
                         ))}
+                        
                     </tbody>
                 </table>
             </div>
