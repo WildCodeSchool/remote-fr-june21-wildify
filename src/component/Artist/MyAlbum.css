@@ -1,8 +1,8 @@
 .artistAlbum{
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     width: 17%;
-    margin: 10px 5px;
+    margin: 5px;
     padding: 5px;
 }
 
@@ -17,6 +17,7 @@
 }
 
 .artistAlbum p{
+    position: relative;
     font-size: medium;
     margin: 0px;
     color: white;
