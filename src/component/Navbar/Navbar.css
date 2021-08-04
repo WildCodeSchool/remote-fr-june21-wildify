@@ -58,6 +58,9 @@ nav {
 
 .nav-title:hover {
   color: darkviolet;
+  border: 1px solid darkviolet;
+  border-radius: 10%;
+  padding: 5px;
 }
 
 .Wlogo {
