@@ -1,0 +1,29 @@
+.homeTop{
+display: flex;
+flex-wrap: wrap;
+}
+
+.homeTopCard{
+width: 200px;
+margin: 5px;
+}
+
+.homeTopCard:active {
+    box-shadow: 0 0 5px #ffc045;
+}
+
+.homeTopCard img{
+width: 100%;
+border-radius: 5px;
+}
+
+.homeTitle{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    background-color: darkviolet;
+    color: ghostwhite;
+    text-align: left;
+    font-size: large;
+    padding: 6px;
+}
