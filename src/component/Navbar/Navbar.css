@@ -1,7 +1,6 @@
 .navbar-container {
   padding: 5px;
   background: transparent;
-  margin-top: 8px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -21,8 +20,8 @@
 }
 
 .nav-logo:hover {
-  color: #ffc228;
-  border: 1px solid #ffc228;
+  color: darkviolet;
+  border: 1px solid darkviolet;
   border-radius: 12%;
   padding: 5px;
 }
@@ -31,7 +30,6 @@
   width: 60px;
   height: 60px;
   padding: 6px;
-  color: #ffc228;
   margin: 10px;
 }
 
@@ -58,7 +56,10 @@ nav {
 }
 
 .nav-title:hover {
-  color: #ffc228;
+  color: darkviolet;
+  border: 1px solid darkviolet;
+  border-radius: 10%;
+  padding: 5px;
 }
 
 .Wlogo {
@@ -78,7 +79,7 @@ nav {
   margin-left: 7px;
   font-size: 30px;
   font-family: sans-serif;
-  color : #ffc228;
+  color : rgb(104,98,97);
   font-weight: bold;
 }
 
