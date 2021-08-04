@@ -14,7 +14,7 @@ const MyAlbum = ({ album }) => {
                 ? <img src={album.image[3]['#text']} alt={album.name}/>
                 : <img src={"https://i.ibb.co/fD8vLPB/no-cover-ter.png"} alt={"Wildify3DCover"}/>
             }
-            {/* <p>{album.name}</p> */}
+            <p>{album.name}</p>
         </Link>
         </div>
     );
