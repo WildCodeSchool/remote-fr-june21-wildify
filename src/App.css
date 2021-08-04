@@ -1,13 +1,10 @@
 
 body{
     font-family: 'Quicksand', sans-serif;
+    background-color: rgb(238,238,238);
 }
 
 a {
     text-decoration: none;
     color: black;
-}
-
-.appBody {
-    background-color: rgb(238,238,238);
 }
