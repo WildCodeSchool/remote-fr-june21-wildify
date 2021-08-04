@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react';
 import axios from 'axios';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 import ExploreArtistCard from './ExploreArtistCard';
 import ExploreAlbumCard from './ExploreAlbumCard';
