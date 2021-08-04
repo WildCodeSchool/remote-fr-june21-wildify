@@ -75,6 +75,11 @@ const Track = () => {
       ) : (
         <TrackProfile {...track} img={imgAudioDb ? imgAudioDb : imgNotFound}/>
         )}
+        {/* { loaderLyric && */}
+          <div className="trackTitle">
+            <span>Lyrics</span>
+          </div>
+        {/* } */}
         {loaderLyric ? (
           <div>Loading...</div>
         ) : (

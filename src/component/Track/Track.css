@@ -5,3 +5,18 @@
   width: 100%;
   min-height: 78vh;
 }
+
+.track h2 {
+  margin: 20px 0 30px 0;
+}
+
+
+.trackTitle {
+  width: 99.4%;
+  background-color: darkviolet;
+  text-align: left;
+  color: ghostwhite;
+  font-size: large;
+  padding: 6px;
+  border-radius: 2px;
+}

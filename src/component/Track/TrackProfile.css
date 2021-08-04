@@ -2,16 +2,11 @@
   width: 90%;
 }
 
-
-.trackTitle {
-  font-size: 40px;
-  margin: 20px 0;
-}
-
 .trackContent {
   display: flex;
   padding: 20px;
   height: 30vh;
+  margin: 10px 0;
 }
 
 .trackAvatar {
@@ -28,9 +23,14 @@
 .trackAvatar img {
   max-width: fit-content;
   height: 100%;
+  border-radius: 50%;
 }
 
 .trackInfo {
   width: 60%;
   margin-left: 20%;
+}
+
+.trackInfo h2 {
+  color: #1e1e1e;
 }
