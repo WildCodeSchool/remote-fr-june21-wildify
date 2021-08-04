@@ -1,0 +1,75 @@
+.artistDisco{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    background-color: #EEEEEE;
+}
+
+.artistTitle{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    background-color: darkviolet;
+    color: ghostwhite;
+    text-align: left;
+    font-size: large;
+    padding: 6px;
+}
+.artistAlbums{
+    display: flex;
+    flex-direction: row;
+    justify-content:stretch;
+}
+
+.artistAlbum{
+    display: flex;
+    flex-direction: column;
+    /* width: 50%;
+    margin: 10px 5px;
+    padding: 5px; */
+}
+
+.artistAlbum img{
+    opacity: 0.8;
+    border-radius: 12px;
+    width: 100%;
+}
+
+.artistAlbum img:hover{
+    opacity: 1.0;
+}
+
+.artistAlbum p{
+    font-size: medium;
+    margin: 0px;
+    color: white;
+}
+
+.albumsPages{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+.albumsPrev{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color: darkviolet;
+    font-size: 1.5em;
+}
+
+.noPrev{
+    display: flex;
+    visibility: hidden;
+    font-size: 1.5em;
+}
+.albumsNext{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color: darkviolet;
+    font-size: 1.5em;
+}
+
