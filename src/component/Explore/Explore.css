@@ -1,22 +1,22 @@
-.Explore {
-  min-height: 100vh;
+.explore {
+  min-height: 80vh;
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-color: #414141;
+  background-color: rgb(238,238,238);
 }
 
-.Explore h1, h2 {
+.explore h1, h2 {
   margin: 30px;
-  color: #FFC045;
-  text-shadow: 0 0 2px #252525;
+  color: rgb(104,98,97);
+  text-shadow: 0 0 2px rgb(173, 173, 173);
 }
 
-.Explore input {
+.explore input {
   width: 60%;
   height: 28px;
   padding: 2px 30px 2px 10px;
-  border: 2px solid #FFC045;
+  border: 2px solid rgb(104,98,97);
   border-radius: 5px;
   box-shadow: 0 0 2px #252525;
   position: relative;
@@ -24,10 +24,10 @@
   background-size: 30px;
   background-position-x: 99.5%;
   background-position-y: 1px;
-  background-color: #c4c4c4;
+  background-color: #dddddd;
 }
 
-.ExploreCardContainer {
+.exploreCardContainer {
   width: 70%;
   display: flex;
   flex-wrap: wrap;
@@ -37,22 +37,22 @@
 }
 
 @media screen and (min-width: 620px) {
-  .ExploreCardContainer {
+  .exploreCardContainer {
     flex-direction: row;
   }
-  .ExploreCardContainer a {
+  .exploreCardContainer a {
     width: 20%;
   }
 }
 
 @media screen and (min-width: 1024px) {
-  .ExploreCardContainer a {
+  .exploreCardContainer a {
     width: 10%;
   }
 }
 
 @media screen and (max-width: 400px) {
-  .ExploreCardContainer a {
+  .exploreCardContainer a {
     width: 100%;
   }
 }
