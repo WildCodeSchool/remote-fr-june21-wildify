@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import axios from 'axios';
 
 const Home = () => {
-    const [topArtists, settopArtists] = useState([]);
+    const [topArtists, setTopArtists] = useState([]);
     const [loader, setLoader] = useState(true)
     
     useEffect(() => {
