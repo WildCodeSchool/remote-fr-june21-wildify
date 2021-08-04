@@ -1,5 +1,8 @@
 import {useEffect, useState} from 'react'
-import { NavLink } from 'react-router-dom';
+import { Link } from 'react-router-dom';
+import axios from 'axios';
+
+import imgNotFound from '../../assets/cover-wildify.png'
 
 import './ExploreCard.css'
 
@@ -11,22 +14,23 @@ const ExploreArtistCard = ({ artist }) => {
   // Call API TheAudioDb pour img Artist
   useEffect(() => {
     const getImgAudioDb = () => {
-      fetch(`https://www.theaudiodb.com/api/v1/json/1/search.php?s=${artist.name}`)
-      .then((res) => res.json())
-      .then((res) => {
-        res.artists && setImg(res.artists[0].strArtistThumb);
+      axios.get(
+        `https://www.theaudiodb.com/api/v1/json/1/search.php?s=${artist.name}`
+      ).then((results) => {
+          results.data.artists ? setImg(results.data.artists[0].strArtistThumb)
+            : setImg(imgNotFound)
       })
     }
     artist && getImgAudioDb()
   }, [artist])
 
 return (
-  <NavLink to={`/artist/${artist.name}`} >
-    <div className="ExploreCard">
-      <img src={img ? img : `https://i.ibb.co/fD8vLPB/no-cover-ter.png`} alt={`Img of ${artist.name}`} />
+  <Link to={`/artist/${artist.name}`} >
+    <div className="exploreCard">
+      <img src={img} alt={`Img of ${artist.name}`} />
       <h3>{artist.name}</h3>
     </div>
-  </NavLink>
+  </Link>
 )};
 
 export default ExploreArtistCard;

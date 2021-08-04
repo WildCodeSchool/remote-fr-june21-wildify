@@ -34,17 +34,17 @@ const App = () => {
         </Route>
         <Route path="/track/:trackName/:artistName">
           <Track />
-          </Route>
-          <Route path="/myLibrary"></Route>
-          <Route path="/userProfile"></Route>
-          <Route path="/legal">
+        </Route>
+        <Route path="/myLibrary"></Route>
+        <Route path="/userProfile"></Route>
+        <Route path="/legal">
           <Legal/>
-          </Route>
-          <Route path="/Contact">
+        </Route>
+        <Route path="/Contact">
           <Contact />
-          </Route>
+        </Route>
         </Switch>
-       <Footer />
+      <Footer />
       </Router>
     </div>
   );
