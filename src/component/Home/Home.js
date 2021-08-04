@@ -9,21 +9,15 @@ import './Home.css'
 const Home = () => {
     // Initial States
     const [topArtists, setTopArtists] = useState([]);
-<<<<<<< HEAD
     const [topTracks, setTopTracks] = useState([]);
     const [loader1, setLoader1] = useState(true);
     const [loader2, setLoader2] = useState(true);
     
-=======
-    const [loader, setLoader] = useState(true)
-
->>>>>>> dev
     useEffect(() => {
     // Get Top 50 artists from lastFM
     const getTopArtists = () => {
         axios
             .get(`https://ws.audioscrobbler.com/2.0/?method=chart.gettopartists&api_key=${process.env.REACT_APP_API_KEY}&format=json`)
-<<<<<<< HEAD
             .then(response => { 
                 setLoader1(false)
                 setTopArtists(response.data.artists.artist)
@@ -42,19 +36,10 @@ const Home = () => {
     }
     getTopTracks()
 
-=======
-            .then(response => {
-                setLoader(false)
-                setTopArtists(response.data.artists.artist)
-            })
-        }
-        getData()
->>>>>>> dev
     }, [])
 
     return (
         <div>
-<<<<<<< HEAD
             {/* {console.log('Top Artists', topArtists)} */}
             <div className = "homeTitle">Top 10 Artists</div>
             {loader1
@@ -82,20 +67,6 @@ const Home = () => {
                             </div>
                     )}
                 </div>
-=======
-{console.log('Top Artists', topArtists)}
-            <h2>Home</h2>
-            {
-                loader ? <div>Loading...</div> :
-                    <div>
-                        {topArtists.map(topArtist =>
-                        <div>
-                            <p>{topArtist.name}</p>
-                            <img src={topArtist.image[3]['#text']} alt="top artists"/>
-                        </div>
-                        )}
-                    </div>
->>>>>>> dev
             }
         </div>
     );
