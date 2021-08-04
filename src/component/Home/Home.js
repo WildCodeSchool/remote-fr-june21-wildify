@@ -25,7 +25,7 @@ const Home = () => {
                 loader ? <div>Loading...</div> :
                     <div>{topArtists.map(topArtist => <div>
                         <p>{topArtist.name}</p>
-                        <img src={topArtist.image[3].['#text']} />
+                        <img src={topArtist.image[3].['#text']} alt="top artists"/>
                     </div>)}</div>
             } 
         </div>

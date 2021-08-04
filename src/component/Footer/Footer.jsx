@@ -1,9 +1,9 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
 
-import Facebook from "./facebook.png";
-import Insta from "./instagram.png";
-import Twitter from "./twitter.png"
+import Facebook from "./facebook-square-brands.svg";
+import Insta from "./instagram-brands.svg";
+import Twitter from "./twitter-square-brands.svg"
 
 import "./Footer.css";
 

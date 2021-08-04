@@ -1,10 +1,10 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
 
-import home from "./home.png";
-import explore from "./explore.png";
-import myLibrary from "./mylibrary.png";
-import UserProfile from "./userprofile.png";
+import home from './home-solid.svg'
+import explore from "./search-solid.svg";
+import myLibrary from "./star-regular.svg";
+import UserProfile from "./user-regular.svg";
 
 import WildifyLogo from './wildify-logo-nav.png';
 
@@ -19,7 +19,7 @@ const Navbar = () => (
     <div className="navbar">
       <nav>
         <NavLink className="nav-buttons" to="/Home">
-          <img className="nav-logo" src={home} alt="Home" activeClassName="nav-active" />
+          <img className="nav-logo" src={home} alt="home" activeClassName="nav-active" />
           <p className="nav-title">Home</p>
         </NavLink>
         <NavLink className="nav-buttons" to="/Explore">

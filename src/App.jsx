@@ -16,7 +16,8 @@ import './App.css'
 const App = () => {
 
   return (
-    <Router>
+    <div className="appBody">
+      <Router>
       <Navbar />
       <Switch>
         <Route exact path="/">
@@ -33,18 +34,19 @@ const App = () => {
         </Route>
         <Route path="/track/:trackName/:artistName">
           <Track />
-        </Route>
-        <Route path="/myLibrary"></Route>
-        <Route path="/userProfile"></Route>
-        <Route path="/legal">
+          </Route>
+          <Route path="/myLibrary"></Route>
+          <Route path="/userProfile"></Route>
+          <Route path="/legal">
           <Legal/>
-        </Route>
-        <Route path="/Contact">
+          </Route>
+          <Route path="/Contact">
           <Contact />
-        </Route>
-      </Switch>
-      <Footer />
-    </Router>
+          </Route>
+        </Switch>
+       <Footer />
+      </Router>
+    </div>
   );
 };
 
