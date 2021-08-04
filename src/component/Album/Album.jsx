@@ -14,14 +14,18 @@ const Album = () => {
   const { artistName, albumName } = useParams();
 
   useEffect(() => {
-    axios
-    .get(`https://ws.audioscrobbler.com/2.0/?method=album.getinfo&api_key=${process.env.REACT_APP_API_KEY}&artist=${artistName}&album=${albumName}&format=json`)
-    .then(response => response.json())
-    .then(data => setAlbum(data.album))
+    const getData = () => {
+      console.log(artistName, albumName);
+      axios
+      .get(`https://ws.audioscrobbler.com/2.0/?method=album.getinfo&api_key=${process.env.REACT_APP_API_KEY}&artist=${artistName}&album=${albumName}&format=json`)
+      .then(data => setAlbum(data.data.album))
+    }
+    getData();
   }, [artistName, albumName]);
 
   return (
     <div>
+      {console.log("coucou", album)}
       {album === null || album === undefined
         ? <div>Wait...</div>
         : <div>

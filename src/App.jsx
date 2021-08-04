@@ -25,7 +25,7 @@ const App = () => {
         <Route path="/artist/:name">
           <Artist/>
         </Route>
-        <Route path="album/:artistName/:albumName">
+        <Route path="/album/:albumName/:artistName">
           <Album />
         </Route>
         <Route path="/track/:trackName/:artistName">
