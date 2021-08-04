@@ -25,6 +25,7 @@
 .artistAlbum{
     display: flex;
     flex-direction: column;
+    position: relative;
     /* width: 50%;
     margin: 10px 5px;
     padding: 5px; */
@@ -41,7 +42,8 @@
 }
 
 .artistAlbum p{
-    font-size: medium;
+    position: absolute;
+    font-size: smaller;
     margin: 0px;
     color: white;
 }

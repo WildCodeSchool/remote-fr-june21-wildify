@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import axios from 'axios';
 
 const Home = () => {
-    const [topArtists, settopArtists] = useState([]);
+    const [topArtists, setTopArtists] = useState([]);
     const [loader, setLoader] = useState(true)
     
     useEffect(() => {
@@ -25,7 +25,7 @@ const Home = () => {
                 loader ? <div>Loading...</div> :
                     <div>{topArtists.map(topArtist => <div>
                         <p>{topArtist.name}</p>
-                        <img src={topArtist.image[3].['#text']} />
+                        <img src={topArtist.image[3].['#text']} alt="top artists"/>
                     </div>)}</div>
             } 
         </div>
