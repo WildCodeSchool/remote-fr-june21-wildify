@@ -8,16 +8,19 @@ import ExploreTrackCard from './ExploreTrackCard'
 import './Explore.css';
 
 const Explore = () => {
-  // Valeur de la recherche dans la barre de recherche
+
+  // Valeur de la recherche dans la barre de recherche.
   const [search, setSearch] = useState('');
 
-  // Reponse du call API avec search
-  const [artistList, setArtistList] = useState([]);
-  const [albumList, setAlbumList] = useState([]);
-  const [trackList, setTrackList] = useState([]);
+  // Reponse du call API avec search pour les Artists, Albums et tracks.
+  const [artistList, setArtistList] = useState(null);
+  const [albumList, setAlbumList] = useState(null);
+  const [trackList, setTrackList] = useState(null);
 
-  // Call API avec Valeur du search
+  // Call API avec Valeur du search.
   useEffect(() => {
+
+      // Call API Artist
       const getArtist = () => {
         fetch(`http://ws.audioscrobbler.com/2.0/?method=artist.search&artist=${search}&api_key=${process.env.REACT_APP_API_KEY}&limit=16&format=json`)
           .then(response => response.json())
@@ -25,17 +28,19 @@ const Explore = () => {
       }
       search && getArtist()
 
+      // Call API Album
       const getAlbum = () => {
         fetch(`http://ws.audioscrobbler.com/2.0/?method=album.search&album=${search}&api_key=${process.env.REACT_APP_API_KEY}&limit=16&format=json`)
           .then(response => response.json())
-          .then(data => setAlbumList(data.results))
+          .then(data => setAlbumList(data.results.albummatches.album))
       }
       search && getAlbum()
 
+      // Call API Track
       const getTrack = () => {
         fetch(`http://ws.audioscrobbler.com/2.0/?method=track.search&track=${search}&api_key=${process.env.REACT_APP_API_KEY}&limit=16&format=json`)
           .then(response => response.json())
-          .then(data => setTrackList(data.results))
+          .then(data => setTrackList(data.results.trackmatches.track))
       }
       search && getTrack()
   },[search])
@@ -45,6 +50,7 @@ const Explore = () => {
       <h1>Search</h1>
       <input type="text" minLength='1' maxLength="50" value={search} onChange={(event) => {setSearch(event.target.value)}}/>
 
+      {/* Affichage des Card Artist */}
       {search && <h2>Artist</h2>}
       <div className="ExploreCardContainer">
         {search && !(artistList === null) && artistList.map((artist) => (
@@ -53,21 +59,24 @@ const Explore = () => {
         }
       </div>
 
+      {/* Affichage des Card Album */}
       {search && <h2>Album</h2>}
       <div className="ExploreCardContainer">
-        {search && !(albumList === undefined || albumList === null || albumList.length === 0) && albumList.albummatches.album.map((album) => (
+        {search && !(albumList === null) && albumList.map((album) => (
             <ExploreAlbumCard key={album.mbid} album={album} />
           ))
         }
       </div>
 
+      {/* Affichage des Card Track */}
       {search && <h2>Track</h2>}
       <div className="ExploreCardContainer">
-        {search && !(trackList === undefined || trackList === null || trackList.length === 0) && trackList.trackmatches.track.map((track) => (
+        {search && !(trackList === null) && trackList.map((track) => (
             <ExploreTrackCard key={track.mbid} track={track} />
           ))
         }
       </div>
+
     </div>
   );
 }

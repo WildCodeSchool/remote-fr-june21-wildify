@@ -7,8 +7,8 @@ import './Album.css';
 
 const Album = () => {
   const [album, setAlbum] = useState();
-  const idAlbum = "Believe";
-  const idArtist = "Cher";
+  const idAlbum = "In the Zone";
+  const idArtist = "Britney Spears";
   useEffect(() => {
     fetch(`https://ws.audioscrobbler.com/2.0/?method=album.getinfo&api_key=e46bdee78e4bad1a3edaa3ba6e3a981e&artist=${idArtist}&album=${idAlbum}&format=json`)
       .then(response => response.json())

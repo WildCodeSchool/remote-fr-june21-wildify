@@ -6,6 +6,7 @@ import Contact from './component/Contact/Contact'
 import DisplayArtist from './component/Artist/DisplayArtist';
 import Explore from './component/Explore/Explore'
 import Footer from './component/Footer/Footer'
+import Home from './component/Home/Home'
 import Legal from './component/Legal/Legal'
 import Navbar from './component/Navbar/Navbar'
 import Track from './component/Track/Track'
@@ -18,7 +19,9 @@ const App = () => {
     <Router>
       <Navbar />
       <Switch>
-        <Route exact path="/"></Route>
+        <Route exact path="/">
+          <Home />
+        </Route>
         <Route path="/explore">
           <Explore/>
         </Route>
