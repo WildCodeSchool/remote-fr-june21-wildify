@@ -1,15 +1,27 @@
 .homeTop{
-display: flex;
-flex-wrap: wrap;
+    display: flex;
+    flex-wrap: wrap;
 }
 
 .homeTopCard{
-width: 200px;
-margin: 5px;
+    position: relative;
+    width: 200px;
+    margin: 5px;
 }
 
 .homeTopCard:active {
     box-shadow: 0 0 5px #ffc045;
+}
+
+.homeTopCard p{
+    position: absolute;
+    top: 80%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    text-align: center;
+    color: #ffc228;
+    background-color: grey;
 }
 
 .homeTopCard img{
