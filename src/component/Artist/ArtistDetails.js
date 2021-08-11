@@ -11,8 +11,8 @@ const ArtistDetails = ({artist, artistInfo}) => {
                 <p>Fans : {artist.strCountry} ({artist.strCountryCode})</p>
                 <p>Origin : {artist.strCountry} ({artist.strCountryCode})</p>
                 <p>Genre : {artist.strGenre}</p>
-                <p>Facebook : <a href={artist.strFacebook} target="_blank">{artist.strFacebook}</a></p>
-                <p>Website : <a href = {artist.strWebsite}>Web icon</a></p>
+                <p>Facebook : <a href={`http://${artist.strFacebook}`} target="_blank" rel="noreferrer">{artist.strFacebook}</a></p>
+                <p>Website : <a href = {`http://${artist.strWebsite}`} target="_blank" rel="noreferrer">Web</a></p>
             </div>
         </div>
     );
