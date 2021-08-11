@@ -1,14 +1,13 @@
 import { useState, useEffect } from 'react';
 
+import ArtistAlbumCard from './ArtistAlbumCard'
+
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faChevronLeft } from '@fortawesome/free-solid-svg-icons'
 import { faChevronRight } from '@fortawesome/free-solid-svg-icons'
 
-import MyAlbum from './MyAlbum';
 
-import './MyAlbums.css'
-
-const MyAlbums = ({albums}) => {
+const ArtistAlbums = ({albums}) => {
 
     // Pagination
     const numRes = parseInt(5);
@@ -41,7 +40,7 @@ const MyAlbums = ({albums}) => {
                     {albums
                         .slice(firstAlbum, lastAlbum)
                         .map( (album, index) =>
-                            <MyAlbum key={index} album={album}/>
+                            <ArtistAlbumCard key={index} album={album}/>
                             )
                     }
                     <div className="albumsPages">
@@ -55,5 +54,5 @@ const MyAlbums = ({albums}) => {
     );
 }
 
-export default MyAlbums;
+export default ArtistAlbums;
 // 

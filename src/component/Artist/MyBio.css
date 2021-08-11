@@ -1,9 +1,0 @@
-.artistBio{
-    padding: 10px;
-    display: flex;
-    flex-direction: column;
-    text-align: justify;
-    font-size: 0.7em;
-    justify-content: center;
-    background-color: #EEEEEE;
-}

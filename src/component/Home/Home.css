@@ -1,22 +1,3 @@
-.homeTop{
-display: flex;
-flex-wrap: wrap;
-}
-
-.homeTopCard{
-width: 200px;
-margin: 5px;
-}
-
-.homeTopCard:active {
-    box-shadow: 0 0 5px #ffc045;
-}
-
-.homeTopCard img{
-width: 100%;
-border-radius: 5px;
-}
-
 .homeTitle{
     display: flex;
     flex-direction: row;
@@ -26,4 +7,24 @@ border-radius: 5px;
     text-align: left;
     font-size: large;
     padding: 6px;
+}
+
+.homeTop{
+display: flex;
+flex-wrap: wrap;
+}
+
+.homeTopCard{
+width: 200px;
+margin: 5px;
+opacity: 0.8;
+}
+
+.homeTopCard:hover {
+    opacity: 1;
+}
+
+.homeTopCard img{
+width: 100%;
+border-radius: 5px;
 }

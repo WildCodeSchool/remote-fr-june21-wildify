@@ -3,7 +3,7 @@ import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 
 import Album from './component/Album/Album'
 import Contact from './component/Contact/Contact'
-import DisplayArtist from './component/Artist/DisplayArtist';
+import Artist from './component/Artist/Artist';
 import Explore from './component/Explore/Explore'
 import Footer from './component/Footer/Footer'
 import Home from './component/Home/Home'
@@ -27,7 +27,7 @@ const App = () => {
           <Explore/>
         </Route>
         <Route path="/artist/:name">
-          <DisplayArtist />
+          <Artist />
         </Route>
         <Route path="/album/:albumName/:artistName">
           <Album />

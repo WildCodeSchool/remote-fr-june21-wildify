@@ -2,13 +2,13 @@ import { useParams } from 'react-router-dom';
 import { useState, useEffect } from 'react';
 import axios from 'axios';
 
-import MyAlbums from './MyAlbums';
-import MyBio from './MyBio';
-import MyDetails from './MyDetails';
+import ArtistAlbums from './ArtistAlbums';
+import ArtistBio from './ArtistBio';
+import ArtistDetails from './ArtistDetails';
 
-import './DisplayArtist.css'
+import './Artist.css'
 
-const DisplayArtist = () => {
+const Artist = () => {
     // Get artist name from url
     const { name } = useParams()
 
@@ -44,14 +44,16 @@ const DisplayArtist = () => {
         getArtistAlbums();
     }, [name])
 
+    console.log(albums)
+
     // Display artist related components
     return (
         <div className="artistCard">
-            <MyDetails artist={artistDB}/>
-            <MyAlbums albums={albums}/>
-            <MyBio artistInfo={artistInfo}/>
+            <ArtistDetails artist={artistDB} artistInfo={artistInfo}/>
+            <ArtistAlbums albums={albums}/>
+            <ArtistBio artist={artistDB} artistInfo={artistInfo}/>
         </div>
     );
 }
 
-export default DisplayArtist;
+export default Artist;
