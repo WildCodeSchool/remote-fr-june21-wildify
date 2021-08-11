@@ -1,9 +1,10 @@
 .track {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  width: 100%;
   min-height: 78vh;
+  margin: 0;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
 }
 
 .track h2 {
@@ -12,11 +13,12 @@
 
 
 .trackTitle {
-  width: 99.4%;
+  width: 100%;
   background-color: darkviolet;
   text-align: left;
   color: ghostwhite;
   font-size: large;
-  padding: 6px;
+  margin: 20px 0;
   border-radius: 2px;
+  padding: 6px 0 6px 20px;
 }

@@ -8,8 +8,7 @@ const MyAlbum = ({ album }) => {
         // Data from lastFM
         album.name !== "(null)" && // remove albums with title = (null)
         <div className="artistAlbum">
-            {/* <Link to={`/artist/${album.artist.name}/album/${album.name}`}>  */}
-            <Link to={`/album/${album.name}`}> 
+            <Link to={`/album/${album.name}/${album.artist.name}`}> 
             {album.image[3]['#text']
                 ? <img src={album.image[3]['#text']} alt={album.name}/>
                 : <img src={"https://i.ibb.co/fD8vLPB/no-cover-ter.png"} alt={"Wildify3DCover"}/>
