@@ -1,4 +1,4 @@
-.ExploreCard {
+.exploreCard {
   width: 95%;
   background-color: #c4c4c4;
   border-radius: 5px;
@@ -11,17 +11,17 @@
   position: relative;
 }
 
-.ExploreCard:active {
+.exploreCard:active {
   box-shadow: 0 0 5px #ffc045;
 }
 
-.ExploreCard img {
+.exploreCard img {
   width: 100%;
   height: 100%;
   border-radius: 5px;
 }
 
-.ExploreCard h3 {
+.exploreCard h3 {
   width: 100%;
   position: absolute;
   bottom: 0;

@@ -106,3 +106,14 @@ Params
 - limit (Optional) : The number of results to fetch per page. Defaults to 50.
 - page (Optional) : The page number to fetch. Defaults to first page.
 - api_key (Required) : A Last.fm API key.
+
+
+## MusicxMatche
+
+Var .env : REACT_APP_API_KEY_MUSIXMATCH
+Adress root : https://api.musixmatch.com/ws/1.1/
+track.lyrics.get?track_mbid
+q_lyricssearch for a text string among lyrics
+f_lyrics_languageFilter the tracks by lyrics language
+
+https://api.musixmatch.com/ws/1.1/track.lyrics.get?track_mbid=${trackMbib}&apikey=${process.env.REACT_APP_API_KEY_MUSIXMATCH}

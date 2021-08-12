@@ -1,22 +1,22 @@
 import React from 'react';
-import { NavLink } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
-import './ArtistAlbum.css'
+import './MyAlbum.css'
 
-const ArtistAlbum = ({ album }) => {
+const MyAlbum = ({ album }) => {
     return (
         // Data from lastFM
         album.name !== "(null)" && // remove albums with title = (null)
         <div className="artistAlbum">
-            <NavLink to={`/album/${album.name}/${album.artist.name}`}> 
+            <Link to={`/album/${album.name}/${album.artist.name}`}> 
             {album.image[3]['#text']
                 ? <img src={album.image[3]['#text']} alt={album.name}/>
                 : <img src={"https://i.ibb.co/fD8vLPB/no-cover-ter.png"} alt={"Wildify3DCover"}/>
             }
             <p>{album.name}</p>
-        </NavLink>
+        </Link>
         </div>
     );
 }
 
-export default ArtistAlbum;
+export default MyAlbum;

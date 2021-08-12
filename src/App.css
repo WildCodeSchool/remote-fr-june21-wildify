@@ -1,6 +1,7 @@
-:root {
-    --bg-color: #424242;
+
+body{
     font-family: 'Quicksand', sans-serif;
+    background-color: rgb(238,238,238);
 }
 
 a {
