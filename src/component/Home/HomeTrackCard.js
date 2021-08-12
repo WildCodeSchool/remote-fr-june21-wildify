@@ -1,4 +1,8 @@
+import { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
+import axios from 'axios';
+
+import imgNotFound from '../../assets/cover-wildify.png'
 
 const HomeTrackCard = ({topTrack}) => {
 
