@@ -1,6 +1,7 @@
 
 const ArtistDetails = ({artist, artistInfo}) => {
-    console.log(artist)
+
+    console.log(artistInfo)
     return (
         <div className="artistDetails">
             <div className="artistAvatar">
@@ -8,7 +9,7 @@ const ArtistDetails = ({artist, artistInfo}) => {
             </div>
             <div className="artistInfo">
             <h2>{artist.strArtist}</h2>
-                <p>Fans : {artist.strCountry} ({artist.strCountryCode})</p>
+                <p>Fans : {artistInfo && artistInfo.stats.listeners}</p>
                 <p>Origin : {artist.strCountry} ({artist.strCountryCode})</p>
                 <p>Genre : {artist.strGenre}</p>
                 <p>Facebook : <a href={`http://${artist.strFacebook}`} target="_blank" rel="noreferrer">{artist.strFacebook}</a></p>

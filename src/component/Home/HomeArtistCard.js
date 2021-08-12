@@ -27,7 +27,6 @@ const HomeArtistCard = ({topArtist}) => {
             <Link to={`/artist/${topArtist.name}`}> 
                 <p>{topArtist.name}</p>
                 <img src={img} alt={`Img of ${topArtist.name}`} />
-                {/* <img src={topArtist.image[3]['#text']} alt="top artists"/> */}
             </Link>
         </div>
     );

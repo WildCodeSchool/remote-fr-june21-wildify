@@ -44,14 +44,12 @@ const Artist = () => {
         getArtistAlbums();
     }, [name])
 
-    console.log(albums)
-
     // Display artist related components
     return (
         <div className="artistCard">
             <ArtistDetails artist={artistDB} artistInfo={artistInfo}/>
             <ArtistAlbums albums={albums}/>
-            <ArtistBio artist={artistDB} artistInfo={artistInfo}/>
+            <ArtistBio artistInfo={artistInfo}/>
         </div>
     );
 }
