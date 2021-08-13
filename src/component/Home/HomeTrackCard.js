@@ -5,6 +5,7 @@ import { Link } from 'react-router-dom';
 // import imgNotFound from '../../assets/cover-wildify.png'
 
 const HomeTrackCard = ({topTrack}) => {
+    
 
     return (
         <div className = "homeTopCard" >

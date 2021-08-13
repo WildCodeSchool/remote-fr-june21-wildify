@@ -1,11 +1,8 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-import './ArtistAlbumCard.css'
-
 const ArtistAlbumCard = ({ album }) => {
     return (
-        // Data from lastFM
         album.name !== "(null)" && // remove albums with title = (null)
         <div className="artistAlbum">
             <Link to={`/album/${album.artist.name}/${album.name}`}> 

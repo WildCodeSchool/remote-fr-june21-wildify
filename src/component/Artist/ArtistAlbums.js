@@ -6,7 +6,6 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faChevronLeft } from '@fortawesome/free-solid-svg-icons'
 import { faChevronRight } from '@fortawesome/free-solid-svg-icons'
 
-
 const ArtistAlbums = ({albums}) => {
 
     // Pagination
@@ -25,9 +24,8 @@ const ArtistAlbums = ({albums}) => {
 
     return (
         <div className="artistDisco">
-
             <div className="artistTitle">
-                <span>Discographie</span>
+                <span>Top Albums</span>
             </div>
             {albums
                 ?<div className="artistAlbums">
@@ -50,9 +48,7 @@ const ArtistAlbums = ({albums}) => {
                 :<div>Discographie non disponible</div>
             }
         </div>
-
     );
 }
 
 export default ArtistAlbums;
-// 

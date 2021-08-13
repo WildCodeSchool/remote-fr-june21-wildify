@@ -18,8 +18,8 @@ const TrackList = ({ tracklist }) => (
                         </tr>
                     </thead>
                     <tbody>
-                        {tracklist.tracks.track.map((alb) => (
-                        <tr>
+                        {tracklist.tracks.track.map((alb,index) => (
+                        <tr key={index}>
                             <td className="track-center">{alb['@attr'].rank}</td>
                             <td className="track-left">{alb.name}</td>
                             <td className="track-center">{Math.floor(alb.duration / 60)}:{alb.duration % 60 ? alb.duration % 60 : '00'}</td>
