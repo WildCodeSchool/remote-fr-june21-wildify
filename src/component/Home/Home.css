@@ -2,7 +2,7 @@
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    background-color: darkviolet;
+    background: linear-gradient(90deg, darkviolet 0%, rgba(255,255,255,1) 70%, transparent 100%);
     color: ghostwhite;
     text-align: left;
     font-size: large;
@@ -12,16 +12,17 @@
 .homeTop{
     display: flex;
     flex-wrap: wrap;
+    justify-content: space-between;
 }
 
 .homeTopCard{
     position: relative;
-    width: 200px;
+    width: 8vw;
     margin: 5px;
 }
 
 .homeTopCard:hover {
-    opacity: 1;
+    opacity: 1.0;
 }
 
 .homeTopCard p{
@@ -32,7 +33,7 @@
     width: 100%;
     text-align: center;
     color: #ffc228;
-    background-color: grey;
+    background-color: rgba(0,0,0, 0.4);
 }
 
 .homeTopCard img{

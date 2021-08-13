@@ -1,3 +1,4 @@
+
 .artistTitle{
     display: flex;
     flex-direction: row;
@@ -28,14 +29,8 @@
 
 /*Details*/
 
-.artistDetails{
-    display: flex;
-    flex-direction: row;
-    width: 100%;
-}
-
 .artistAvatar{
-    width: 25%;
+    width: 40%;
     padding: 20px
 }
 .artistAvatar img{
@@ -46,26 +41,21 @@
     border-radius: 50%;
 }
 
-.artistInfo{
-    width: 75%;
-    display:flex;
-    flex-direction: column;
-    justify-content: center;
-}
-
 .artistInfo h2{
+    margin-left: 25px;
+    margin: 10px;
     margin-left: 25px;
 }
 
 .artistInfo p{
-    margin: 0;
+    margin: 0px;
     margin-left: 25px;
     padding: 0;
 }
 
 /*Disco*/
 
-.artistDisco, .artistBio, .bestSongs, .similar{
+.artistDetails, .artistInfo, .artistDisco, .artistBio, .bestSongs, .similar{
     display: flex;
     flex-direction: column;
     width: 100%;
@@ -88,15 +78,13 @@
     opacity: 1.0;
 }
 
-.artistAlbum img, .artistTrack img{
-    height: 10vw;
-    width: 10vw;
+.artistAlbum img, .artistTrack img, .similarArtist img{
+    height: 8vw;
+    width: 8vw;
     border-radius: 10px;
 }
 
 .similarArtist img{
-    height: 10vw;
-    width: 10vw;
     border-radius: 50%;
 }
 
@@ -112,7 +100,7 @@
     font-weight: bold;
     padding: 6px 0px;
     color: #fcc228;
-    background-color: grey;
+    background-color: rgba(0,0,0, 0.4);
 }
 
 /*Bio*/
@@ -125,4 +113,17 @@
 .artistBio a{
     color: darkviolet;
     font-style: italic;
+}
+
+
+/*MediaQueries*/
+
+@media (min-width: 480px){
+    .artistDetails{
+        flex-direction: row;
+    } 
+    .artistInfo{
+        width: 75%;
+        justify-content: center;
+    }
 }

@@ -9,7 +9,7 @@ import { faChevronRight } from '@fortawesome/free-solid-svg-icons'
 const ArtistAlbums = ({albums}) => {
 
     // Pagination
-    const numRes = parseInt(5);
+    const numRes = parseInt(10);
     const [firstAlbum, setFirstAlbum] = useState(0);
     const [lastAlbum, setLastAlbum] = useState(numRes);
     
