@@ -9,8 +9,8 @@ const TrackList = ({ tracklist }) => (
     <div className="track-list-bloc">
         <h3>Liste des pistes</h3>
         <div className="track-list-bloc-table">
-                    {tracklist.tracks.track.map((alb) => (
-                        <div className="bloc">
+                    {tracklist.tracks.track.map((alb, index) => (
+                        <div className="bloc" key={index}>
                             <Link to={`/track/${alb.name}/${alb.artist}`}>
                             <div className="blocpist">
                                 <div>

@@ -10,6 +10,7 @@ import Home from './component/Home/Home'
 import Legal from './component/Legal/Legal'
 import Navbar from './component/Navbar/Navbar'
 import Track from './component/Track/Track'
+import UserLogin from './component/User/UserLogin'
 
 import './App.css'
 
@@ -36,7 +37,9 @@ const App = () => {
           <Track />
         </Route>
         <Route path="/myLibrary"></Route>
-        <Route path="/userProfile"></Route>
+        <Route path="/userProfile">
+          <UserLogin />
+        </Route>
         <Route path="/legal">
           <Legal/>
         </Route>
