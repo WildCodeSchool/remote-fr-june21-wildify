@@ -1,34 +1,34 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 import play from '../../assets/iconplay.png';
-import time from '../../assets/icontime.png';
 
 import './Album.css';
 
 const TrackList = ({ tracklist }) => (
-        <div className="track-list-bloc">
-            <h3>Liste des pistes</h3>
-            <div className="track-list-bloc-table">
-                <table>
-                    <thead>
-                        <tr>
-                            <th><img src={play} alt="Logo" /></th>
-                            <th className="track-left">Titre</th>
-                            <th><img src={time} alt="Logo" /></th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        {tracklist.tracks.track.map((alb,index) => (
-                        <tr key={index}>
-                            <td className="track-center">{alb['@attr'].rank}</td>
-                            <td className="track-left">{alb.name}</td>
-                            <td className="track-center">{Math.floor(alb.duration / 60)}:{alb.duration % 60 ? alb.duration % 60 : '00'}</td>
-                        </tr>
-                        ))}
-                    </tbody>
-                </table>
-            </div>
+    <div className="track-list-bloc">
+        <h3>Liste des pistes</h3>
+        <div className="track-list-bloc-table">
+                    {tracklist.tracks.track.map((alb) => (
+                        <div className="bloc">
+                            <Link to={`/track/${alb.name}/${alb.artist}`}>
+                            <div className="blocpist">
+                                <div>
+                                    <img className="img-bloc-pist" src={tracklist.image[4]['#text']} alt={tracklist.image['#text']} />
+                                </div>
+                                <div className="blocpist-infos">
+                                <div className="track-name">{alb.name}</div>
+                                    <div className="blocpist-infos-time">
+                                        <div><img src={play} alt="Logo" className="blocpist-infos-logo" /></div>
+                                        <div className="track-duration">{Math.floor(alb.duration / 60)} m {alb.duration % 60 ? alb.duration % 60 : '00'} s</div>
+                                    </div>
+                                </div>
+                            </div>
+                            </Link>
+                        </div>
+                    ))}
         </div>
+    </div>
 )
 
 export default TrackList;
