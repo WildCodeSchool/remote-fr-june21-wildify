@@ -61,6 +61,11 @@
     width: 100%;
 }
 
+.artistName{
+    display: flex;
+    flex-direction: row;
+}
+
 .artistAlbums, .artistTracks, .similarArtists{
     display: flex;
     flex-direction: row;
@@ -115,6 +120,13 @@
     font-style: italic;
 }
 
+.favoriteBtn{
+    padding: 15px 5px;
+    font-size: small;
+    border-radius: 10px;
+    background-color: darkviolet;
+    color: white;
+}
 
 /*MediaQueries*/
 

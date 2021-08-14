@@ -23,12 +23,10 @@ const HomeArtistCard = ({topArtist}) => {
     }, [topArtist])
 
     return (
-        <div className = "homeTopCard" >
-            <Link to={`/artist/${topArtist.name}`}> 
-                <p>{topArtist.name}</p>
-                <img src={img} alt={`Img of ${topArtist.name}`} />
-            </Link>
-        </div>
+        <Link to={`/artist/${topArtist.name}`}> 
+            <p>{topArtist.name}</p>
+            <img src={img} alt={`Img of ${topArtist.name}`} />
+        </Link>
     );
 }
 
