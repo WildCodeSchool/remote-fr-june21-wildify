@@ -11,7 +11,7 @@ const TrackList = ({ tracklist }) => (
         <div className="track-list-bloc-table">
                     {tracklist.tracks.track.map((alb, index) => (
                         <div className="bloc" key={index}>
-                            <Link to={`/track/${alb.name}/${alb.artist}`}>
+                            <Link to={`/track/${tracklist.name}/${tracklist.artist}`}>
                             <div className="blocpist">
                                 <div>
                                     <img className="img-bloc-pist" src={tracklist.image[4]['#text']} alt={tracklist.image['#text']} />

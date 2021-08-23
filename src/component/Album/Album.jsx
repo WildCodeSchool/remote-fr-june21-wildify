@@ -11,21 +11,20 @@ import './Album.css';
 
 const Album = () => {
   const [album, setAlbum] = useState();
-  const { artistName, albumName } = useParams();
+  const { albumName, artistName } = useParams();
 
   useEffect(() => {
     const getData = () => {
-      console.log(artistName, albumName);
       axios
       .get(`https://ws.audioscrobbler.com/2.0/?method=album.getinfo&api_key=${process.env.REACT_APP_API_KEY}&artist=${artistName}&album=${albumName}&format=json`)
-      .then(data => setAlbum(data.data.album))
+      .then(data =>
+        data.data.album && setAlbum(data.data.album))
     }
     getData();
-  }, [artistName, albumName]);
+  }, [albumName, artistName]);
 
   return (
     <div>
-      {console.log("coucou", album)}
       {album === null || album === undefined
         ? <div>Wait...</div>
         : <div>
