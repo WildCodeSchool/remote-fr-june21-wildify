@@ -88,3 +88,33 @@
     padding: 3px;  
   }
 }
+
+@media screen and (max-width: 400px) {
+  .footer {
+    bottom: 0;
+    height: 10vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-direction: column;
+    margin-bottom: 10vh;
+    margin: 8px 0px 100px 0px; 
+    padding: 5px;
+  }
+
+  .footer-buttons {
+    margin: 4px;
+    padding: 3px;
+  }
+
+  .footer-logos {
+    padding: 3px;  
+  }
+
+  .logo {
+    width: 30px;
+    height: 30px;
+    margin: 15px;
+  }
+}
