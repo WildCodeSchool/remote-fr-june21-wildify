@@ -1,0 +1,65 @@
+.loginWrapper {
+    display:flex;
+    min-height: 75vh;
+    align-items: center;
+    justify-content: center;
+}
+
+.loginWrapper form{
+    padding: 50px;
+    border-radius: 8px;
+    background-color: white;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+
+.loginInput{
+    display: flex;
+    flex-direction: column;
+}
+
+.loginInput input{
+
+}
+
+.loginInput input:focus{
+    outline: none !important;
+    border:1px solid rgba(139,129,244,1)
+}
+
+.loginInput label{
+    margin: 8px 0;
+}
+
+.loginBtn{
+    text-align: center;
+}
+
+.loginBtn button{
+    width: 100%;
+    margin: 20px 0;
+    padding: 5px;
+    background: rgba(139,129,244,1);
+    color: white;
+    border: none;
+    border-radius: 16px;
+    text-align: center;
+    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+}
+
+.userCard{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+    background-color: white;
+    padding: 20px;
+}
+
+.userAvatar{
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    background: radial-gradient(darkviolet 0%, white 100%)
+}

@@ -1,11 +1,8 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-import './MyAlbum.css'
-
-const MyAlbum = ({ album }) => {
+const ArtistAlbumCard = ({ album }) => {
     return (
-        // Data from lastFM
         album.name !== "(null)" && // remove albums with title = (null)
         <div className="artistAlbum">
             <Link to={`/album/${album.name}/${album.artist.name}`}> 
@@ -19,4 +16,4 @@ const MyAlbum = ({ album }) => {
     );
 }
 
-export default MyAlbum;
+export default ArtistAlbumCard;

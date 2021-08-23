@@ -48,7 +48,7 @@ const Home = () => {
                     {topArtists
                         .slice(0, 10) //limit to 10 results
                         .map( (topArtist, index) =>
-                            <div className = "homeTopCard">
+                            <div className = "homeTopArtistCard" >
                                 <HomeArtistCard key={index} topArtist={topArtist}/>
                             </div>
                     )}
@@ -62,7 +62,7 @@ const Home = () => {
                     {topTracks
                         .slice(0, 10) //limit to 10 results
                         .map( (topTrack, index) =>
-                            <div className = "homeTopCard">
+                            <div className = "homeTopTrackCard" >
                                 <HomeTrackCard key={index} topTrack={topTrack}/>
                             </div>
                     )}
