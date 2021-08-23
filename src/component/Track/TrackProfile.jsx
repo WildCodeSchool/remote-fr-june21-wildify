@@ -19,7 +19,8 @@ const TrackProfile = ({ artist, name, duration, listeners, img }) => {
               <p>Track : {name} </p>
               <p>Durée : {timeToMin(duration)}</p>
               <p>Nombres d'écoute : {listeners}</p>
-              <a href={artist.url}>Liens LastFM</a>
+              {/* <a href={artist.url}>Liens LastFM</a> */}
+              <a href={`https://www.last.fm/music/${artist.name}/_/${name}`} target="_blank" rel="noreferrer">Liens LastFM</a>
             </div>
           </div>
         </div>
