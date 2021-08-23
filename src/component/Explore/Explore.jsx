@@ -68,7 +68,7 @@ const Explore = () => {
 
       {/* Affichage des Card Artist */}
       <div className="ExploreBanner">
-        <h2>Artists</h2>
+      {search && <h2>Artists</h2>}
         <i className="svg-inline--fa fa-podcast fa-w-14"></i>
       </div>
       {search && <div className="exploreCardContainer">
