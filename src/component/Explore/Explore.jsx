@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 import axios from 'axios';
-// import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import HorizontalScroll from 'react-scroll-horizontal'
 
 import ExploreArtistCard from './ExploreArtistCard';
 import ExploreAlbumCard from './ExploreAlbumCard';
@@ -30,7 +30,7 @@ const Explore = () => {
       // Call API Artist
       const getArtist = () => {
         axios.get(
-          `http://ws.audioscrobbler.com/2.0/?method=artist.search&artist=${search}&api_key=${process.env.REACT_APP_API_KEY}&limit=16&format=json`
+          `http://ws.audioscrobbler.com/2.0/?method=artist.search&artist=${search}&api_key=${process.env.REACT_APP_API_KEY}&format=json`
         ).then((results) => {
           setArtistList(results.data.results.artistmatches.artist)
           setLoaderArtist(false)
@@ -41,7 +41,7 @@ const Explore = () => {
       // Call API Album
       const getAlbum = () => {
         axios.get(
-          `http://ws.audioscrobbler.com/2.0/?method=album.search&album=${search}&api_key=${process.env.REACT_APP_API_KEY}&limit=16&format=json`
+          `http://ws.audioscrobbler.com/2.0/?method=album.search&album=${search}&api_key=${process.env.REACT_APP_API_KEY}&format=json`
         ).then((results) => {
           setAlbumList(results.data.results.albummatches.album)
           setLoaderAlbum(false)
@@ -69,16 +69,17 @@ const Explore = () => {
       {/* Affichage des Card Artist */}
       <div className="ExploreBanner">
       {search && <h2>Artists</h2>}
-        <i className="svg-inline--fa fa-podcast fa-w-14"></i>
       </div>
       {search && <div className="exploreCardContainer">
         {loaderArtist ? (
           <div>Loading...</div>
         ) : (
-            artistList.map((artist) => (
-            <ExploreArtistCard key={artist.mbid} artist={artist} />
-            ))
-        )
+          <HorizontalScroll>
+            {artistList.map((artist) => (
+              <ExploreArtistCard key={artist.mbid} artist={artist} />
+            ))}
+          </HorizontalScroll>
+          )
         }
       </div>}
 
@@ -88,9 +89,11 @@ const Explore = () => {
         {loaderAlbum ? (
           <div>Loading...</div>
         ) : (
-            albumList.map((album) => (
+          <HorizontalScroll>
+            {albumList.map((album) => (
             <ExploreAlbumCard key={album.mbid} album={album} />
-          ))
+          ))}
+          </HorizontalScroll>
         )
         }
       </div>}
@@ -101,9 +104,11 @@ const Explore = () => {
         {loaderTrack ? (
           <div>Loading...</div>
         ) : (
-            trackList.map((track) => (
+          <HorizontalScroll>
+            {trackList.map((track) => (
             <ExploreTrackCard key={track.mbid} track={track} />
-          ))
+          ))}
+          </HorizontalScroll>
         )
         }
       </div>}

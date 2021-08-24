@@ -23,8 +23,10 @@ const ExploreArtistCard = ({ artist }) => {
     artist && getImgAudioDb()
   }, [artist])
 
+  const child = { width: `10em`, height: `100%`}
+
 return (
-  <Link to={`/artist/${artist.name}`} >
+  <Link to={`/artist/${artist.name}`} style={child}>
     <div className="exploreCard">
       <img src={img ? img : imgNotFound} alt={`Img of ${artist.name}`} />
       <h3>{artist.name}</h3>

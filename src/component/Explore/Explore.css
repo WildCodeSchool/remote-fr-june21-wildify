@@ -29,30 +29,14 @@
 
 .exploreCardContainer {
   width: 70%;
+  height: 200px;
   display: flex;
   flex-wrap: wrap;
+  flex-direction:row;
   gap: 20px;
   justify-content: center;
-  overflow: hidden;
 }
 
-@media screen and (min-width: 620px) {
-  .exploreCardContainer {
-    flex-direction: row;
-  }
-  .exploreCardContainer a {
-    width: 20%;
-  }
-}
-
-@media screen and (min-width: 1024px) {
-  .exploreCardContainer a {
-    width: 10%;
-  }
-}
-
-@media screen and (max-width: 400px) {
-  .exploreCardContainer a {
-    width: 100%;
-  }
+::-webkit-scrollbar {
+  display: none;
 }
