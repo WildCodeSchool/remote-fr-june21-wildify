@@ -52,7 +52,7 @@ const Explore = () => {
       // Call API Track
       const getTrack = () => {
         axios.get(
-          `http://ws.audioscrobbler.com/2.0/?method=track.search&track=${search}&api_key=${process.env.REACT_APP_API_KEY}&limit=16&format=json`
+          `http://ws.audioscrobbler.com/2.0/?method=track.search&track=${search}&api_key=${process.env.REACT_APP_API_KEY}&format=json`
         ).then((results) => {
           setTrackList(results.data.results.trackmatches.track)
           setLoaderTrack(false)
