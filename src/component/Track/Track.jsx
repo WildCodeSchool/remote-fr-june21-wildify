@@ -46,7 +46,7 @@ const Track = () => {
       axios.get(
         `https://www.theaudiodb.com/api/v1/json/1/search.php?s=${track.artist.name}`
       ).then((results) => {
-        setImgAudioDb(results.data.artists[0].strArtistThumb)
+        results.data.artists && setImgAudioDb(results.data.artists[0].strArtistThumb)
       })
     }
     track && getImgAudioDb();
