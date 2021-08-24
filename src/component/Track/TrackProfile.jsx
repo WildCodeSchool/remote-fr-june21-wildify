@@ -4,7 +4,7 @@ import './TrackProfile.css'
 
 const TrackProfile = ({ artist, name, duration, listeners, img }) => {
 
-  const timeToMin = time => ((time / 1000) /60).toFixed(2);
+  const timeToSec = time => ((time /1000) % 60).toFixed(0);
 
     return (
         <div className="trackProfile">
@@ -19,9 +19,8 @@ const TrackProfile = ({ artist, name, duration, listeners, img }) => {
               <h2>{artist.name}</h2>
             </Link>
               <p>Track : {name} </p>
-              <p>Durée : {timeToMin(duration)}</p>
+              <p>Durée : {Math.floor(duration / 60000)} min {duration % 60 ? timeToSec(duration) : '00'}</p>
               <p>Nombres d'écoute : {listeners}</p>
-              {/* <a href={artist.url}>Liens LastFM</a> */}
               <a href={`https://www.last.fm/music/${artist.name}/_/${name}`} target="_blank" rel="noreferrer">Liens LastFM</a>
             </div>
           </div>

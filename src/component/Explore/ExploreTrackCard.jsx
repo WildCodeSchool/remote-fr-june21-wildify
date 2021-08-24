@@ -23,7 +23,7 @@ const ExploreTrackCard = ({ track }) => {
     track && getImgAudioDb()
   }, [track])
 
-  const child = { width: `10em`, height: `100%`}
+  const child = { width: `10em`}
 
   return (
   <Link to={`/track/${track.name}/${track.artist}`} style={child}>

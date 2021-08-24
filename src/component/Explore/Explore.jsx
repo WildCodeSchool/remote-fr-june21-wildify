@@ -67,14 +67,17 @@ const Explore = () => {
       <input type="text" minLength='1' maxLength="50" value={search} onChange={(event) => {setSearch(event.target.value)}}/>
 
       {/* Affichage des Card Artist */}
-      <div className="ExploreBanner">
-      {search && <h2>Artists</h2>}
+      {search &&
+      <div className="segment">
+        <h2 className="segmentTitle">Artists</h2>
       </div>
+      }
       {search && <div className="exploreCardContainer">
         {loaderArtist ? (
           <div>Loading...</div>
         ) : (
-          <HorizontalScroll>
+          <HorizontalScroll
+          reverseScroll = { true }>
             {artistList.map((artist) => (
               <ExploreArtistCard key={artist.mbid} artist={artist} />
             ))}
@@ -89,7 +92,8 @@ const Explore = () => {
         {loaderAlbum ? (
           <div>Loading...</div>
         ) : (
-          <HorizontalScroll>
+          <HorizontalScroll
+          reverseScroll = { true }>
             {albumList.map((album) => (
             <ExploreAlbumCard key={album.mbid} album={album} />
           ))}
@@ -104,7 +108,8 @@ const Explore = () => {
         {loaderTrack ? (
           <div>Loading...</div>
         ) : (
-          <HorizontalScroll>
+          <HorizontalScroll
+          reverseScroll = { true }>
             {trackList.map((track) => (
             <ExploreTrackCard key={track.mbid} track={track} />
           ))}

@@ -6,7 +6,7 @@ import './ExploreCard.css'
 
 const ExploreAlbumCard = ({ album }) => {
 
-const child = { width: `10em`, height: `100%`}
+const child = { width: `10em`}
 
 return (
   <Link to={`/album/${album.name}/${album.artist}`} style={child}>
