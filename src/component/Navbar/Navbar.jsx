@@ -1,7 +1,6 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
 
-import home from './home-solid.svg'
 import explore from "./search-solid.svg";
 import myLibrary from "./star-regular.svg";
 import UserProfile from "./user-regular.svg";
@@ -12,16 +11,19 @@ import "./Navbar.css";
 
 const Navbar = () => (
   <div className="navbar-container">
-    <div className="w-logo-container">
+    {/* <div className="w-logo-container">
     <img className="Wlogo" src={WildifyLogo} alt="wildify-logo"></img>
     <p className="logo-title">Wildify</p>
-    </div>
+    </div>  */}
+    <nav>
+      <NavLink className="nav-buttons" to="/">
+          <img className="nav-logo" src={WildifyLogo} alt="home" activeClassName="nav-active" />
+          <p className="nav-title">Home</p>
+      </NavLink>
+    </nav>
+
     <div className="navbar">
       <nav>
-        <NavLink className="nav-buttons" to="/">
-          <img className="nav-logo" src={home} alt="home" activeClassName="nav-active" />
-          <p className="nav-title">Home</p>
-        </NavLink>
         <NavLink className="nav-buttons" to="/Explore">
           <img className="nav-logo" src={explore} alt="explore" activeClassName="nav-active" />
           <p className="nav-title">Explore</p>
