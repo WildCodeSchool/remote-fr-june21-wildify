@@ -28,6 +28,11 @@
 
 .loginInput label{
     margin: 8px 0;
+    display: flex;
+    justify-content: center;
+    font-family: sans-serif;
+    font-weight: bold;
+    color: rgb(104,98,97);
 }
 
 .loginBtn{
