@@ -87,7 +87,10 @@ const Explore = () => {
       </div>}
 
       {/* Affichage des Card Album */}
-      {search && <h2>Album</h2>}
+      {search &&
+        <div className="segment">
+        <h2 className="segmentTitle">Albums</h2>
+      </div>}
       {search && <div className="exploreCardContainer">
         {loaderAlbum ? (
           <div>Loading...</div>
@@ -103,7 +106,11 @@ const Explore = () => {
       </div>}
 
       {/* Affichage des Card Track */}
-      {search && <h2>Track</h2>}
+      {search &&
+        <div className="segment">
+          <h2 className="segmentTitle">Tracks</h2>
+        </div>
+      }
       {search && <div className="exploreCardContainer">
         {loaderTrack ? (
           <div>Loading...</div>

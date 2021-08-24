@@ -72,8 +72,8 @@
   left: auto;
   margin-left: 10px;
   margin-top: -1px;
-  background: #aaa;
-  height: 1px;
+  background: darkviolet;
+  height: 2px;
   width: 55vw;
   z-index: 10;
 }
