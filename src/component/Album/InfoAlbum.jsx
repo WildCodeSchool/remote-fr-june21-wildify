@@ -1,4 +1,6 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
+
 import './Album.css';
 
 const InfoAlbum = ({ infoalbum }) => (
@@ -10,7 +12,9 @@ const InfoAlbum = ({ infoalbum }) => (
         <h2>{infoalbum.name}</h2>
         <div>
           <p>{infoalbum.strArtist}</p>
-          <p>{infoalbum.artist}</p>
+          <Link to={`/artist/${infoalbum.artist}`} >
+            <p>{infoalbum.artist}</p>
+          </Link>
         </div>
       </article>
     </div>

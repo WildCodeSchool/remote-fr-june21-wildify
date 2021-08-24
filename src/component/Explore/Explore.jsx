@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 import axios from 'axios';
-// import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import HorizontalScroll from 'react-scroll-horizontal'
 
 import ExploreArtistCard from './ExploreArtistCard';
 import ExploreAlbumCard from './ExploreAlbumCard';
@@ -30,7 +30,7 @@ const Explore = () => {
       // Call API Artist
       const getArtist = () => {
         axios.get(
-          `http://ws.audioscrobbler.com/2.0/?method=artist.search&artist=${search}&api_key=${process.env.REACT_APP_API_KEY}&limit=16&format=json`
+          `http://ws.audioscrobbler.com/2.0/?method=artist.search&artist=${search}&api_key=${process.env.REACT_APP_API_KEY}&format=json`
         ).then((results) => {
           setArtistList(results.data.results.artistmatches.artist)
           setLoaderArtist(false)
@@ -41,7 +41,7 @@ const Explore = () => {
       // Call API Album
       const getAlbum = () => {
         axios.get(
-          `http://ws.audioscrobbler.com/2.0/?method=album.search&album=${search}&api_key=${process.env.REACT_APP_API_KEY}&limit=16&format=json`
+          `http://ws.audioscrobbler.com/2.0/?method=album.search&album=${search}&api_key=${process.env.REACT_APP_API_KEY}&format=json`
         ).then((results) => {
           setAlbumList(results.data.results.albummatches.album)
           setLoaderAlbum(false)
@@ -52,7 +52,7 @@ const Explore = () => {
       // Call API Track
       const getTrack = () => {
         axios.get(
-          `http://ws.audioscrobbler.com/2.0/?method=track.search&track=${search}&api_key=${process.env.REACT_APP_API_KEY}&limit=16&format=json`
+          `http://ws.audioscrobbler.com/2.0/?method=track.search&track=${search}&api_key=${process.env.REACT_APP_API_KEY}&format=json`
         ).then((results) => {
           setTrackList(results.data.results.trackmatches.track)
           setLoaderTrack(false)
@@ -67,43 +67,60 @@ const Explore = () => {
       <input type="text" minLength='1' maxLength="50" value={search} onChange={(event) => {setSearch(event.target.value)}}/>
 
       {/* Affichage des Card Artist */}
-      <div className="ExploreBanner">
-      {search && <h2>Artists</h2>}
-        <i className="svg-inline--fa fa-podcast fa-w-14"></i>
+      {search &&
+      <div className="segment">
+        <h2 className="segmentTitle">Artists</h2>
       </div>
+      }
       {search && <div className="exploreCardContainer">
         {loaderArtist ? (
           <div>Loading...</div>
         ) : (
-            artistList.map((artist) => (
-            <ExploreArtistCard key={artist.mbid} artist={artist} />
-            ))
-        )
+          <HorizontalScroll
+          reverseScroll = { true }>
+            {artistList.map((artist) => (
+              <ExploreArtistCard key={artist.mbid} artist={artist} />
+            ))}
+          </HorizontalScroll>
+          )
         }
       </div>}
 
       {/* Affichage des Card Album */}
-      {search && <h2>Album</h2>}
+      {search &&
+        <div className="segment">
+        <h2 className="segmentTitle">Albums</h2>
+      </div>}
       {search && <div className="exploreCardContainer">
         {loaderAlbum ? (
           <div>Loading...</div>
         ) : (
-            albumList.map((album) => (
+          <HorizontalScroll
+          reverseScroll = { true }>
+            {albumList.map((album) => (
             <ExploreAlbumCard key={album.mbid} album={album} />
-          ))
+          ))}
+          </HorizontalScroll>
         )
         }
       </div>}
 
       {/* Affichage des Card Track */}
-      {search && <h2>Track</h2>}
+      {search &&
+        <div className="segment">
+          <h2 className="segmentTitle">Tracks</h2>
+        </div>
+      }
       {search && <div className="exploreCardContainer">
         {loaderTrack ? (
           <div>Loading...</div>
         ) : (
-            trackList.map((track) => (
+          <HorizontalScroll
+          reverseScroll = { true }>
+            {trackList.map((track) => (
             <ExploreTrackCard key={track.mbid} track={track} />
-          ))
+          ))}
+          </HorizontalScroll>
         )
         }
       </div>}
