@@ -5,6 +5,7 @@ import Album from './component/Album/Album'
 import Contact from './component/Contact/Contact'
 import Artist from './component/Artist/Artist';
 import Explore from './component/Explore/Explore'
+import Favoris from './component/Favoris/Favoris'
 import Footer from './component/Footer/Footer'
 import Home from './component/Home/Home'
 import Legal from './component/Legal/Legal'
@@ -36,7 +37,9 @@ const App = () => {
         <Route path="/track/:trackName/:artistName">
           <Track />
         </Route>
-        <Route path="/myLibrary"></Route>
+        <Route path="/Favoris">
+          <Favoris />
+        </Route>
         <Route path="/userProfile">
           <UserLogin />
         </Route>
