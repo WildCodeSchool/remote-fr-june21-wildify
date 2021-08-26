@@ -5,11 +5,10 @@ import HorizontalScroll from 'react-scroll-horizontal'
 import ExploreArtistCard from './ExploreArtistCard';
 import ExploreAlbumCard from './ExploreAlbumCard';
 import ExploreTrackCard from './ExploreTrackCard';
-// import useFavoris from '../Favoris/Favoris';
 
 import './Explore.css';
 
-const Explore = ({fav}) => {
+const Explore = () => {
 
   // Valeur de la recherche dans la barre de recherche.
   const [search, setSearch] = useState('');
@@ -24,10 +23,6 @@ const Explore = ({fav}) => {
   // Les tracks
   const [trackList, setTrackList] = useState(null);
   const [loaderTrack, setLoaderTrack] = useState(true);
-  // Les favoris
-  // const [favorisOnly, setFavorisOnly] = useState(false);
-  // const [artistFavoris, toggleArtistFavoris] = useFavoris();
-  // const [favorisState, setFavorisState] = useState(fav);
 
   // Call API avec Valeur du search.
   useEffect(() => {
@@ -66,12 +61,6 @@ const Explore = ({fav}) => {
       search && getTrack();
   },[search]);
 
-// Favoris
-  // useEffect(() => {
-  //   setFavorisState(fav.filter((s) => (favorisOnly ? favoris.includes(s.id) : s)));
-  // }, [fav, favorisOnly, favoris]);
-
-  
     return (
     <div className="explore">
       <h1>Search</h1>

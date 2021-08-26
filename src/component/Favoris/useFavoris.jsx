@@ -1,9 +1,9 @@
 import { useEffect, useState } from 'react';
 import './Favoris.css'
 
-export default function useFavoris () {
+export default function useFavoris (category) {
   const [favoris, setFavoris] = useState(() => {
-    const ls = localStorage.getItem("favoris");
+    const ls = localStorage.getItem(category);
     if (ls) return JSON.parse(ls);
     else return [];
   });
@@ -15,7 +15,7 @@ export default function useFavoris () {
   };
 
   useEffect(() => {
-    localStorage.setItem("favoris", JSON.stringify(favoris));
+    localStorage.setItem(category, JSON.stringify(favoris));
   }, [favoris]);
 
     

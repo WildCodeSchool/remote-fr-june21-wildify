@@ -48,3 +48,14 @@
 .trackInfo a {
   margin: 10px 0;
 }
+
+.favoriteBtn{
+  padding: 15px 5px;
+  font-size: small;
+  border-radius: 10px;
+  background-color: darkviolet;
+  color: white;
+  width:50px;
+}
+
+
