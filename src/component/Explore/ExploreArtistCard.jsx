@@ -21,15 +21,16 @@ const ExploreArtistCard = ({ artist }) => {
       })
     }
     artist && getImgAudioDb()
-  }, [artist])
+  }, [artist]);
 
-return (
-  <Link to={`/artist/${artist.name}`} >
-    <div className="exploreCard">
-      <img src={img ? img : imgNotFound} alt={`Img of ${artist.name}`} />
-      <h3>{artist.name}</h3>
-    </div>
-  </Link>
-)};
+    return (
+      <Link to={`/artist/${artist.name}`} >
+        <div className="exploreCard">
+          <img src={img ? img : imgNotFound} alt={`Img of ${artist.name}`} />
+          <h3>{artist.name}</h3>
+        </div>
+      </Link>
+    )
+}
 
 export default ExploreArtistCard;
