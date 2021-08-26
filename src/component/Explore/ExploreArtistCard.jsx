@@ -21,7 +21,7 @@ const ExploreArtistCard = ({ artist }) => {
       })
     }
     artist && getImgAudioDb()
-  }, [artist])
+  }, [artist]);
 
   const child = { width: `10em`}
 

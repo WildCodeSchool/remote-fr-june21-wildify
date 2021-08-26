@@ -15,18 +15,18 @@
     justify-content: space-between;
 }
 
-.homeTopArtistCard, .homeTopTrackCard{
+.homeTopArtistCard, .homeTopTrackCard, .homeTopAlbumCard {
     position: relative;
     width: 16vw;
     margin: 5px;
     opacity: 0.9;
 }
 
-.homeTopArtistCard:hover, .homeTopTrackCard:hover{
+.homeTopArtistCard:hover, .homeTopTrackCard:hover, .homeTopAlbumCard:hover {
     opacity: 1.0;
 }
 
-.homeTopArtistCard p, .homeTopTrackCard p{
+.homeTopArtistCard p, .homeTopTrackCard p, .homeTopAlbumCard p {
     position: absolute;
     top: 80%;
     left: 50%;
@@ -40,11 +40,16 @@
 .homeTopArtistCard img{
     width: 100%;
     border-radius: 50%;
-    }
+}
     
 .homeTopTrackCard img{
-width: 100%;
-border-radius: 5px;
+    width: 100%;
+    border-radius: 5px;
+}
+
+.homeTopAlbumCard img{
+    width: 100%;
+    border-radius: 5px;
 }
 
 @media screen and (max-width: 700px) {

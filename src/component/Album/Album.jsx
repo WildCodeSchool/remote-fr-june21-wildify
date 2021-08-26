@@ -20,7 +20,7 @@ const Album = () => {
       .then(data =>
         data.data.album && setAlbum(data.data.album))
     }
-    getData();
+    albumName && artistName ? getData() : console.log(`albumName et artistName ne sont pas définis`);
   }, [albumName, artistName]);
 
   return (

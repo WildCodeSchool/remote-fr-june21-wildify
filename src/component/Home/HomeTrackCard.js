@@ -20,7 +20,7 @@ const HomeTrackCard = ({topTrack}) => {
                     : setTopTrackImg(imgNotFound)
             )
         );
-        getTopTrackImg();
+        topTrack && getTopTrackImg();
     }, [topTrack])
 
     return (

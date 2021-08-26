@@ -1,14 +1,15 @@
-import { useEffect, useState } from 'react';
+import { useEffect, useState} from 'react';
 import axios from 'axios';
 import HorizontalScroll from 'react-scroll-horizontal'
 
 import ExploreArtistCard from './ExploreArtistCard';
 import ExploreAlbumCard from './ExploreAlbumCard';
 import ExploreTrackCard from './ExploreTrackCard';
+// import useFavoris from '../Favoris/Favoris';
 
 import './Explore.css';
 
-const Explore = () => {
+const Explore = ({fav}) => {
 
   // Valeur de la recherche dans la barre de recherche.
   const [search, setSearch] = useState('');
@@ -23,6 +24,10 @@ const Explore = () => {
   // Les tracks
   const [trackList, setTrackList] = useState(null);
   const [loaderTrack, setLoaderTrack] = useState(true);
+  // Les favoris
+  // const [favorisOnly, setFavorisOnly] = useState(false);
+  // const [artistFavoris, toggleArtistFavoris] = useFavoris();
+  // const [favorisState, setFavorisState] = useState(fav);
 
   // Call API avec Valeur du search.
   useEffect(() => {
@@ -61,7 +66,13 @@ const Explore = () => {
       search && getTrack();
   },[search]);
 
-  return (
+// Favoris
+  // useEffect(() => {
+  //   setFavorisState(fav.filter((s) => (favorisOnly ? favoris.includes(s.id) : s)));
+  // }, [fav, favorisOnly, favoris]);
+
+  
+    return (
     <div className="explore">
       <h1>Search</h1>
       <input type="text" minLength='1' maxLength="50" value={search} onChange={(event) => {setSearch(event.target.value)}}/>

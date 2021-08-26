@@ -30,7 +30,7 @@ const Navbar = () => (
         </NavLink>
         <NavLink className="nav-buttons" to="/MyLibrary">
           <img className="nav-logo" src={myLibrary} alt="My Library" activeClassName="nav-active" />
-          <p className="nav-title">My Library</p>
+          <p className="nav-title">Favorites</p>
         </NavLink>
         <NavLink className="nav-buttons" to="/UserProfile">
           <img className="nav-logo" src={UserProfile} alt="Profil" activeClassName="nav-active" />
