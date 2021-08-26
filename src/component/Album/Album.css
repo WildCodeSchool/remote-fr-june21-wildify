@@ -27,6 +27,13 @@ body {
     font-size:18px;
     color: black;
 }
+.favoriteBtn{
+    padding: 15px 5px;
+    font-size: small;
+    border-radius: 10px;
+    background-color: darkviolet;
+    color: white;
+}
 /* ------------ TrackList ------------- */
 .track-list-bloc {
     display: block;
