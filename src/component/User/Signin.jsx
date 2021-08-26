@@ -19,7 +19,12 @@ const Signin = () => {
   };
 
   return (
-    <form onSubmit={signin}>
+    <form
+      onSubmit={(e) => {
+        e.preventDefault();
+        signin();
+      }}
+    >
       <div className="loginInput">
         <label>Username :</label>
         <input
