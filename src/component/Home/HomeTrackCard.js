@@ -26,7 +26,7 @@ const HomeTrackCard = ({topTrack}) => {
     return (
         <Link to={`/track/${topTrack.name}/${topTrack.artist.name}`}> 
             <img src={topTrackImg} alt={"Wildify3DCover"}/>
-            <p>{topTrack.name}</p>
+            <p className={'card-title'}>{topTrack.name}</p>
         </Link>
     );
 }
