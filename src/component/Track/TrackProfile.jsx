@@ -17,7 +17,6 @@ const TrackProfile = ({ artist, name, duration, listeners, img, toggleTrackFavor
           <Link to={`/artist/${artist.name}`} >
             <img src={img} alt={`Album img of ${artist.name}}`} />
           </Link>
-          
         </div>
         <div className="trackInfo">
           <Link to={`/artist/${artist.name}`} >
