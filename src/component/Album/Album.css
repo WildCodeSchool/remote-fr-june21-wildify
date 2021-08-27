@@ -40,12 +40,15 @@ body {
     margin: 1vh;
 }
 .track-list-bloc h3 {
-    font-size:20px;
-    text-align:center;
-    padding: 1.5vh 0;
+    display: flex;
+    flex-direction: row;
     justify-content: space-between;
-    background-color: #bd8904;
+    background: linear-gradient(90deg, darkviolet 0%, rgba(255,255,255,1) 70%, transparent 100%);
     color: ghostwhite;
+    text-align: left;
+    font-size: large;
+    padding: 6px;
+    border-radius: 6px;
 }
 .track-list-bloc-table {
     display:grid;
@@ -63,8 +66,9 @@ body {
     flex-direction:row;
     align-items: center;
     padding: 10px;
-    background: #06060645;
+    background: #c2bdbd45;
     margin: 6px 0;
+    border-radius: 6px;
 }
 .img-bloc-pist {
     width: 100px;

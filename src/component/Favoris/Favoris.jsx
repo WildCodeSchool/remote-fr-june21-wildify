@@ -29,8 +29,8 @@ const Favoris = () => {
 
     
     return (
-        <div>
-            <h1>Librairie</h1>
+        <div className="FavContainer">
+            <h1>Mes Favoris</h1>
 
             <h2>Album</h2>
             {/* une image */}
