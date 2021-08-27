@@ -55,7 +55,7 @@ const Home = () => {
     }, [])
 
     return (
-        <div>
+        <div className="home">
             {/* {console.log('Top Artists', topArtists)} */}
             <div className = "homeTitle">Top 10 Artists</div>
             {loader1
