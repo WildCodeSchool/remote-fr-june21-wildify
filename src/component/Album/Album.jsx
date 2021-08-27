@@ -9,7 +9,7 @@ import TrackList from './TrackList';
 import './Album.css';
 
 
-const Album = () => {
+const Album = ({albumFavoris, toggleAlbumFavoris}) => {
   const [album, setAlbum] = useState();
   const { albumName, artistName } = useParams();
 
@@ -23,12 +23,14 @@ const Album = () => {
     albumName && artistName ? getData() : console.log(`albumName et artistName ne sont pas définis`);
   }, [albumName, artistName]);
 
+  
+
   return (
     <div>
       {album === null || album === undefined
         ? <div>Wait...</div>
         : <div>
-          <InfoAlbum key={albumName} infoalbum={album} />
+          <InfoAlbum key={albumName} infoalbum={album} albumFavoris={albumFavoris} toggleAlbumFavoris={toggleAlbumFavoris(album.idArtist)}/>
           <TrackList key={albumName} tracklist={album} />
           </div>
       }
