@@ -12,7 +12,6 @@ body {
 }
 .info-album-bloc-img img {
     width:30vh;
-    height:30vh;
     border-radius:50%;
 }
 .info-album-bloc-article{
@@ -105,8 +104,7 @@ body {
 }
 @media (min-width : 768px){
     .info-album-bloc-img img {
-        width:50vh;
-        height:50vh;
+        width:30vh;
     }
     .track-list-bloc h3 {
         font-size:25px;
