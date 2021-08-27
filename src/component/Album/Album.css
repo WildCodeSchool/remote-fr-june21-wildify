@@ -67,6 +67,7 @@ body {
     padding: 10px;
     background: #c2bdbd45;
     margin: 6px 0;
+    border-radius: 6px;
 }
 .img-bloc-pist {
     width: 100px;
