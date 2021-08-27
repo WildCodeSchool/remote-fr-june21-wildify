@@ -27,9 +27,9 @@ const ArtistTopTrackCard = ({ track }) => {
         track.name !== "(null)" && // remove albums with title = (null)
         <div className="artistAlbum">
             <Link to={`/track/${track.name}/${track.artist.name}`}> 
-            <img src={trackImg} alt={"Wildify3DCover"}/>
-            <p>{track.name}</p>
-        </Link>
+                <img src={trackImg} alt={"Wildify3DCover"}/>
+                <p>{track.name}</p>
+            </Link>
         </div>
     );
 }
