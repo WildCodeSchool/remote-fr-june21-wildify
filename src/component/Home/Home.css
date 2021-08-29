@@ -2,6 +2,27 @@
     padding: 2vh;
 }
 
+.homeHeader {
+font-family: Quicksand;
+font-style: normal;
+font-weight: 500;
+line-height: 17px;
+align-items: center;
+text-align: center;
+color: #FFC045;
+background: #414141;
+padding: 20px 12px;
+margin-bottom: 20px;
+}
+.homeHeader h1 {
+    font-size:50px;
+    color: #FFC045;
+}
+
+.homeHeader p {
+    font-size: 24px;
+}
+
 .homeTitle{
     display: flex;
     flex-direction: row;
@@ -57,11 +78,17 @@
 }
 
 @media screen and (max-width: 1024px) {
-
     .homeTopArtistCard, .homeTopTrackCard{
         width: 25vw;
     }
+    .homeHeader h1 {
+        font-size:30px;
+        color: #FFC045;
+    }
     
+    .homeHeader p {
+        font-size: 16px;
+    }
 }
 
 @media screen and (max-width: 700px) {
