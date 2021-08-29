@@ -3,6 +3,7 @@ import axios from 'axios';
 
 import HomeArtistCard from "./HomeArtistCard";
 import HomeTrackCard from "./HomeTrackCard";
+import WildifyLogo from './../../assets/wildify-logo.png';
 
 import './Home.css'
 
@@ -42,6 +43,10 @@ const Home = () => {
 
     return (
         <div className="home">
+            <div className="homeHeader">
+                <h1>Wildify</h1>
+                <p>Retrouvez vos musiques preferées à portée de main.</p>
+            </div>
             {/* {console.log('Top Artists', topArtists)} */}
             <div className = "homeTitle">Top 10 Artists</div>
             {loader1
