@@ -108,7 +108,7 @@ Params
 - api_key (Required) : A Last.fm API key.
 
 
-## MusicxMatche
+## MusicxMatch
 
 Var .env : REACT_APP_API_KEY_MUSIXMATCH
 Adress root : https://api.musixmatch.com/ws/1.1/

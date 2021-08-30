@@ -66,5 +66,7 @@
     width: 200px;
     height: 200px;
     border-radius: 50%;
-    background: radial-gradient(darkviolet 0%, white 100%)
+}
+.userAvatar img{
+    width: 100%;
 }

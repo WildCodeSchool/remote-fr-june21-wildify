@@ -1,6 +1,28 @@
 import { useState } from "react";
 import axios from "axios";
 
+ // Envois les infos dans le back qui verifie les identifiant.
+ const isLogged = () => {
+  axios
+    .post("http://localhost:3000/auth/login", {
+      userName: userName,
+      userPassword: userPassword,
+    })
+    .then((response) => {
+      if (response.data.message) {
+        setLoginStatus(response.data.message);
+      } else {
+        setLoginStatus(`${response.data.userName} is connected.`);
+        setToken(true)
+      }
+    });
+};
+
+const handleSubmit = (e) => {
+  e.preventDefault();
+  isLogged();
+};
+
 const Login = () => {
   // State userLogin
   const [userName, setUserName] = useState("");
@@ -10,7 +32,7 @@ const Login = () => {
   const [loginStatus, setLoginStatus] = useState("");
 
   // Envois les infos dans le back qui verifie les identifiant.
-  const login = () => {
+  const loginExists = () => {
     axios
       .post("http://localhost:3000/auth/login", {
         userName: userName,

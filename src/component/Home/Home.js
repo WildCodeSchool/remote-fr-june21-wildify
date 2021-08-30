@@ -33,7 +33,6 @@ const Home = () => {
         axios
             .get(`https://ws.audioscrobbler.com/2.0/?method=chart.gettoptracks&api_key=${process.env.REACT_APP_API_KEY}&format=json`)
             .then(response => { 
-                console.log("bloblo")
                 setLoader2(false)
                 setTopTracks(response.data.tracks.track)
             })
