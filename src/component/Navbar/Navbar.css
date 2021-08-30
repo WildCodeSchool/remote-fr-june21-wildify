@@ -16,7 +16,7 @@
   position: relative;
   top: 0;
   width: 100%;
-  height: 7vh;
+  height: 6vh;
 }
 
 .nav-logo:hover {
@@ -27,8 +27,8 @@
 }
 
 .nav-logo {
-  width: 50px;
-  height: 50px;
+  width: 40px;
+  height: 40px;
   padding: 6px;
   margin: 10px;
 }
@@ -85,6 +85,40 @@ nav {
 
 
 /* Responsive Design */
+
+@media screen and (max-width:1024px) {
+  .navbar-container {
+    position: fixed;
+    bottom: 0;
+    height: 6vh;
+    display: flex;
+    justify-content: center;
+    align-self: center;
+    width: 100%;
+    z-index: 10;
+  }
+
+  .navbar {
+    display: flex;
+    justify-content: space-around;
+  }
+
+  .nav-logo {
+    margin: 8px;
+    width: 30px;
+    height: 30px;
+  }
+
+  .Wlogo {
+    width: 30px;
+    height: 30px;
+  }
+
+  .nav-title {
+    font-size: 16px;
+  }
+
+}
 
 @media screen and (max-width:700px) {
   .navbar-container {
@@ -147,13 +181,13 @@ nav {
 
   .nav-logo {
     margin: 6px;
-    width: 30px;
-    height: 30px;
+    width: 35px;
+    height: 35px;
   }
 
   .Wlogo {
-    width: 30px;
-    height: 30px;
+    width: 35px;
+    height: 35px;
   }
 
   .nav-title {

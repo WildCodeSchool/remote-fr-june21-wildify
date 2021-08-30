@@ -1,11 +1,8 @@
 
+
+
 const ArtistDetails = ({artist, artistInfo}) => {
 
-    // console.log(artistInfo)
-
-    const toggleFavorite = () => {
-        alert('Artist added to favorites')
-    }
     return (
         <div className="artistDetails">
             <div className="artistAvatar">
@@ -14,7 +11,6 @@ const ArtistDetails = ({artist, artistInfo}) => {
             <div className="artistInfo">
                 <div className = "artistName">
                     <h2>{artist.strArtist}</h2>
-                    <div className = "favoriteBtn" onClick={toggleFavorite}>Add Button</div>
                 </div>
                 <p>Fans : {artistInfo && artistInfo.stats.listeners}</p>
                 <p>Origin : {artist.strCountry} ({artist.strCountryCode})</p>
