@@ -8,14 +8,17 @@ body {
     align-items: center;
     flex-direction: column;
     height: 85%;
-    margin-top: 25px;
-    margin-bottom: 60px;
     background-color : rgb(238,238,238);
+    border: 2px solid darkviolet;
+    border-radius: 8px;
+    padding: 5px;
+    width: 40%;
+    margin: 50px 400px 50px 400px;
 }
 
 .form-h1 {
     text-align: center;
-    margin-top: 50px;
+    margin-top: 25px;
     font-size: 40px;
     font-weight: bold;
     color : rgb(104,98,97);
@@ -77,20 +80,42 @@ body {
     color: darkviolet;
 }
 
-
-
-@media screen and (max-width: 700px) {
+@media screen and (max-width: 1024px) {
     .form-container {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        margin-bottom: 30px;
-        margin-top: 70px;
-        width: 100%;
+        width: 90%;
+        margin: 10px;
     }
 
     .form-h1 {
         font-size: 28px;
+        text-align: center;
+        width: 80%;
+        margin-bottom: 30px;
+    }
+}
+
+@media screen and (max-width: 700px) {
+    .form-container {
+        width: 90%;
+        margin: 10px;
+    }
+
+    .form-h1 {
+        font-size: 25px;
+        text-align: center;
+        width: 80%;
+        margin-bottom: 30px;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .form-container {
+        width: 90%;
+        margin: 10px;
+    }
+
+    .form-h1 {
+        font-size: 22px;
         text-align: center;
         width: 80%;
         margin-bottom: 30px;

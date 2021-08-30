@@ -1,4 +1,6 @@
-
+.artistCard {
+    padding: 2vh;
+}
 .artistTitle{
     display: flex;
     flex-direction: row;
@@ -15,7 +17,6 @@
     justify-content: center;
     text-align: center;
     align-items: center;
-    width: 40px;
 }
 
 .albumsPrev, .albumsNext{
@@ -39,6 +40,10 @@
     min-width: 200px;
     min-height: 200px;
     border-radius: 50%;
+}
+
+.artistInfo {
+    padding-bottom: 10px;
 }
 
 .artistInfo h2{
@@ -84,7 +89,6 @@
 }
 
 .artistAlbum img, .artistTrack img, .similarArtist img{
-    height: 8vw;
     width: 8vw;
     border-radius: 10px;
 }
@@ -137,5 +141,29 @@
     .artistInfo{
         width: 75%;
         justify-content: center;
+    }
+}
+
+@media screen and (min-width: 480px) and (max-width: 1024px){
+    .artistAlbums, .artistTracks, .similarArtists{
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .artistAlbum img, .artistTrack img, .similarArtist img{
+        width: 20vw;
+    }
+    .albumsPages {
+        width: 0;
+    }
+}
+
+@media (max-width: 480px){
+    .artistAlbums, .artistTracks, .similarArtists{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    .artistAlbum img, .artistTrack img, .similarArtist img{
+        width: 88vw;
     }
 }
