@@ -1,0 +1,120 @@
+.footer-container {
+  background-color : rgb(238,238,238);
+  bottom: 0;
+  height: 10vh;
+  width: 100%;
+}
+
+.footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  margin-left: 10px;
+  margin-right: 10px;
+  margin-top: 10px;
+}
+
+.footer-buttons {
+  color : rgb(104,98,97);
+  padding: 5px;
+  margin: 5px;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  font-size: 16px;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.footer-buttons:hover {
+  color: darkviolet;
+  border: 1px solid darkviolet;
+  border-radius: 12%;
+  padding: 5px;
+}
+
+.active {
+  color: darkviolet;
+}
+
+.footer-logos {
+  display: flex;
+  justify-content: space-around;
+  margin-left: 10px;
+}
+
+.footer-links {
+  display: flex;
+  justify-content: space-around;
+  padding: 5px;
+  margin-right: 10px;
+}
+
+.logo {
+  width: 40px;
+  height: 40px;
+  margin: 5px;
+  padding: 5px;
+}
+
+.logo:hover {
+  color: darkviolet;
+  border: 1px solid darkviolet;
+  border-radius: 12%;
+  padding: 5px;
+}
+
+/* Responsive Design */
+
+@media screen and (max-width: 700px) {
+  .footer {
+    bottom: 0;
+    height: 10vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin-bottom: 10vh;
+    margin: 8px 0px 100px 0px; 
+    padding: 5px;
+
+  }
+
+  .footer-buttons {
+    margin: 4px;
+    padding: 3px;
+  }
+
+  .footer-logos {
+    padding: 3px;  
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .footer {
+    bottom: 0;
+    height: 10vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-direction: column;
+    margin-bottom: 10vh;
+    margin: 8px 0px 100px 0px; 
+    padding: 5px;
+  }
+
+  .footer-buttons {
+    margin: 4px;
+    padding: 3px;
+  }
+
+  .footer-logos {
+    padding: 3px;  
+  }
+
+  .logo {
+    width: 30px;
+    height: 30px;
+    margin: 15px;
+  }
+}

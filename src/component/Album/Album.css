@@ -1,0 +1,140 @@
+body {
+    background-color: #414141;
+}
+/* ------------ InfoAlbum ------------- */
+.info-album-bloc {
+    display: block;
+    margin: 1vh;
+}
+.info-album-bloc-img{
+    text-align:center;
+    padding: 2vh;
+}
+.info-album-bloc-img img {
+    width:30vh;
+    border-radius:50%;
+}
+.info-album-bloc-article{
+    text-align:center;
+    padding-bottom: 1vh;
+}
+.info-album-bloc-article h2 {
+    font-size:20px;
+    color: black;
+}
+.info-album-bloc-article p {
+    font-size:18px;
+    color: black;
+}
+.favoriteBtn{
+    padding: 15px 5px;
+    font-size: small;
+    border-radius: 10px;
+    background-color: darkviolet;
+    color: white;
+}
+/* ------------ TrackList ------------- */
+.track-list-bloc {
+    display: block;
+    margin: 1vh;
+}
+.track-list-bloc h3 {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    background: linear-gradient(90deg, darkviolet 0%, rgba(255,255,255,1) 70%, transparent 100%);
+    color: ghostwhite;
+    text-align: left;
+    font-size: large;
+    padding: 6px;
+    border-radius: 6px;
+}
+.track-list-bloc-table {
+    display:grid;
+    color: white;
+}
+.track-name {
+    text-align:left;
+    padding: 2vh 0;
+}
+.track-duration {
+    text-align:center;
+}
+.blocpist {
+    display:flex;
+    flex-direction:row;
+    align-items: center;
+    padding: 10px;
+    background: #c2bdbd45;
+    margin: 6px 0;
+    border-radius: 6px;
+}
+.img-bloc-pist {
+    width: 100px;
+}
+.blocpist-infos {
+    display:flex;
+    flex-direction:column;
+    padding: 0 0 0 12px;
+}
+.blocpist-infos-time {
+    display:flex;
+    flex-direction:row;
+    align-items: center;
+}
+.blocpist-infos-logo {
+    width: 40px;
+    padding-right: 6px;
+}
+/* ------------ Mediaqueries ------------- */
+@media (min-width: 522px) {
+    .info-album-bloc {
+        display:flex;
+        justify-content:space-evenly;
+    }
+    .info-album-bloc-img {
+        align-self: center;
+    }
+    .info-album-bloc-article{
+        align-self: center;
+    }
+    .blocpist {
+        padding: 10px 10px 10px 28px;
+    }
+}
+@media (min-width : 768px){
+    .info-album-bloc-img img {
+        width:30vh;
+    }
+    .info-album-bloc-article h2 {
+        font-size:28px;
+    }
+    .info-album-bloc-article p {
+        font-size:24px;
+    }
+    .blocpist {
+        padding: 10px 10px 10px 40px;
+    }
+}
+@media (min-width : 1100px){
+    .info-album-bloc,
+    .track-list-bloc {
+        margin: 3vh 15vh;
+    }
+    .blocpist {
+        padding: 10px 10px 10px 60px;
+    }
+}
+@media (min-width : 1250px){
+    .track-list-bloc-table {
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: space-around;
+    }
+    .bloc {
+        width: 35vw;
+    }
+    .blocpist {
+        padding: 10px;
+    }
+}
